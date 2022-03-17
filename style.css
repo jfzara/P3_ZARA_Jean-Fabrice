@@ -1,0 +1,263 @@
+
+@media screen and (max-width: 768px) {
+    
+
+  body {
+      font-family: 'Roboto', sans-serif;
+      
+    
+}  
+
+.container-titre {
+    background-color:rgb(224, 224, 224);
+}
+
+h1, h2, p {
+    font-size: 1rem;
+    font-weight: bolder;
+
+}
+
+p {
+    font-size: 1rem;
+    font-weight: normal;
+
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.container-logo {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.container-titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 12rem;
+    background-color:rgb(237 237 237);
+}
+
+.btn-ancre-explorer {
+    width: 60%;
+    background-color: #9356DC;
+    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+    border-radius: 20px;
+    text-decoration: none;
+    line-height: 3rem;
+    width: 50%;
+    text-align: center;
+    color: white;
+}
+
+
+.header-logo {
+    width:40%;
+}
+
+
+/*--Formulaire--*/
+
+
+.formulaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    background-color: rgb(219, 219, 219);
+}
+
+.icone-localisation {
+    width: 4%;
+}
+.txt_form {
+    background-color: rgb(219, 219, 219);
+    font-weight: bold;
+    
+}
+
+/*--Fonctionnement (fctn)--*/
+
+
+
+
+.fctn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.btn-fctn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    border: 0px rgb(233, 233, 233) solid;
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px lightgray;
+}
+
+
+.nmbr-fctn{
+    background-color: #9356DC;
+    color: white;
+    width: 5%;
+    border-radius: 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.fctn-titre {
+    font-size: 1rem;
+    font-weight: bold;
+    width: 50%;
+}
+
+.icone-fctn {
+    font-size: 1rem;
+    width:8%;
+}
+
+.icone-fctn :hover{
+    color:#9356DC ;
+}
+
+.icone-fctn :active{
+    color:#9356DC ;
+}
+
+.icone-fctn :visited{
+    color: gray;
+}
+
+.fctn-iconemenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:8%;
+}
+
+
+.restos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(243, 243, 243);
+}
+
+.restos-fig {
+   height: 2%;
+   position: relative;
+}
+
+.restos-photos {
+    max-width: 100%;
+    max-height: 80%;
+    border-radius: 15px 15px 0 0;
+    
+}
+
+.restos-nouveau {
+    border: 3px rgb(132, 255, 108) solid;
+    background-color: rgb(132, 255, 108);
+    color: rgb(0, 116, 58);
+    font-weight: bold;
+    width: 20%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-align: center;
+}   /*--pseudo element before after--*/
+
+.restos-legende {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restos-infos {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+figcaption {
+    background-color: white;
+    border-radius: 0 0 15px 15px ;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+}
+
+.fa-heart{
+    font-size: 1.2rem;
+
+}
+.fa-heart :hover{
+    cursor: pointer;
+
+}
+.fa-heart:active{
+    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+    
+}
+
+.fa-heart:visited{
+    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+
+}
+/*--Footer--*/
+
+footer {
+    
+    background-color: rgb(65, 65, 65);
+    color: white;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.footer-logo {
+  width:20%; 
+  color: white;
+}
+
+.footer-liens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.footer-ancres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 3rem;
+}
+
+.icones-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1.5rem;
+}
+
+
+}
