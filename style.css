@@ -8,13 +8,10 @@
     
 }  
 
-.container-titre {
-    background-color:rgb(222, 222, 222);
-}
 
-h1, h2, p {
-    font-size: 1rem;
-    font-weight: bolder;
+h1, h2 {
+    font-size: 1.2rem;
+    font-weight: 900;
 
 }
 
@@ -41,7 +38,10 @@ a {
     flex-direction: column;
     align-items: center;
     height: 12rem;
-    background-color:rgb(222, 222, 222);
+    background-color:rgb(245, 245, 245);
+}
+.header-titre,.header-soustitre {
+    padding-left: 0.5rem;
 }
 
 .btn-ancre-explorer {
@@ -51,9 +51,11 @@ a {
     border-radius: 20px;
     text-decoration: none;
     line-height: 3rem;
-    width: 50%;
+    width: 55%;
     text-align: center;
     color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 
@@ -102,32 +104,43 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 1rem;
     width: 100%;
-    height: 3rem;
-    border: 0px rgb(227, 227, 227) solid;
-    border-radius: 15px;
-    box-shadow: 5px 5px 7px lightgray;
+    height: 3.5rem;
+    background-color: rgb(245, 245, 245);
+    border: 0px rgb(245, 245, 245) solid;
+    border-radius: 17px;
+    box-shadow: 5px 5px 7px rgb(218, 218, 218);
+    color: rgb(58, 58, 58);
 }
 
 
 .nmbr-fctn{
     background-color: #9356DC;
     color: white;
-    width: 5%;
+    width: 28px;
+    height: 19px;
     border-radius: 50px;
-    padding-top: 3px;
+    padding-top: 6px;
     padding-bottom: 3px;
+    position: relative;
+    left: -1rem;
 }
 
-.fctn-titre {
+.fctn-texte {
     font-size: 1rem;
     font-weight: bold;
     width: 50%;
+    
 }
-
+.titre-section-fctn{
+        width: 100%;
+        
+    }
 .fctn i {
     font-size: 1rem;
     width:8%;
+    color: rgb(105, 105, 105);
 }
 
 .fctn i :hover{
