@@ -3,34 +3,29 @@
     
 
   body {
-      font-family: 'Roboto', sans-serif;
-      
-    
+      font-family: 'Roboto', sans-serif;  
 }  
-
 
 h1, h2 {
     font-size: 1.2rem;
     font-weight: 900;
-
 }
 
 p {
     font-size: 1rem;
     font-weight: normal;
-
 }
 
 a {
     text-decoration: none;
     cursor: pointer;
 }
+
 .container-logo {
     display:flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-
 }
 
 .container-titre {
@@ -40,6 +35,7 @@ a {
     height: 12rem;
     background-color:rgb(245, 245, 245);
 }
+
 .header-titre,.header-soustitre {
     padding-left: 0.5rem;
 }
@@ -58,11 +54,9 @@ a {
     padding-right: 1rem;
 }
 
-
 .header-logo {
     width:40%;
 }
-
 
 /*--Formulaire--*/
 
@@ -80,15 +74,14 @@ a {
 .icone-localisation {
     width: 4%;
 }
+
 .txt_form {
     background-color: rgb(222, 222, 222);
     font-weight: bold;
-    
 }
 
+
 /*--Fonctionnement (fctn)--*/
-
-
 
 
 .fctn{
@@ -115,6 +108,16 @@ a {
 }
 
 
+.btn-fctn:hover {
+    background-color: #f3e8ff;
+}
+
+/*rajouter hover-focus-active pour i font awesome*/
+
+.btn-fctn i:focus {
+    color: #d3dc56;
+}
+
 .nmbr-fctn{
     background-color: #9356DC;
     color: white;
@@ -133,14 +136,15 @@ a {
     width: 50%;
     
 }
+
 .titre-section-fctn{
-        width: 100%;
-        
-    }
+    width: 100%;
+}
+
 .fctn i {
     font-size: 1rem;
     width:8%;
-    color: rgb(105, 105, 105);
+    color: rgb(112, 112, 112);
 }
 
 .fctn i :hover{
@@ -160,8 +164,8 @@ a {
     flex-direction: row;
     justify-content: center;
     width:8%;
+    gap:0.3rem;
 }
-
 
 #restos {
     display: flex;
@@ -206,7 +210,6 @@ a {
 .restos-infos {
     display: flex;
     flex-direction: column;
-    
 }
 
 
@@ -219,25 +222,23 @@ figcaption {
 
 .fa-heart{
     font-size: 1.2rem;
-
 }
+
 .fa-heart :hover{
     cursor: pointer;
-
 }
+
 .fa-heart:active{
     background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-    
 }
 
 .fa-heart:visited{
     background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-
 }
+
 /*--Footer--*/
 
 footer {
-    
     background-color: rgb(65, 65, 65);
     color: white;
     padding-left: 1.5rem;
@@ -252,8 +253,7 @@ footer {
 .footer-liens {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .footer-ancres {
