@@ -1,5 +1,8 @@
 @media screen  and (min-width: 990px) {
-
+    @font-face {
+        font-family: Shrikhand;
+        src: url(./shrikhand/Shrikhand-Regular.otf);
+    }
 
 body {
         font-family: 'Roboto', sans-serif;          
@@ -28,6 +31,8 @@ header {
     gap: 1rem;
     padding-top: 2rem;
 }
+
+
 
 .container-logo {
     display:flex;
@@ -66,11 +71,27 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 2rem;
+    height: 5rem;
     background-color: rgb(222, 222, 222);
-    border: none;
-    order: 3;
+    
 }
+
+.texte-formulaire {
+    color: rgb(54, 54, 54);
+    font-weight: 700;
+    background-color: rgb(222, 222, 222);
+    border: rgb(222, 222, 222);
+    width: 33%;
+    padding-left: 5px;
+    border-bottom: 4px solid rgb(203 203 203);
+} 
+
+.icone-localisation {
+    color: rgb(54, 54, 54);
+    margin-right: 6px;
+}
+
+
 
 .fctn {
     display: flex;
@@ -142,31 +163,64 @@ header {
 
 
 footer {
+    background-color: rgb(65, 65, 65);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: rgb(222, 222, 222);
-    color: white;
-    padding-left: 8rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    position: relative;
-    color: rgb(58, 58, 58);
-    height: 6rem;
+    flex-direction: column;
+    align-items: center;
 }
 
-.footer-container-logo {
-    order: 5;
+.footer-logo_white {
+    color: white;
+}
+
+li {
+   list-style: none; 
+   color: white;
+}
+
+.footer-liens {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px; 
+}
+
+.footer-ancres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 3rem;
+}
+
+.icones-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1.5rem;
+    gap: 3px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-right: 45px;
+}
+
+
+
+.footer-logo_white {
+    font-family: Shrikhand;
+    font-weight: 500;
+    color: white;
+    /*order: 5;
     position: absolute;
     right: 28px;
     bottom: 0rem;
     height: 1rem;
-    margin-bottom: 2rem;
-}
-
-.footer-logo {
-    height: 1rem;
+    margin-bottom: 1rem;*/
 }
 
 .footer-liens {
@@ -205,14 +259,14 @@ footer p,.icones-footer, footer a {
     align-items: center;
     background-color: rgb(255, 255, 255);
     margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 
 
 #restos img {
     width: 100%;
-    height: 80%; 
+    height: 300px;
     object-fit: cover;
-    border: 0.1px #9356DC solid;
     border-bottom: 0;
     border-radius: 15px 15px 0 0;
     box-sizing: border-box;
@@ -221,7 +275,9 @@ footer p,.icones-footer, footer a {
 
 
 #restos article{
-    width: 90%;  
+    
+    width: 90%; 
+    margin-bottom: 2rem; 
 }
 
 .restos-fig {
@@ -230,6 +286,8 @@ footer p,.icones-footer, footer a {
    display: flex;
    flex-direction: column;
    margin-left: 6rem;
+   box-shadow: 16px 15px 8px rgb(218 218 218);
+   border-radius: 0 0 15px 15px;
 }
 
 .restos-infos {
@@ -258,7 +316,6 @@ footer p,.icones-footer, footer a {
     padding-right: 2rem;
     background-color: white;
     border-radius: 0 0 15px 15px;
-    border: 0.1px #9356DC solid;
     border-top: 0;
     box-sizing: border-box;
     

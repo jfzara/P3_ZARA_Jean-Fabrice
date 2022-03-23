@@ -1,7 +1,10 @@
 
 @media screen and (max-width: 768px) {
     
-
+@font-face {
+    font-family: Shrikhand;
+    src: url(./shrikhand/Shrikhand-Regular.otf);
+}
   body {
       font-family: 'Roboto', sans-serif;  
 }  
@@ -27,6 +30,8 @@ a {
     justify-content: center;
     width: 100%;
 }
+
+
 
 .container-titre {
     display: flex;
@@ -69,17 +74,27 @@ a {
     width: 100%;
     height: 2rem;
     background-color: rgb(222, 222, 222);
-    border: none;
+    border-top: 4px #c9c9c9 solid;
+    border-bottom: 1px solid rgb(222, 222, 222) ;
+    
 }
+
+.texte-formulaire {
+    color: rgb(54, 54, 54);
+    font-weight: 700;
+    background-color: rgb(222, 222, 222);
+    border: rgb(222, 222, 222);
+    width: 33%;
+    padding-left: 5px;
+} 
 
 .icone-localisation {
+    color: rgb(54, 54, 54);
     width: 4%;
+    margin-right: 13px;
 }
 
-.txt_form {
-    background-color: rgb(222, 222, 222);
-    font-weight: bold;
-}
+
 
 
 /*--Fonctionnement (fctn)--*/
@@ -109,8 +124,8 @@ a {
 }
 
 
-.btn-fctn:hover {
-    background-color: #f3e8ff;
+.fctn-btn_degustez {
+    background-color: #fefdff;
 }
 
 /*rajouter hover-focus-active pour i font awesome*/
@@ -129,6 +144,7 @@ a {
     padding-bottom: 3px;
     position: relative;
     left: -1rem;
+    text-align: center;
 }
 
 .fctn-texte {
@@ -148,17 +164,11 @@ a {
     color: rgb(112, 112, 112);
 }
 
-.fctn i :hover{
+.fctn i :nth-of-type(3){
     color:#9356DC ;
 }
 
-.fctn i :active{
-    color:#9356DC ;
-}
 
-.fctn i :visited{
-    color: gray;
-}
 
 .fctn-iconemenu {
     display: flex;
@@ -177,7 +187,9 @@ a {
     padding-bottom: 1rem;
     background-color: rgb(243, 243, 243);
 }
-
+.restos-titre {
+    padding-left: 2.5rem;
+ }
 .restos-fig {
    position: relative;
 }
@@ -190,8 +202,8 @@ a {
 }
 
 .restos-nouveau {
-    border: 3px rgb(132, 255, 108) solid;
-    background-color: rgb(132, 255, 108);
+    border: 3px #99E2D0 solid;
+    background-color: #99E2D0;
     color: rgb(0, 116, 58);
     font-weight: bold;
     width: 20%;
@@ -223,6 +235,8 @@ figcaption {
 
 .fa-heart{
     font-size: 1.2rem;
+    color: rgb(90, 90, 90);
+    border: black;
 }
 
 .fa-heart :hover{
@@ -246,9 +260,15 @@ footer {
     padding-top: 1.5rem;
 }
 
-.footer-logo {
-  width:20%; 
-  color: white;
+
+.footer-logo_white {
+    font-family: Shrikhand;
+    font-weight: 500;
+    color: white;
+}
+
+li  {
+   list-style: none; 
 }
 
 .footer-liens {
