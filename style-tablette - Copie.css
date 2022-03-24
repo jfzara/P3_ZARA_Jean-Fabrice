@@ -1,0 +1,38 @@
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+    
+
+.btn-fctn:hover {
+    background-color: #f3e8ff;
+}
+/*rajouter hover-focus-active pour i font awesome*/
+
+
+
+.fa-heart{
+    font-size: 1.2rem;
+}
+
+.fa-heart :hover{
+    cursor: pointer;
+}
+
+.fa-heart:active{
+    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+}
+
+.fa-heart:checked{
+    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+}
+
+    
+    
+    
+}
+    
+    
+    
+    
+    
+    
+    
+         
