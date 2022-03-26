@@ -1,4 +1,4 @@
-/*--FORMULAIRE--*/
+
 
 $color-tertiary-darker:rgb(54, 54, 54);
 $color-tertiary-dark:rgb(112, 112, 112);
@@ -27,6 +27,10 @@ $color-secondary: #FF79DA;
         padding-top: 6px;
         padding-bottom: 3px;
 }
+
+
+/*--FORMULAIRE--*/
+
 
 .formulaire {
     display: flex;
@@ -79,7 +83,8 @@ $color-secondary: #FF79DA;
 
 
 .section-fctn {
-    display: flex;
+
+   { display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
