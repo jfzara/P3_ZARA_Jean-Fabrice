@@ -1,0 +1,140 @@
+/*--FORMULAIRE--*/
+
+$color-background-dark:rgb(54, 54, 54);
+$color-background-light: rgb(222, 222, 222);
+$color-background-lighter:rgb(245, 245, 245);
+$font-weight-gras: 700;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+@mixin bouton-explorer {
+    background-color: $color-primary;
+    background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+    border-radius: 20px;
+    text-decoration: none;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+}  
+@mixin ombre-boutons { box-shadow: 5px 5px 7px $color-background-light;}
+
+
+
+.formulaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    height: 2rem;
+    background-color: $color-background-light; 
+    border-top: 4px #c9c9c9 solid;
+    border-bottom: 1px solid $color-background-light;   
+
+
+    &__texte {
+        color: rgb(54, 54, 54); /*$font-color-formulaire: rgb(54, 54, 54) = couleur background footer*/ 
+        font-weight: 700;/*$font-weight-gras: 700*/
+        background-color: $color-background-light;
+        border: $color-background-light;
+        width: 33%;
+        padding-left: 5px;
+    } 
+
+    &__icone {
+        color: $color-background-dark;
+        width: 4%;
+        margin-right: 13px;
+    }
+
+}
+
+/*BOUTON EXPLORER*/
+
+
+.btn__ancre_explorer {
+    @include bouton-explorer;
+    width: 60%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include ombre-boutons;
+    font-weight: $font-gras;
+}
+
+
+/*--SECTION FONCTIONNEMENT (fctn)--*/
+
+
+.section-fctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.section-fctn__etape {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 3.5rem;
+    background-color: $color-background-lighter; 
+    border: 0px $color-background-lighter solid;
+    border-radius: 17px;
+    @include ombre-boutons;   
+}
+
+.section-fctn div:nth-of-type(3) {
+    background-color: #ecddff;/*$background-color-degustez: #ecddff */
+}/*etape 3 : "dégustez au restaurant"*/
+
+.section-fctn div:nth-of-type(3) i {
+    color: $color-primary6DC;
+}/*etape 3 : " icône restaurant (dégustez au restaurant)"*/
+
+.section-fctn__numero {
+    background-color: $color-primary;
+    color: white;
+    width: 28px;
+    height: 19px;
+    border-radius: 50px;
+    padding-top: 6px;
+    padding-bottom: 3px;
+    /*@mixin sectn nmr*/ 
+    position: relative;
+    left: -1rem;
+    text-align: center;
+}
+
+.section-fctn__texte {
+    font-size: 1rem;
+    font-weight: 700;/*$font-gras= font-weight: 700;*/
+    width: 50%; 
+}
+
+.section-fctn__titre {
+    width: 100%;
+}
+
+.section-fctn i {
+    font-size: 1rem;
+    width:8%;
+    color: rgb(112, 112, 112);/*variable*/ 
+}
+
+.section-fctn i :nth-of-type(3){
+    color:#9356DC ; /*variable*/ 
+}
+
+.section-fctn__iconemenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:8%;
+    gap:0.3rem;
+}
+
+
