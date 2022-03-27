@@ -567,7 +567,7 @@ header {
 }
 
 .restos__nouveau {
-    border: 3px rgb(132, 255, 108) solid;
+    border: 3px #99E2D0 solid;
     background-color: rgb(132, 255, 108);
     color: rgb(0, 116, 58);
     font-weight: bold;
