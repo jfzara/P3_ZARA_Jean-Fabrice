@@ -20,6 +20,7 @@
 body {
     font-family: 'Roboto', sans-serif;  
     src: url('./robotofonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
+    margin: 0;
 }  
 
 h1, h2 {
@@ -41,7 +42,7 @@ a {
 /*HEADER-LOGO*/
 
 
-.container-logo {
+.header__container {
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -370,7 +371,7 @@ header {
     padding-top: 2rem;
 } 
 
-.container-logo {
+.header__container {
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -707,7 +708,7 @@ header {
     padding-top: 2rem;
 }
 
-.container-logo {
+.header__container {
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -1006,4 +1007,100 @@ footer p,.footer__icones, footer a {
 }
  
 
+}
+
+
+
+/*PAGE A LA FRANCAISE*/ 
+
+
+/*HEADER*/ 
+
+
+
+.header__container_restos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 11rem;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.header__container_restos i {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(58, 58, 58);
+}
+
+/*EN-TETE*/ 
+
+
+.entete__restos {
+    width: 100%;
+    margin-inline-start: 0;
+    margin-inline-end: 0; 
+}
+
+.entete__restos img {
+    object-fit: cover;
+    width: 100%;
+    height: 30rem;
+    position: relative;
+} /*@mixin*/ 
+
+.entete__restos p {
+    font-family: Shrikhand;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-left: 1.5rem;  
+}
+
+.entete__restos figcaption  {
+    display: flex;
+    flex-direction: row;   
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3rem;
+    background-color: rgb(222, 222, 222); 
+    border-radius: 60px 60px 0 0; 
+    position: relative; 
+    bottom: 132px;
+}
+
+
+/*Bouton coeur blanc + Bouton coeur violet*/
+
+.restos__coeur_pages {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.restos__coeur_plein_pages {
+    font-size: 0rem;
+    display: none;  
+}
+
+.restos__coeur_pages:active  > .restos__coeur_plein_pages {
+    color: transparent;
+    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+}
+
+.restos__coeur_vide_pages {
+font-size: 2rem;
+}
+
+.restos__coeur_pages:active  > .restos__coeur_vide_pages  {    
+    font-size: 0rem;  
+}
+
+.menu__resto_pages {    
+    font-size: 0rem; 
+    background-color: rgb(222, 222, 222); 
 }
