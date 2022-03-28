@@ -226,12 +226,12 @@ $color-emphasis-dark: rgb(0, 116, 58);
     cursor: pointer;
 }
 
-.restos__coeur_plein {
+&_plein {
     font-size: 0rem;
     display: none;  
 }
 
-.restos__coeur:active  > .restos__coeur_plein {
+&:active  > &_plein {
     color: transparent;
     background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
     font-size: 2rem;
@@ -239,11 +239,11 @@ $color-emphasis-dark: rgb(0, 116, 58);
     display: block;
 }
 
-.restos__coeur_vide {
+&_vide {
 font-size: 2rem;
 }
 
-.restos__coeur:active  > .restos__coeur_vide  {    
+&:active  > &_vide  {    
     font-size: 0rem;  
 }
 
@@ -257,6 +257,18 @@ footer {
     align-items: center;
 }
 
+    & ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding-right: 45px;
+    }
+
+    & li {
+        list-style: none; 
+        color: white;
+    }
+
 .footer__logo_white {
     font-family: Shrikhand;
     font-weight: 500;
@@ -264,17 +276,7 @@ footer {
     
 }
 
-footer ul {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    padding-right: 45px;
-}
 
-li {
-    list-style: none; 
-    color: white;
-}
     
 .footer__ancres,.footer__ancres_illustrees {
     width: 25%;
@@ -296,7 +298,7 @@ li {
     line-height: 3rem;
 }
 
-footer p,.footer__icones, footer a {
+& p, & a, .footer__icones {
     font-weight: $font-weight-gras;
 }
 
@@ -307,3 +309,96 @@ footer p,.footer__icones, footer a {
     width: 1.5rem;
     gap: 3px;
 }
+
+
+/*PAGE A LA FRANCAISE*/ 
+
+.tout {
+    height: 143rem;
+    min-width: 356px;
+}
+
+/*HEADER*/ 
+
+
+.header__container_restau {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 11rem;
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+.header__container_restau i {
+    font-size: 2rem;
+    font-weight: $font-weight-gras;
+    color: $color-tertiary-darker;
+}
+
+/*EN-TETE*/ 
+
+
+.entete__restau {
+    width: 100%;
+    margin-inline-start: 0;
+    margin-inline-end: 0; 
+}
+
+.entete__restau img {
+    object-fit: cover;
+    width: 100%;
+    height: 30rem;
+    position: relative;
+} /*@mixin*/ 
+
+.entete__restau p {
+    font-family: Shrikhand;
+    font-size: 2.5rem;
+    font-weight: $font-weight-gras;
+    padding-left: 1.5rem;  
+}
+
+.entete__restau figcaption  {
+    display: flex;
+    flex-direction: row;   
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3rem;
+    background-color: $color-tertiary-light; 
+    border-radius: 60px 60px 0 0; 
+    position: relative; 
+    bottom: 132px;
+}
+
+/*Bouton coeur blanc + Bouton coeur violet*/
+
+.restau__coeur {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+&_plein {
+    font-size: 0rem;
+    display: none;  
+}
+
+&:active  > &_plein {
+    color: transparent;
+    background-image: linear-gradient(to bottom, $color-primary, $color-secondary);
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+}
+
+&_vide {
+font-size: 2rem;
+}
+
+&:active  > &_vide  {    
+    font-size: 0rem;  
+}
+
+
