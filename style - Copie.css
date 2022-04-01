@@ -1288,7 +1288,8 @@ font-size: 2rem;
 
 
 
-/*MENU*/
+/*MENU éléments statiques*/
+
 
 .menu__restau { 
     position: relative;
@@ -1316,21 +1317,23 @@ font-size: 2rem;
     position: relative;
     top: -25px;
 }
-.menu__restau_cartes { 
+
+.menu__slide {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 25px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 6px 8px 6px rgb(205 205 205);
+    background-color: #99E2D0;
+    font-weight: 700;
+    width: 3rem;
+    height: 3rem;
+    padding: 2rem;
     position: relative;
-    cursor: pointer;
+    left: 8rem;
+}
+
+.menu__plats {
+    width: 50%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .menu__btn_commander {
@@ -1363,93 +1366,67 @@ font-size: 2rem;
 
 
 
+/* MENU éléments animés*/
 
+/* carte */
 
-
-
-
-
-
-
-/*Plats*/
-
-.fa-check {
+.menu__restau_cartes { 
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 25px;
+    padding-left: 1rem;
+    /*padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;*/
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 6px 8px 6px rgb(205 205 205);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+/*Fa spin*/
+
+
+.fa-check/* icone*/ {
     color: #99E2D0;
     font-weight: 700;
     font-size: 1.5rem;
-    
 }
 
-.fa-tourne {
+.fa-tourne /* div*/  { 
+    position: absolute;
     width: 1rem;
     height: 1rem;
     border-radius: 50px;
     border: 1px #99E2D0 solid;
     padding: 8px 14px 14px 10px;
-    background-color: #9356DC;
-    
+    background-color: white;
+    bottom: 2rem;
 }
-
-.menu__prix {
-    display: flex;
-    flex-direction: row;
-    border: #9356DC 2px solid;
-    font-weight: 700;
-    width: 24%;
-    align-items: flex-end;
-}
-
-.menu__restau_cartes::after {
-    content: "";
-    background-color: #99E2D0;
-    position: absolute;
-    top: 0px;
-    right: -20%;
-    width: 20%;
-    height: 100%;
-    border-radius: 0 25px 25px 0;
-    
-}
-
-
-.menu__plats {
-    width: 65%;
-    border: 1px green solid;
-}
-
 
 /*Animation sélection plats*/
 
-
-   
-}
-
-.menu__restau_cartes:hover::after {
-    transform: translateX(-97%);
-    transition: all 0.2s ease-in-out;
-    overflow: hidden;
-    
-}
-
 .menu__restau_cartes:hover .fa-tourne {
     transform: rotate(360deg);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.menu__restau_cartes:hover .menu__prix, .menu__prix p {
-    transform: translateX(-100px);
-    transition: all 0.2s ease-in-out;
+
+.menu__restau_cartes:hover .menu__slide, .menu__slide p {
+    transform: translateX(-8rem);
+    transition: all 0.3s ease-in-out;
 }
 
 .menu__restau_cartes:hover .menu__plats {
     overflow: hidden;
-    transition: width 0.6s;
+    transition: all 0.3s ease-in-out;
+    transition: width 0.3s ;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 50%;
 }
 
 
