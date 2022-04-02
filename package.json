@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/styletest.css"
   },
   "author": "jfzara",
   "license": "ISC",
-  "description": "package P3 Openclassrooms"
-}
+  "description": "package P3 Openclassrooms",
+  "dependencies": {
+          "sass": "^1.49.7"
+      }
+  }
