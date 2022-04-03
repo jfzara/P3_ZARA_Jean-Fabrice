@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/styletest.css"
+    "sass": "sass --watch ./sass/maintest.scss:./public/css/styletest.css"
   },
   "author": "jfzara",
   "license": "ISC",
