@@ -1345,18 +1345,26 @@ a {
 @keyframes coeur-fill {
     from {
       opacity: 0;
+      
     }
   
     to {
         opacity: 1;
+        
     }
   }
 
 .restau__coeur:hover  .restau__coeur_plein {
-    animation: coeur-fill 1.5s forwards;
-    animation-timing-function: ease-in-out;
+    animation: coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
     
 }    
+.restau__coeur:hover .restau__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;
+    
+}  
+
 
 /*--FOOTER--*/
 
