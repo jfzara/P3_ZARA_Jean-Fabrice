@@ -227,13 +227,17 @@ footer a  {
     position: relative;
     box-shadow: 9px 10px 16px rgb(218 218 218);/*variable $cartes-ombre*/
 }
-
+/*
 .restos__photos {
     max-width: 100%;
     max-height: 80%;
     border-radius: 15px 15px 0 0;  
+}*/
+.restos__photos {
+    width: 100rem;
+    height: 80rem;
+    border-radius: 15px 15px 0 0;  
 }
-
 .restos__nouveau {
     border: 3px #99E2D0 solid;
     background-color: #99E2D0;
@@ -308,14 +312,17 @@ footer a  {
                                 
 
 
-/*--FOOTER--*/
+/*--FOOTER MOBILE--*/
 
 
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
     background-color: rgb(65, 65, 65);/*variable*/ 
     color: white;
-    padding-left: 1.5rem;
     padding-top: 1.5rem;
+    
 }
 
 .footer__logo_white {
@@ -323,6 +330,14 @@ footer {
     font-weight: 500;
     color: white;
 }
+
+.footer__liste  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: initial;
+}
+
 
 li {
    list-style: none; 
@@ -645,36 +660,34 @@ header {
 }    
 
 
-/*FOOTER*/
+/*FOOTER TABLETTE*/
 
 
 footer {
     background-color: rgb(65, 65, 65);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding-right: 2rem;
 }
-
+  
 .footer__logo_white {
     font-family: Shrikhand;
     font-weight: 500;
     font-size: 1.5rem;
     color: white;
-    
+    margin-left: 4rem;
 }
 
-footer ul {
+.footer__liste  {
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    padding-right: 45px;
+    justify-content: space-between;
 }
 
 li {
     list-style: none; 
     color: white;
 }
-    
+
 .footer__ancres,.footer__ancres_illustrees {
     width: 25%;
 }
@@ -686,7 +699,7 @@ li {
     gap: 15px; 
     font-weight: 600;
 }
-
+   
 .footer__ancres {
     display: flex;
     flex-direction: row;
@@ -697,15 +710,6 @@ li {
 }
 
 
-
-.footer__icones {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 1.5rem;
-    gap: 3px;
-    
-}
 
 
 }
@@ -1000,14 +1004,14 @@ header {
 }    
 
  
-/*FOOTER*/ 
+/*FOOTER DESKTOP*/ 
 
 
 footer {
     background-color: rgb(65, 65, 65);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding-right: 2rem;
 }
   
 .footer__logo_white {
@@ -1015,18 +1019,17 @@ footer {
     font-weight: 500;
     font-size: 1.5rem;
     color: white;
+    margin-left: 4rem;
+}
+
+.footer__liste  {
+    display: flex;
+    justify-content: space-between;
 }
 
 li {
     list-style: none; 
     color: white;
-}
-
-footer ul {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    padding-right: 45px;
 }
 
 .footer__ancres,.footer__ancres_illustrees {
@@ -1041,7 +1044,6 @@ footer ul {
     font-weight: 600;
 }
    
-  
 .footer__ancres {
     display: flex;
     flex-direction: row;
@@ -1050,17 +1052,6 @@ footer ul {
     margin-bottom: 0.5rem;
     line-height: 3rem;
 }
-
-
-
-.footer__icones {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 1.5rem;
-    gap: 3px;
-}
- 
 
 }
 
@@ -1096,13 +1087,8 @@ a {
     cursor: pointer;
 }
 
-
-
-
-
-
 .tout {
-    height: 143rem;
+    height: 145rem;
     min-width: 356px;
 }
 
@@ -1119,132 +1105,21 @@ a {
     margin-top: 1rem;
 }
 
+
 .header__container_restau i {
-    font-size: 2rem;
+    
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: rgb(58, 58, 58);
 }
 
-/*EN-TETE*/ 
-
-
-.entete__restau {
-    width: 100%;
-    margin-inline-start: 0;
-    margin-inline-end: 0; 
-}
-
-.entete__restau img {
-    object-fit: cover;
-    width: 100%;
-    height: 30rem;
-    position: relative;
-} /*@mixin*/ 
-
-.entete__restau p {
-    font-family: Shrikhand;
-    font-size: 2.5rem;
-    font-weight: 700;
-    padding-left: 1.5rem;  
-}
-
-.entete__restau figcaption  {
-    display: flex;
-    flex-direction: row;   
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 3rem;
-    background-color: rgb(222, 222, 222); 
-    border-radius: 60px 60px 0 0; 
-    position: relative; 
-    bottom: 132px;
-}
-
-
-/*Bouton coeur blanc + Bouton coeur violet*/
-
-.restau__coeur {
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-}
-
-.restau__coeur_plein {
-    font-size: 0rem;
-    display: none;  
-}
-
-.restau__coeur:active  > .restau__coeur_plein {
-    color: transparent;
-    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
-    font-size: 2rem;
-    font-weight: 300;
-    display: block;
-}
-
-.restau__coeur_vide {
-    font-size: 2rem;
-}
-
-.restau__coeur:active  > .restau__coeur_vide {    
-    font-size: 0rem;  
-    display: none;
-}
-
-
-
-
-/*--FOOTER--*/
-
-
-footer {
-    background-color: rgb(65, 65, 65);/*variable*/ 
-    color: white;
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
-}
-
-.footer__logo_white {
-    font-family: Shrikhand;
-    font-weight: 500;
-    color: white;
-}
-
-li  {
-   list-style: none; 
-}
-
-.footer__ancres_illustrees {
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-}
-
-.footer__ancres {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 3rem;
-}
-
-.footer__icones {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 1.5rem;
-}
-
-
-
-
-
-/*PAGE  RESTAURANT mobile*/ 
-
-.tout {
-    height: 143rem;
-    min-width: 356px;
+.header__restos_logo {
+    min-width: 190px;
+    width: 42%;
+    margin-left: 8%;
 }
 
 /*HEADER*/ 
@@ -1260,11 +1135,6 @@ li  {
     margin-top: 1rem;
 }
 
-.header__container_restau i {
-    font-size: 2rem;
-    font-weight: 700;
-    color: rgb(58, 58, 58);
-}
 
 /*EN-TETE*/ 
 
@@ -1301,58 +1171,12 @@ li  {
     bottom: 132px;
 }
 
-
-/*Bouton coeur blanc + Bouton coeur violet*/
-                                            
-                                            
-.restos__coeur {
-    font-size: 2rem;
-    position: relative;
-    height: 2rem;
-    font-size: 2rem;
-    width: 2rem;
-    cursor: pointer;
-    border: none;
-    background-color: white;
-}        
-
- .restos__coeur_plein {
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-}
-
-  .restos__coeur_vide {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: 0;
-    
-}
-
-/*--Hover sur div-coeur: coeur Blanc devient Violet --*/
-
-.restos__coeur:hover  .restos__coeur_vide {
-    z-index: -1;
-}        
-.restos__coeur:hover  .restos__coeur_plein {
-    z-index: 0;
-}    
-
-
-
-
 /*MENU éléments statiques*/
 
 
 .menu__restau { 
     position: relative;
-    top: -344px;   
-    font-size: 0rem; 
+    top: -165px;   
     background-color: rgb(222, 222, 222); 
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -1484,6 +1308,46 @@ li  {
     white-space: nowrap;
 }
 
+/*Bouton coeur blanc + Bouton coeur violet*/
+                                            
+                                            
+.restos__coeur {
+    font-size: 2rem;
+    position: relative;
+    height: 2rem;
+    font-size: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}        
+
+ .restos__coeur_plein {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+}
+
+.restos__coeur_vide {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+      
+}
+
+/*--Hover sur div-coeur: coeur Blanc devient Violet --*/
+
+.restos__coeur:hover  .restos__coeur_vide {
+    z-index: -1;
+}        
+.restos__coeur:hover  .restos__coeur_plein {
+    z-index: 0;
+}    
 
 
 /*--FOOTER--*/
@@ -1501,6 +1365,11 @@ footer {
     font-weight: 500;
     color: white;
 }
+
+.footer__liste  {
+    display: flex;
+    justify-content: space-between;
+} 
 
 li  {
    list-style: none; 
@@ -1527,6 +1396,7 @@ li  {
     align-items: center;
     width: 1.5rem;
 }
+
 
 
 /*Animation apparition progressive*/
@@ -1575,7 +1445,7 @@ li  {
 @media screen  and (min-width: 768px) and (max-width: 990px) {
 
 .tout {
-    height: 142rem;
+    height: 134rem;
 }
     
         
@@ -1598,6 +1468,9 @@ li  {
     font-size: 2rem;
     font-weight: 700;
     color: rgb(58, 58, 58);
+    position: absolute;
+    left: 63px;
+    top: 76px;
 }
 
 /*EN-TETE*/ 
@@ -1785,29 +1658,42 @@ li  {
 
 
 footer {
-    background-color: rgb(65, 65, 65);/*variable*/ 
-    color: white;
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
+    background-color: rgb(65, 65, 65);
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
 }
-
+  
 .footer__logo_white {
     font-family: Shrikhand;
     font-weight: 500;
     font-size: 1.5rem;
     color: white;
+    margin-left: 4rem;
 }
 
-li  {
+.footer__liste  {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
     list-style: none; 
+    color: white;
+}
+
+.footer__ancres,.footer__ancres_illustrees {
+    width: 25%;
 }
 
 .footer__ancres_illustrees {
     display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
+    gap: 15px; 
+    font-weight: 600;
 }
-
+   
 .footer__ancres {
     display: flex;
     flex-direction: row;
@@ -1815,13 +1701,6 @@ li  {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     line-height: 3rem;
-}
-
-.footer__icones {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 1.5rem;
 }
 
 
@@ -1876,7 +1755,7 @@ li  {
 
 
 .tout {
-    height: 142rem;
+    height: 134rem;
 }
 
     
@@ -1895,12 +1774,15 @@ li  {
     padding-right: 4rem;
 }
 
+
 .header__container_restau i {
     font-size: 2rem;
     font-weight: 700;
     color: rgb(58, 58, 58);
+    position: absolute;
+    left: 63px;
+    top: 76px;
 }
-
 /*EN-TETE*/ 
 
 
@@ -2124,33 +2006,46 @@ li  {
 
 
 
-/*--FOOTER--*/
+/*FOOTER DESKTOP*/ 
 
 
 footer {
-    background-color: rgb(65, 65, 65);/*variable*/ 
-    color: white;
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
+    background-color: rgb(65, 65, 65);
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
 }
-
+  
 .footer__logo_white {
     font-family: Shrikhand;
     font-weight: 500;
     font-size: 1.5rem;
     color: white;
+    margin-left: 4rem;
 }
 
-li  {
+.footer__liste  {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
     list-style: none; 
+    color: white;
+}
+
+.footer__ancres,.footer__ancres_illustrees {
+    width: 25%;
 }
 
 .footer__ancres_illustrees {
     display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
+    gap: 15px; 
+    font-weight: 600;
 }
-
+   
 .footer__ancres {
     display: flex;
     flex-direction: row;
@@ -2160,11 +2055,6 @@ li  {
     line-height: 3rem;
 }
 
-.footer__icones {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 1.5rem;
 }
 
 

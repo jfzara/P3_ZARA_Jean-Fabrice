@@ -1,4 +1,4 @@
-@import 'testsass';
+
 
 $color-tertiary-darker:rgb(54, 54, 54);
 $color-tertiary-dark:rgb(112, 112, 112);
@@ -37,6 +37,7 @@ $color-emphasis-dark: rgb(0, 116, 58);
         padding-bottom: 3px;
 }
 
+@import 'testsass';
 
 /*--FORMULAIRE--*/
  
@@ -53,7 +54,7 @@ $color-emphasis-dark: rgb(0, 116, 58);
     border-top: 4px #c9c9c9 solid;
     border-bottom: 1px solid $color-tertiary-light;  
     cursor: pointer; 
-
+ 
 
     &__texte {
         color: $color-tertiary-darker; 
@@ -84,7 +85,7 @@ $color-emphasis-dark: rgb(0, 116, 58);
     padding-left: 1rem;
     padding-right: 1rem;
     @include ombre-boutons;
-    font-weight: $font-gras;
+    font-weight: $font-weight-gras;
 }
 
 
@@ -99,7 +100,7 @@ $color-emphasis-dark: rgb(0, 116, 58);
     gap: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
-}
+
 
     &__etape {
         display: flex;
@@ -401,4 +402,4 @@ font-size: 2rem;
     font-size: 0rem;  
 }
 
-
+}
