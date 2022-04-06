@@ -23,37 +23,44 @@
 
 /*animation accueil + spinner*/
 
-.accueil-fondu {
+
+
+
+.fade-out {
     display: flex;
     flex: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: rgb(245, 241, 241);
     z-index: 1;
-    animation: accueil-fondu_animation 2500ms forwards;
+    animation: accueil-fondu_animation 2900ms forwards;
     animation-timing-function: ease-in-out;
+
 }
 
 
 
-.spinner {
-    width: 3rem;
-    height: 3rem;
-    border: none ;
-    border-radius: 17px;
-    box-shadow: 4px 4px 20px #9356DC ;
-    animation: accueil-spinner 10s cubic-bezier( 0.19, 1, 0.22, 1 ) forwards;
-    animation-iteration-count: 3;
+.fa-spinner {
+    position: absolute;
+    top: 20rem;
+    width: 6rem;
+    height: 6rem;
+    font-size: 6rem;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: accueil-spinner 1.5s linear forwards;
+    animation-iteration-count: 5;
 } 
 
 @keyframes accueil-spinner {
    
     to {
         transform: rotate(360deg);
-        transition: all 1s;
+        
         }
 }
 
@@ -63,7 +70,7 @@
     opacity:1;
     }
     to {
-    opacity:0  ;
+    opacity:0;
     }
 
 }
@@ -75,6 +82,10 @@ body {
     src: url('./robotofonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
     margin: 0;
 }  
+
+ main {
+    height:152rem;
+}
 
 h1, h2 {
     font-size: 1.2rem;
@@ -96,6 +107,10 @@ a {
     cursor: pointer;
 }
 
+article, figure {
+    cursor: pointer;
+}
+
 footer a  {
     font-size: 1.2rem;
 }
@@ -113,6 +128,7 @@ footer a  {
 .header-logo {
     width:43%;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 
@@ -148,6 +164,7 @@ footer a  {
     color: white;
     padding-left: 1rem;
     padding-right: 1rem;
+    cursor: pointer;
 }
 
 
@@ -227,8 +244,8 @@ footer a  {
     width: 28px;
     height: 19px;
     border-radius: 50px;
-    padding-top: 3px;
-    padding-bottom: 5px;
+    padding-top: 1px;
+    padding-bottom: 7px;
     position: relative;
     left: -1rem;
     text-align: center;
@@ -271,7 +288,7 @@ footer a  {
     margin-top: 3rem;
     margin-bottom: 3rem;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
     background-color: rgb(243, 243, 243);/*variable*/ 
 }
 
@@ -289,12 +306,7 @@ footer a  {
     border-radius: 15px;
 
 }
-/*
-.restos__photos {
-    max-width: 100%;
-    max-height: 80%;
-    border-radius: 15px 15px 0 0;  
-}*/
+
 .restos__photos { 
     width: 100%;
     height: 15rem;
@@ -324,8 +336,13 @@ footer a  {
     padding-left: 1.5rem;
     padding-right: 2rem;
     height: 8rem;
+    filter: brightness(96%);
 }
 
+.restos__cartes{
+    cursor: pointer;
+    
+} 
 
 .restos__infos /*nom et lieu du restaurant*/{
     display: flex;
@@ -333,7 +350,20 @@ footer a  {
 } 
 
 
-                                            /*Bouton coeur blanc + Bouton coeur violet*/
+/*animation figcaption-lighten*/
+
+.restos__cartes:hover  .restos__legende {
+    -webkit-filter: brightness(100%);
+    
+}
+ 
+.restos__cartes:hover  .restos__fig {
+ box-shadow: 9px 10px 10px rgb(189, 189, 189);    
+    
+}
+                            
+
+/*ANIMATION COEUR OPACITY*/
                                             
                                             
 .restos__coeur {
@@ -344,17 +374,19 @@ footer a  {
     width: 2rem;
     cursor: pointer;
     border: none;
-    background-color: white;
+    background-color: rgb(255, 255, 255); 
 }        
 
- .restos__coeur_plein {
+
+.restos__coeur_plein {
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     top: 0%;
     left: 0%;
-    z-index: -1;
+    z-index: 0;
+    opacity: 0;
 }
 
 .restos__coeur_vide {
@@ -362,20 +394,31 @@ footer a  {
     top: 0%;
     left: 0%;
     z-index: 0;
-      
 }
 
-/*--Hover sur div-coeur: coeur Blanc devient Violet --*/
 
-.restos__coeur:hover  .restos__coeur_vide {
-    z-index: -1;
-}        
+@keyframes accueil-coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
 .restos__coeur:hover  .restos__coeur_plein {
-    z-index: 0;
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
 }    
-
-                                
-
+.restos__coeur:hover .restos__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;
+    
+}  
 
 /*--FOOTER MOBILE--*/
 
@@ -508,6 +551,9 @@ main {
     height: 167rem;
 }
 
+article {
+    cursor: pointer;
+}
 
 /*HEADER-LOGO*/
 
@@ -701,19 +747,6 @@ header {
     box-sizing: border-box;
 }
 
-.restos__legende /*figcaption*/ {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 0.4rem;
-    padding-right: 2rem;
-    background-color: white;
-    border-radius: 0 0 15px 15px;
-    border-top: 0;
-    box-sizing: border-box; 
-}
-
 .restos__infos /*nom et lieu du restaurant*/{
     display: flex;
     flex-direction: column;
@@ -731,7 +764,34 @@ header {
     text-align: center;
 }   
 
-                                        /*Bouton coeur blanc + Bouton coeur violet*/
+
+.restos__legende /*figcaption*/ {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.4rem;
+    padding-right: 2rem;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+    border-top: 0;
+    box-sizing: border-box; 
+    filter: brightness(96%);
+}
+
+/*animation figcaption-lighten*/
+
+.restos__cartes:hover  .restos__legende {
+    -webkit-filter: brightness(100%);
+    
+}
+ 
+.restos__cartes:hover  .restos__fig {
+ box-shadow: 9px 10px 10px rgb(189, 189, 189);    
+    
+}
+
+/*ANIMATION COEUR OPACITY*/
                                             
                                             
 .restos__coeur {
@@ -742,17 +802,19 @@ header {
     width: 2rem;
     cursor: pointer;
     border: none;
-    background-color: white;
+    background-color: rgb(255, 255, 255); 
 }        
 
- .restos__coeur_plein {
+
+.restos__coeur_plein {
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     top: 0%;
     left: 0%;
-    z-index: -1;
+    z-index: 0;
+    opacity: 0;
 }
 
 .restos__coeur_vide {
@@ -760,17 +822,34 @@ header {
     top: 0%;
     left: 0%;
     z-index: 0;
-      
 }
 
-/*--Hover sur div-coeur: coeur Blanc devient Violet --*/
 
-.restos__coeur:hover  .restos__coeur_vide {
-    z-index: -1;
-}        
+@keyframes accueil-coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
 .restos__coeur:hover  .restos__coeur_plein {
-    z-index: 0;
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
 }    
+.restos__coeur:hover .restos__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;
+    
+}  
+
+
+                                        
 
 
 /*FOOTER TABLETTE*/
@@ -901,6 +980,11 @@ body {
 main {
     height: 167rem;
 }
+
+article {
+    cursor: pointer;
+}
+
 
 /*HEADER-LOGO*/
 
@@ -1080,6 +1164,7 @@ header {
     margin-left: 6rem;
     box-shadow: 9px 10px 16px rgb(218 218 218);
     border-radius: 0 0 15px 15px;
+    
 }
   
 #restaurants img {
@@ -1102,7 +1187,7 @@ header {
     border-radius: 0 0 15px 15px;
     border-top: 0;
     box-sizing: border-box;
-    
+    filter: brightness(96%);
 }
 
 
@@ -1125,7 +1210,19 @@ header {
 } 
 
                                        
-                                                /*Bouton coeur blanc + Bouton coeur violet*/
+/*animation figcaption-lighten*/
+
+.restos__cartes:hover  .restos__legende {
+    -webkit-filter: brightness(100%);
+    
+}
+ 
+.restos__cartes:hover  .restos__fig {
+ box-shadow: 9px 10px 10px rgb(189, 189, 189);    
+    
+}
+
+/*ANIMATION COEUR OPACITY*/
                                             
                                             
 .restos__coeur {
@@ -1136,35 +1233,51 @@ header {
     width: 2rem;
     cursor: pointer;
     border: none;
-    background-color: white;
+    background-color: rgb(255, 255, 255); 
 }        
 
- .restos__coeur_plein {
+
+.restos__coeur_plein {
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     top: 0%;
     left: 0%;
-    z-index: -1;
+    z-index: 0;
+    opacity: 0;
 }
 
-  .restos__coeur_vide {
+.restos__coeur_vide {
     position: absolute;
     top: 0%;
     left: 0%;
     z-index: 0;
-    
 }
 
-/*--Hover sur div-coeur: coeur Blanc devient Violet --*/
 
-.restos__coeur:hover  .restos__coeur_vide {
-    z-index: -1;
-}        
+@keyframes accueil-coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
 .restos__coeur:hover  .restos__coeur_plein {
-    z-index: 0;
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
 }    
+.restos__coeur:hover .restos__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;
+    
+}   
 
  
 /*FOOTER DESKTOP*/ 
@@ -1217,6 +1330,9 @@ li {
 }
 
 }
+
+
+
 
 
 
@@ -1411,6 +1527,7 @@ a {
 
 
 
+
 /* MENU éléments animés*/
 
 /* carte */
@@ -1428,8 +1545,19 @@ a {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    filter: brightness(96%);
 }
+/*animation figcaption-lighten*/
 
+.menu__restau_cartes:hover {
+    -webkit-filter: brightness(100%);
+    
+}
+ 
+.menu__restau_cartes:hover {
+ box-shadow: 9px 10px 10px rgb(189, 189, 189);    
+    
+}
 
 /*Fa spin*/
 
@@ -1455,7 +1583,7 @@ a {
 
 .menu__restau_cartes:hover .fa-tourne {
     transform: rotate(360deg);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s linear;
 }
 
 .menu__restau_cartes:hover .menu__slide, .menu__slide p {
@@ -1518,15 +1646,15 @@ a {
   }
 
 .restau__coeur:hover  .restau__coeur_plein {
-    animation: coeur-fill 0.4s forwards;
+    animation: coeur-fill 0.6s forwards;
     animation-timing-function: ease-in;
     
 }    
 .restau__coeur:hover .restau__coeur_vide {
-    transform: scale(1.1) ;
-    transition: transform  0.2s ease-in-out;
+    transform: scale(1.2) ;
+    transition: transform  0.5s ease-in-out;
     
-}  
+}   
 
 
 /*--FOOTER--*/
@@ -1684,7 +1812,7 @@ li  {
     background-color: rgb(222, 222, 222); 
     border-radius: 60px 60px 0 0; 
     position: relative; 
-    bottom: 132px;
+    bottom: 280px;
 }
 
 
@@ -1766,7 +1894,7 @@ li  {
     text-decoration: none;
 }
 
-/*Bouton coeur blanc + Bouton coeur violet*/
+/*ANIMATION COEUR OPACITY*/
                                             
                                             
 .restau__coeur {
@@ -1777,17 +1905,19 @@ li  {
     width: 2rem;
     cursor: pointer;
     border: none;
-    background-color: white;
+    background-color: rgb(222, 222, 222); 
 }        
 
- .restau__coeur_plein {
+
+.restau__coeur_plein {
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
     top: 0%;
     left: 0%;
-    z-index: -1;
+    z-index: 0;
+    opacity: 0;
 }
 
 .restau__coeur_vide {
@@ -1795,17 +1925,31 @@ li  {
     top: 0%;
     left: 0%;
     z-index: 0;
-      
 }
 
-/*--Hover sur div-coeur: coeur Blanc devient Violet --*/
 
-.restau__coeur:hover  .restau__coeur_vide {
-    z-index: -1;
-}        
+@keyframes coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
 .restau__coeur:hover  .restau__coeur_plein {
-    z-index: 0;
-} 
+    animation: coeur-fill 0.6s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+.restau__coeur:hover .restau__coeur_vide {
+    transform: scale(1.2) ;
+    transition: transform  0.5s ease-in-out;
+    
+}  
 
 /* MENU éléments animés*/
 
@@ -1827,8 +1971,19 @@ li  {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    filter: brightness(96%);
 }
+/*animation figcaption-lighten*/
 
+.menu__restau_cartes:hover {
+    -webkit-filter: brightness(100%);
+    
+}
+ 
+.menu__restau_cartes:hover {
+ box-shadow: 9px 10px 10px rgb(189, 189, 189);    
+    
+}
 
 /*Fa spin*/
 
@@ -1854,7 +2009,7 @@ li  {
 
 .menu__restau_cartes:hover .fa-tourne {
     transform: rotate(360deg);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s linear;
 }
 
 .menu__restau_cartes:hover .menu__slide, .menu__slide p {
@@ -2037,47 +2192,62 @@ li {
 }
 
 
-/*Bouton coeur blanc + Bouton coeur violet*/
+/*ANIMATION COEUR OPACITY*/
                                             
                                             
 .restau__coeur {
+    font-size: 2rem;
     position: relative;
     height: 2rem;
     font-size: 2rem;
     width: 2rem;
-    cursor: pointer; 
-    
-
+    cursor: pointer;
+    border: none;
+    background-color: rgb(222, 222, 222); 
 }        
 
- 
+
+.restau__coeur_plein {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    opacity: 0;
+}
 
 .restau__coeur_vide {
     position: absolute;
     top: 0%;
     left: 0%;
-    z-index: 1;
-    overflow: hidden;  
+    z-index: 0;
 }
 
-/*--Hover sur div-coeur: coeur Blanc devient Violet --*/
 
-.restau__coeur_vide:hover >.restau__coeur_vide::after {
-   animation: coeur-fill-up 2s;
-}       
-  
-
-
-
-@keyframes coeur-fill-up {
+@keyframes coeur-fill {
     from {
-          transform: translateY(93%)  ;
-      }
-
-      to {
-          transform: translateY (0%);
-      }
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
   }
+
+.restau__coeur:hover  .restau__coeur_plein {
+    animation: coeur-fill 0.6s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+.restau__coeur:hover .restau__coeur_vide {
+    transform: scale(1.2) ;
+    transition: transform  0.5s ease-in-out;
+    
+}  
 
 
 /*MENU éléments statiques*/
@@ -2177,6 +2347,18 @@ li {
     cursor: pointer;
     overflow: hidden;
     width: 80%;
+    filter: brightness(96%);
+}
+/*animation figcaption-lighten*/
+
+.menu__restau_cartes:hover {
+    -webkit-filter: brightness(100%);
+    
+}
+ 
+.menu__restau_cartes:hover {
+ box-shadow: 9px 10px 10px rgb(189, 189, 189);    
+    
 }
 
 
@@ -2204,7 +2386,7 @@ li {
 
 .menu__restau_cartes:hover .fa-tourne {
     transform: rotate(360deg);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s linear;
 }
 
 .menu__restau_cartes:hover .menu__slide, .menu__slide p {
