@@ -33,7 +33,7 @@
     height: 100vh;
     background-color: rgb(245, 241, 241);
     z-index: 1;
-    animation: accueil-fondu_animation 1500ms forwards;
+    animation: accueil-fondu_animation 2500ms forwards;
     animation-timing-function: ease-in-out;
 }
 
