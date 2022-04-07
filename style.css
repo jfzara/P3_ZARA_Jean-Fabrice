@@ -28,7 +28,7 @@
 
 .fade-out {
     display: flex;
-    flex: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -79,7 +79,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;  
-    src: url('./robotofonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
     margin: 0;
 }  
 
@@ -498,7 +497,7 @@ li {
 
 .fade-out {
     display: flex;
-    flex: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -563,7 +562,7 @@ li {
 
 .accueil-fondu {
     display: flex;
-    flex: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -1012,7 +1011,7 @@ li {
 
 .fade-out {
     display: flex;
-    flex: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;
@@ -1074,7 +1073,7 @@ li {
 
 .accueil-fondu {
     display: flex;
-    flex: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -1507,7 +1506,6 @@ li {
 
 body {
     font-family: 'Roboto', sans-serif;  
-    src: url('./robotofonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
     margin: 0;
 }  
 
@@ -2667,6 +2665,9 @@ header {
 
 /*ANIMATION MENU FADE IN apparition progressive*/
 
+.menu__restau .menu__restau_tiers
+
+
 .menu__restau_tiers { 
     animation: fade-in-tiers 1.5s forwards;
     
@@ -2762,7 +2763,7 @@ li {
 }
 
 
-}
+
 
 
 
