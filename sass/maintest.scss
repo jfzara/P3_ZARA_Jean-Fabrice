@@ -1,3 +1,11 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/typography';
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'components/buttons';
+@import 'pages/home';
 
 
 $color-tertiary-darker:rgb(54, 54, 54);
@@ -37,7 +45,7 @@ $color-emphasis-dark: rgb(0, 116, 58);
         padding-bottom: 3px;
 }
 
-@import 'testsass';
+
 
 /*--FORMULAIRE--*/
  
@@ -157,6 +165,7 @@ $color-emphasis-dark: rgb(0, 116, 58);
         width:8%;
         gap:0.3rem;
     }
+}
 
 
     /*SECTION RESTOS*/
