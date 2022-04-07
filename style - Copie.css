@@ -431,7 +431,13 @@ footer {
     color: white;
     padding-top: 1.5rem;
     padding-left: 3rem;
+    padding-right: 3rem;
+
 }
+
+
+
+
 
 .footer__logo_white {
     font-family: Shrikhand;
@@ -445,7 +451,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: initial;
 }
 
 
@@ -625,8 +630,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 0rem;
-    padding-bottom: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 } 
 
 .header__container {
@@ -638,7 +643,7 @@ header {
 
 .header__restau_logo {
     font-family: Shrikhand;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     padding-left: 1.5rem;
 }
@@ -1543,8 +1548,8 @@ a {
 
 .header__container_restau i {
     position: absolute;
-    left: 20px;
-    top: 41px;
+    left: 12%;
+    top: 6%;
     font-size: 2rem;
     font-weight: 700;
     color: rgb(58, 58, 58);
@@ -1552,7 +1557,7 @@ a {
 
 .header__restau_logo{
     font-family: Shrikhand;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     padding-left: 1.5rem;  
 }
@@ -1565,7 +1570,7 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 19%;
+    gap: 25%;
     padding-left: 2rem;
     margin-top: 1rem;
 }
@@ -1844,13 +1849,10 @@ footer {
     margin-bottom: 0rem;
 }
 
-.footer__liste  {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: initial;
-}
 
+.footer__liste {
+    
+}
 
 li {
     list-style: none;
@@ -1959,8 +1961,8 @@ li {
     font-weight: 700;
     color: rgb(58, 58, 58);
     position: absolute;
-    left: 63px;
-    top: 67px;
+    left: 12%;
+    top: 14%;
 }
 
 /*EN-TETE*/ 
@@ -2254,7 +2256,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+  
 }
 
 li {
@@ -2346,18 +2348,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 0rem;
-    padding-bottom: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.header__container_restau i {
-    font-size: 2rem;
-    font-weight: 700;
-    color: rgb(58, 58, 58);
-    position: absolute;
-    left: 112px;
-    top: 54px;
-}
+
 
 .header__container_restau i {
     font-size: 2rem;
@@ -2365,12 +2360,12 @@ header {
     color: rgb(58, 58, 58);
     position: absolute;
     left: 12%;
-    top: 8%;
+    top: 12%;
 }
 
 .header__restau_logo {
     font-family: Shrikhand;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     padding-left: 1.5rem;
 }
@@ -2692,14 +2687,16 @@ footer {
 
 .footer__liste {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 }
+
+
 
 li {
     list-style: none;
     color: white;
+    
 }
 
 .footer__ancres,.footer__ancres_illustrees {
@@ -2765,7 +2762,6 @@ li {
 
 
 }
-
 
 
 
