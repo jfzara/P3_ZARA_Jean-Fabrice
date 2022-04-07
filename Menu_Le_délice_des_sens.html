@@ -3,7 +3,7 @@
 
 <head >
    <meta charset="utf-8" />
-   <title> Ohmyfood </title>
+   <title> Ohmyfood-Le délice des sens </title>
    <link rel="icon" type="image/x-icon" href="images/logo/ohmyfood@2x.svg">
    <link rel="stylesheet" type="text/css" href="style - Copie.css">
    <link rel="stylesheet" type="text/css" href="./public/css/style.css">
@@ -22,9 +22,9 @@
             <a href="./index.html" class="header__ancre_retour">
                 <i class="fas fa-arrow-left"></i>
             </a>
-            <img src="images\logo\ohmyfood.png" alt="logo Oh my food" class="header__restos_logo">
+            <p class="header__restau_logo">ohmyfood</p>
         </div> 
-    </header>  
+    </header> 
      
     <main class="tout">
         <figure class="entete__restau">
@@ -38,12 +38,18 @@
             </figcaption>
         </figure>
         <section class="menu__restau"> 
-            <section>
-                <p class="menu__restau_titre" >Entrées</p>
-                <div class="menu__restau_soulignement"></div>
+           
+
+            <section class="menu__restau_tiers">
+                <div class="menu__restau_titre">
+                <p> Entrées</p>
+                <div class="menu__restau_soulignement">
+                    <div class="menu__restau_ligne-verte"></div>
+                </div>
+            </div>
                 <article class="menu__restau_cartes">
                     <div class="menu__plats">
-                        <h2> Tartare de thon</h2>
+                        <h2>Tartare de thon</h2>
                         <p>Assaisonné au yuzu</p>
                     </div>
                     <div class="menu__slide">
@@ -56,8 +62,8 @@
                     </div>
                 </article>
                 <article class="menu__restau_cartes">
-                    <div>
-                        <h2>Bouchée de homard croustillant </h2>
+                    <div class="menu__plats">
+                        <h2>Bouchée de homard croustillant</h2>
                         <p>Et sa farandole de petits légumes</p>
                     </div>
                     <div class="menu__slide">
@@ -70,7 +76,7 @@
                     </div>
                 </article>
                 <article class="menu__restau_cartes">
-                    <div>
+                    <div class="menu__plats">
                         <h2>Velouté de cèpes </h2>
                         <p>Aux truffes</p>
                     </div>
@@ -81,16 +87,19 @@
                         <span class="fa-tourne">
                             <i class="fas fa-check"></i>
                         </span>
-                    </div>
+                </div>
                 </article>
-            </section>
-
-            <section>
-                <p class="menu__restau_titre" >Plats</p>
-                <div class="menu__restau_soulignement"></div>
+            </section> 
+            <section class="menu__restau_tiers">
+                <div class="menu__restau_titre">
+                <p>Plats</p>
+                <div class="menu__restau_soulignement">
+                    <div class="menu__restau_ligne-verte"></div>
+                </div>
+            </div>
                 <article class="menu__restau_cartes">
-                    <div>
-                        <h2>Poulet rôti aux herbes de Provence </h2>
+                    <div class="menu__plats">
+                        <h2>Poulet rôti aux herbes de Provence</h2>
                         <p>Et sa crème de truffe</p>
                     </div>
                     <div class="menu__slide">
@@ -103,8 +112,8 @@
                     </div>
                 </article>
                 <article class="menu__restau_cartes">
-                    <div>
-                        <h2>Langouste rôtie </h2>
+                    <div class="menu__plats">
+                        <h2>Langouste rôtie</h2>
                         <p>Et ses légumes de saison</p>
                     </div>
                     <div class="menu__slide">
@@ -117,7 +126,7 @@
                     </div>
                 </article>
                 <article class="menu__restau_cartes">
-                    <div>
+                    <div class="menu__plats">
                         <h2>Côte de boeuf Angus</h2>
                         <p>Et sa purée de panais</p>
                     </div>
@@ -130,16 +139,18 @@
                         </span>
                     </div>
                 </article>
-                
             </section>
 
-            <section>
-                <p class="menu__restau_titre">Desserts</p>
-                <div class="menu__restau_soulignement">
-
+            <section class="menu__restau_tiers">
+                <div class="menu__restau_titre">
+                    <p >Desserts</p>
+                    <div class="menu__restau_soulignement">
+                        <div class="menu__restau_ligne-verte"></div>
+                    </div>
+                </div>
                 </div>
                 <article class="menu__restau_cartes">
-                    <div>
+                    <div class="menu__plats">
                         <h2>Farandole de desserts</h2>
                         <p>Du chef</p>
                     </div>
@@ -153,7 +164,7 @@
                     </div>
                 </article>
                 <article class="menu__restau_cartes">
-                    <div>
+                    <div class="menu__plats">
                         <h2>Crème brulée </h2>
                         <p>Revisitée</p>
                     </div>
@@ -164,11 +175,11 @@
                         <span class="fa-tourne">
                             <i class="fas fa-check"></i>
                         </span>
-                    </article>
-                </div>
+                    </div>  
+                </article>
                 <article class="menu__restau_cartes">
-                    <div>
-                        <h2>Tiramisu </h2>
+                    <div class="menu__plats">
+                        <h2>Tiramisu</h2>
                         <p>À la noisette</p>
                     </div>
                     <div class="menu__slide">
@@ -178,13 +189,14 @@
                         <span class="fa-tourne">
                             <i class="fas fa-check"></i>
                         </span>
-                    </article>
-                </div>
-                <a href="#"  > 
-                <p class="menu__btn_commander">Commander</p>
-                </a>
+                    </div>
+                </article>
             </section>
-            
+            <div class="menu__btn">
+                <a href="#" class="menu__btn_commander"  > 
+                    <p>Commander</p>
+                 </a>
+            </div>
         </section>  
     </main>
 
@@ -194,10 +206,10 @@
         <p class="footer__logo_white">ohmyfood</p>
         <ul class="footer__liste">
            <li>
-              <a class="footer__ancres_illustrees">
-                 <i class="fas fa-utensils footer__icones"></i>
-                 <p> Proposer un restaurant</p>
-              </a>
+            <a class="footer__ancres_illustrees">
+                <i class="fas fa-utensils"></i>
+                <p> Proposer un restaurant</p>
+             </a>
            </li>   
            <li>
               <a class="footer__ancres_illustrees">
