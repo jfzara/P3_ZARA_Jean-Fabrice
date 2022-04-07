@@ -1,5 +1,5 @@
 
-/*-FONTS-*/
+/*--FONTS--*/
 
 
 @font-face {
@@ -124,7 +124,7 @@ footer a  {
     width: 100%;
 }
 
-.header-logo {
+.header__logo {
     width:43%;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -134,7 +134,7 @@ footer a  {
 /*TITRES H1 H2 */
 
 
-.container-titres {
+.entete-home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,7 +142,7 @@ footer a  {
     padding-bottom: 4rem;
 }
 
-.entete__titre,.entete__soustitre {
+.entete-home__titre,.entete-home__soustitre {
     padding-left: 0.5rem;
     text-align: center;
 }
@@ -422,7 +422,7 @@ footer a  {
 /*--FOOTER MOBILE--*/
 
 
-footer {
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -693,7 +693,7 @@ header {
 /*TITRES H1 H2 + bouton Explorer*/ 
 
 
-.container-titres {
+.entete-home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1156,7 +1156,7 @@ header {
 /*TITRES H1 H2 + bouton Explorer*/ 
   
 
-.container-titres {
+.entete-home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1612,7 +1612,7 @@ a {
 /*MENU éléments statiques*/
 
 
-.menu__restau { 
+.menu-restau { 
     position: relative;
     top: -113px;
     background-color: rgb(212, 211, 211);
@@ -1622,7 +1622,7 @@ a {
     
 }
 
-.menu__restau_titre { 
+.menu-restau__titre { 
     text-transform: uppercase;
     font-size: 2rem;
     line-height: 2rem;
@@ -1630,7 +1630,7 @@ a {
     position: relative;
 }
 
-.menu__restau_soulignement { 
+.menu-restau__soulignement { 
     border-bottom: 4px #99E2D0 solid;
     height: 3px;
     width: 5rem;
@@ -1638,7 +1638,7 @@ a {
     top: -25px;
 }
 
-.menu__slide {
+.menu-restau__cartes_slide {
     display: flex;
     flex-direction: row;
     background-color: #99E2D0;
@@ -1650,7 +1650,7 @@ a {
     left: 8rem;
 }
 
-.menu__plats {
+.menu-restau__plats {
     width: 50%;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1702,7 +1702,7 @@ a {
 
 /* carte */
 
-.menu__restau_cartes { 
+.menu-restau__cartes { 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1719,12 +1719,12 @@ a {
 }
 /*animation figcaption-lighten*/
 
-.menu__restau_cartes:hover {
+.menu-restau__cartes:hover {
     -webkit-filter: brightness(100%);
     
 }
  
-.menu__restau_cartes:hover {
+.menu-restau__cartes:hover {
  box-shadow: 9px 10px 10px rgb(189, 189, 189);    
     
 }
@@ -1738,7 +1738,7 @@ a {
     font-size: 1.5rem;
 }
 
-.fa-tourne /* div*/  { 
+.menu-restau__cartes_tourne /* div*/  { 
     position: absolute;
     width: 1rem;
     height: 1rem;
@@ -1751,17 +1751,17 @@ a {
 
 /*Animation sélection plats*/
 
-.menu__restau_cartes:hover .fa-tourne {
+.menu-restau__cartes:hover .menu-restau__cartes_tourne {
     transform: rotate(360deg);
     transition: all 0.3s linear;
 }
 
-.menu__restau_cartes:hover .menu__slide, .menu__slide p {
+.menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
     transform: translateX(-8rem);
     transition: all 0.3s ease-in-out;
 }
 
-.menu__restau_cartes:hover .menu__plats {
+.menu-restau__cartes:hover .menu-restau__plats {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     transition: width 0.3s ;
@@ -1829,7 +1829,7 @@ a {
 /*--FOOTER MOBILE--*/
 
 
-footer {
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -1912,12 +1912,12 @@ li {
   
 
 
-  .menu__restau_cartes {
+  .menu-restau__cartes {
     animation: slide-up 0.6s;
     animation-timing-function: ease-in-out;
 }
 
- .menu__restau_cartes {
+ .menu-restau__cartes {
     animation: fade-in 3000ms;
     animation-timing-function: ease-in;
 }
@@ -2004,7 +2004,7 @@ li {
 /*MENU éléments statiques*/
 
 
-.menu__restau { 
+.menu-restau { 
     position: relative;
     top: -344px;   
     font-size: initial; 
@@ -2015,7 +2015,7 @@ li {
     
 }
 
-.menu__restau::after {
+.menu-restau::after {
     content: "";
     width: 100%;
     height: 314vh;
@@ -2026,7 +2026,7 @@ li {
     z-index: -2;
 }
 
-.menu__restau_titre { 
+.menu-restau__titre { 
     text-transform: uppercase;
     font-size: 2rem;
     line-height: 2rem;
@@ -2034,7 +2034,7 @@ li {
     position: relative;
 }
 
-.menu__restau_soulignement { 
+.menu-restau__soulignement { 
     border-bottom: 4px #99E2D0 solid;
     height: 3px;
     width: 5rem;
@@ -2042,7 +2042,7 @@ li {
     top: -25px;
 }
 
-.menu__slide {
+.menu-restau__cartes_slide {
     display: flex;
     flex-direction: row;
     background-color: #99E2D0;
@@ -2054,7 +2054,7 @@ li {
     left: 8rem;
 }
 
-.menu__plats {
+.menu-restau__plats {
     width: 50%;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -2160,7 +2160,7 @@ li {
 
 /* carte */
 
-.menu__restau_cartes { 
+.menu-restau__cartes { 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -2180,12 +2180,12 @@ li {
 }
 /*animation figcaption-lighten*/
 
-.menu__restau_cartes:hover {
+.menu-restau__cartes:hover {
     -webkit-filter: brightness(100%);
     
 }
  
-.menu__restau_cartes:hover {
+.menu-restau__cartes:hover {
  box-shadow: 9px 10px 10px rgb(189, 189, 189);    
     
 }
@@ -2199,7 +2199,7 @@ li {
     font-size: 1.5rem;
 }
 
-.fa-tourne /* div*/  { 
+.menu-restau__cartes_tourne /* div*/  { 
     position: absolute;
     width: 1rem;
     height: 1rem;
@@ -2212,17 +2212,17 @@ li {
 
 /*Animation sélection plats*/
 
-.menu__restau_cartes:hover .fa-tourne {
+.menu-restau__cartes:hover .menu-restau__cartes_tourne {
     transform: rotate(360deg);
     transition: all 0.3s linear;
 }
 
-.menu__restau_cartes:hover .menu__slide, .menu__slide p {
+.menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
     transform: translateX(-8rem);
     transition: all 0.3s ease-in-out;
 }
 
-.menu__restau_cartes:hover .menu__plats {
+.menu-restau__cartes:hover .menu-restau__plats {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     transition: width 0.3s ;
@@ -2235,7 +2235,7 @@ li {
 /*--FOOTER--*/
 
 
-footer {
+.footer {
     background-color: rgb(65, 65, 65);
     display: flex;
     flex-direction: column;
@@ -2310,13 +2310,13 @@ li {
         
     
     
-.menu__restau_cartes {
+.menu-restau__cartes {
     animation: slide-up 0.6s;
     animation-timing-function: ease-in-out;
     animation-delay: 0.5s;
 }
 
-.menu__restau_cartes {
+.menu-restau__cartes {
     animation: fade-in 0.6s;
     animation-timing-function: ease-in;
 }
@@ -2467,7 +2467,7 @@ header {
 /*MENU éléments statiques*/
 
 
-.menu__restau {
+.menu-restau {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -2479,7 +2479,7 @@ header {
     padding-bottom: 4rem;
 }
 
-.menu__restau::after {
+.menu-restau::after {
     content: "";
     width: 100%;
     height: 71vh;
@@ -2489,7 +2489,7 @@ header {
     z-index: -2;
 }
 
-.menu__restau_tiers { 
+.menu-restau__tiers { 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2498,7 +2498,7 @@ header {
     
 }
 
-.menu__restau_titre { 
+.menu-restau__titre { 
     text-transform: uppercase;
     font-size: 2rem;
     line-height: 2rem;
@@ -2509,14 +2509,14 @@ header {
     
 }
 
-.menu__restau_soulignement { 
+.menu-restau__soulignement { 
     height: 3px;
     position: relative;
     top: -25px;
 }
 
 
-.menu__restau_ligne-verte { 
+.menu-restau__ligne-verte { 
     width: 100%;
     position: absolute;
     border: 2px #99E2D0 solid;
@@ -2526,7 +2526,7 @@ header {
 
 }
 
-.menu__slide {
+.menu-restau__cartes_slide {
     display: flex;
     flex-direction: row;
     background-color: #99E2D0;
@@ -2541,7 +2541,7 @@ header {
 
 
 
-.menu__plats {
+.menu-restau__plats {
     width: 50%;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -2549,7 +2549,7 @@ header {
 
 /* BOUTON Commander*/
 
-.menu__btn {
+.menu-restau__btn {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -2557,14 +2557,14 @@ header {
 }
 
 
-.menu__btn_commander {
+.menu-restau__btn_commander {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-decoration: none;
 }
 
-.menu__btn_commander p {
+.menu-restau__btn_commander p {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -2593,7 +2593,7 @@ header {
 /* carte */
 
 
-.menu__restau_cartes {
+.menu-restau__cartes {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -2612,12 +2612,12 @@ header {
 }
 /*animation figcaption-lighten*/
 
-.menu__restau_cartes:hover {
+.menu-restau__cartes:hover {
     -webkit-filter: brightness(100%);
     
 }
  
-.menu__restau_cartes:hover {
+.menu-restau__cartes:hover {
  box-shadow: 9px 10px 10px rgb(189, 189, 189);    
     
 }
@@ -2632,7 +2632,7 @@ header {
     font-size: 1.5rem;
 }
 
-.fa-tourne /* div*/  { 
+.menu-restau__cartes_tourne /* div*/  { 
     position: absolute;
     width: 1rem;
     height: 1rem;
@@ -2645,17 +2645,17 @@ header {
 
 /*Animation sélection plats*/
 
-.menu__restau_cartes:hover .fa-tourne {
+.menu-restau__cartes:hover .menu-restau__cartes_tourne {
     transform: rotate(360deg);
     transition: all 0.3s linear;
 }
 
-.menu__restau_cartes:hover .menu__slide, .menu__slide p {
+.menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
     transform: translateX(-8rem);
     transition: all 0.3s ease-in-out;
 }
 
-.menu__restau_cartes:hover .menu__plats {
+.menu-restau__cartes:hover .menu-restau__plats {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     transition: width 0.3s ;
@@ -2665,10 +2665,10 @@ header {
 
 /*ANIMATION MENU FADE IN apparition progressive*/
 
-.menu__restau .menu__restau_tiers
+.menu-restau .menu-restau__tiers
 
 
-.menu__restau_tiers { 
+.menu-restau__tiers { 
     animation: fade-in-tiers 1.5s forwards;
     
 }
@@ -2694,7 +2694,7 @@ header {
 
     
 
-.menu__restau_fade {
+.menu-restau_fade {
     width: 100%;
     height: 100%;
 
@@ -2702,7 +2702,7 @@ header {
     animation-timing-function: ease-in;
 }
 
-/*.menu__restau_fade {
+/*.menu-restau_fade {
     animation: slide-up 0.6s;
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
@@ -2711,7 +2711,7 @@ header {
 /*FOOTER DESKTOP*/ 
 
 
-footer {
+.footer {
     background-color: rgb(65, 65, 65);
     display: flex;
     flex-direction: column;
