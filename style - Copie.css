@@ -2391,30 +2391,47 @@ li {
 .menu__restau { 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     position: relative;
-    top: -344px;   
-    font-size: initial; 
-    background-color: rgb(211, 211, 211); 
-    padding-left: 2rem ;
-    padding-right: 2rem ;
-    padding-bottom: 7rem;
+    top: -344px;
+    font-size: initial;
+    background-color: rgb(211, 211, 211);
+    padding-bottom: 4rem;
+}
+.menu__restau_tiers { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
-
 .menu__restau_titre { 
     text-transform: uppercase;
     font-size: 2rem;
     line-height: 2rem;
     padding-top: 2rem;
     position: relative;
+    overflow: hidden;
+    width: fit-content;
+    
 }
 
 .menu__restau_soulignement { 
-    border-bottom: 4px #99E2D0 solid;
     height: 3px;
-    width: 5rem;
     position: relative;
     top: -25px;
+}
+
+
+.menu__restau_ligne-verte { 
+    width: 100%;
+    position: absolute;
+    border: 2px #99E2D0 solid;
+}
+
+
+
 }
 
 .menu__slide {
@@ -2435,12 +2452,28 @@ li {
     white-space: nowrap;
 }
 
+/* BOUTON Commander*/
+
+.menu__btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+
 .menu__btn_commander {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 28%;
-    min-width: 90px;
+    text-decoration: none;
+}
+
+.menu__btn_commander p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 193px;
     background-color: #9356DC;
     background-image: linear-gradient(to top left, #9356DC, #FF79DA);
     border-radius: 25px;
@@ -2455,13 +2488,7 @@ li {
     text-align: center;
     color: white;
     font-weight: 500;
-}
-
-.menu__restau a { 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 
