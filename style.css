@@ -422,7 +422,7 @@ footer a  {
 
 
 
-/*--FOOTER MOBILE--*/
+/*--FOOTER --*/
 
 
 .footer {
@@ -894,7 +894,7 @@ header {
                                         
 
 
-/*FOOTER TABLETTE*/
+/*FOOTER */
 
 
 .footer {
@@ -1339,7 +1339,7 @@ header {
 }   
 
  
-/*FOOTER DESKTOP*/ 
+/*FOOTER */ 
 
 
 .footer {
@@ -1395,6 +1395,12 @@ li {
 
 
 
+
+
+
+
+
+
 /*PAGE RESTAURANT mobile*/ 
 
 
@@ -1432,7 +1438,7 @@ a {
 /*HEADER mobile*/ 
 
 
-.header__container_restau {
+.header-restau__container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1444,34 +1450,26 @@ a {
 }
 
 
-.header__container_restau i {
+.header-restau__container i {
     position: absolute;
-    left: 12%;
-    top: 6%;
     font-size: 2rem;
     font-weight: 700;
     color: rgb(58, 58, 58);
+    left: 12%;
+    top: 9%;
 }
 
-.header__restau_logo{
+.header-restau__logo{
     font-family: Shrikhand;
     font-size: 3rem;
     font-weight: 700;
     padding-left: 1.5rem;  
 }
 
-/*HEADER*/ 
 
 
-.header__container_restau {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 25%;
-    padding-left: 2rem;
-    margin-top: 1rem;
-}
+
+
 
 
 /*EN-TETE*/ 
@@ -1836,14 +1834,12 @@ li {
 
 .tout {
     height: 390vh;
-}
-    
-        
+}      
     
 /*HEADER*/ 
 
 
-.header__container_restau {
+.header-restau__container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1852,15 +1848,16 @@ li {
     padding-left: 2rem;
     margin-top: 1rem;
     padding-right: 4rem;
+    height: 5rem;
 }
-
-.header__container_restau i {
+    
+.header-restau__container i {
     font-size: 2rem;
     font-weight: 700;
     color: rgb(58, 58, 58);
     position: absolute;
     left: 12%;
-    top: 14%;
+    top: 9%;
 }
 
 /*EN-TETE*/ 
@@ -2242,7 +2239,7 @@ li {
 
 /*HEADER*/ 
 
-header {
+.header-restau {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2250,18 +2247,29 @@ header {
     padding-bottom: 1rem;
 }
 
+.header-restau__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    height: 5rem;
+    justify-content: center;
+    gap: 19%;
+    padding-right: 4rem;
+    
+}
 
-
-.header__container_restau i {
+.header-restau__container i {
     font-size: 2rem;
     font-weight: 700;
     color: rgb(58, 58, 58);
     position: absolute;
     left: 12%;
-    top: 12%;
+    top: 9%;
 }
 
-.header__restau_logo {
+.header-restau__logo {
     font-family: Shrikhand;
     font-size: 3rem;
     font-weight: 700;

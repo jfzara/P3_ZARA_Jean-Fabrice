@@ -22,7 +22,7 @@ $font-tres-gras: 900;
 $font-normale: 1rem;
 $font-moyenne: 1.2rem;
 $font-grande: 1.5rem;
-$font-tres-grande: 2rem;
+$font-tres-grande: 2.5rem;
 
 @font-face {
     font-family: Shrikhand;
@@ -1232,16 +1232,454 @@ li {
 
 
 
-                                            
-            
+
+/*PAGE RESTAURANT */ 
 
 
 
 
+/*MAIN page restaurant (class="tout") */ 
 
 
+@media screen and (max-width: 768px) {
+    .tout {
+        height: 362vh;
+        min-width: 356px;
+    }
+}
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+    .tout {
+        height: 390vh;
+    }
+
+}
+
+@media screen  and (min-width: 990px) {
+    .tout {
+        height: 321vh;
+    }
+}
+  
+
+/*HEADER */ 
 
 
- 
+@mixin header-restau-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    height: 5rem;
+}
+@mixin fleche-retour {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(58, 58, 58);
+    left: 12%;
+    top: 9%;
+}
+@mixin header-restau-logo {
+    font-family: Shrikhand;
+    font-size: 3rem;
+    font-weight: 700;
+    padding-left: 1.5rem;  
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .header-restau {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .header-restau__container {
+        @include header-restau-container;
+        justify-content: flex-start;
+        gap: 23%;  
+    }
+
+    .header-restau__container i {
+        @include fleche-retour;
+    }
+
+    .header-restau__logo {
+        @include header-restau-logo;  
+    }
 
 } 
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+
+    .header-restau {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .header-restau__container {
+        @include header-restau-container;
+        justify-content: center;
+        gap: 19%;
+        padding-right: 4rem;  
+    }
+    
+    .header-restau__container i {
+        @include fleche-retour;
+    }
+
+
+
+
+} 
+
+@media screen  and (min-width: 990px) {
+
+    .header-restau {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .header-restau__container {
+        @include header-container-restau;
+    
+        justify-content: center;
+        gap: 19%;
+        padding-right: 4rem;  
+    }
+
+    .header-restau__container i {
+        @include fleche-retour;
+    }
+
+    .header-restau__logo {
+        @include header-restau-logo;
+    }
+
+
+    
+
+
+
+
+
+
+
+} 
+
+
+
+
+/*EN-TETE*/ 
+
+
+@mixin entete-restau {
+    width: 100%;
+    margin-inline-start: 0;
+    margin-inline-end: 0; 
+}
+@mixin entete-restau-images{
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+}
+@mixin nom-restau {
+    font-family: Shrikhand;
+    font-size: $font-tres-grande;
+    font-weight: $font-gras;
+    padding-left: 1.5rem;  
+}
+@mixin pancarte{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3rem;
+    background-color: rgb(222, 222, 222);
+    border-radius: 60px 60px 0 0;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+
+    .entete__restau  {
+        @include entete-restau; 
+    
+
+    & img {
+        @include entete-restau-images;
+        height: 28rem;   
+    } 
+
+    & p  {
+        @include nom-restau;  
+    }
+
+    & figcaption {
+        @include pancarte;
+        bottom: 94px;
+    }
+
+} 
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+    .entete__restau {
+        @include entete-restau;
+        height: 52rem;
+    
+
+    & img {
+        @include entete-restau-images;
+        height: 37rem;
+    } 
+
+    & p  {
+        @include nom-restau;  
+    }
+
+    & figcaption {
+        @include pancarte;
+        bottom: 220px;
+    }
+
+} 
+
+@media screen  and (min-width: 990px) {
+    .entete__restau {
+        @include entete-restau;
+        height: 52rem;
+    
+    
+        & img {
+        @include entete-restau-images;
+        height: 37rem;
+        } 
+
+        & p  {
+            @include nom-restau;  
+        }
+
+        & figcaption {
+            @include pancarte;
+            bottom: 220px;
+        }
+        
+    }
+
+
+
+/*MENU éléments statiques*/
+
+
+.menu-restau { 
+    position: relative;
+    top: -113px;
+    background-color: rgb(212, 211, 211);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+    
+}
+
+.menu-restau__titre { 
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding-top: 2rem;
+    position: relative;
+}
+
+.menu-restau__soulignement { 
+    border-bottom: 4px #99E2D0 solid;
+    height: 3px;
+    width: 5rem;
+    position: relative;
+    top: -25px;
+}
+
+.menu-restau__cartes_slide {
+    display: flex;
+    flex-direction: row;
+    background-color: #99E2D0;
+    font-weight: 700;
+    width: 3rem;
+    height: 3rem;
+    padding: 2rem;
+    position: relative;
+    left: 8rem;
+}
+
+.menu-restau__plats {
+    width: 50%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {} 
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+/*MENU éléments statiques*/
+
+
+.menu-restau { 
+    position: relative;
+    top: -344px;   
+    font-size: initial; 
+    background-color: rgb(212, 212, 212); 
+    padding-left: 2rem ;
+    padding-right: 2rem ;
+    padding-bottom: 2rem;
+    
+}
+
+.menu-restau::after {
+    content: "";
+    width: 100%;
+    height: 314vh;
+    background-color: rgb(211, 211, 211);
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    z-index: -2;
+}
+
+.menu-restau__titre { 
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding-top: 2rem;
+    position: relative;
+}
+
+.menu-restau__soulignement { 
+    border-bottom: 4px #99E2D0 solid;
+    height: 3px;
+    width: 5rem;
+    position: relative;
+    top: -25px;
+}
+
+.menu-restau__cartes_slide {
+    display: flex;
+    flex-direction: row;
+    background-color: #99E2D0;
+    font-weight: 700;
+    width: 3rem;
+    height: 3rem;
+    padding: 2rem;
+    position: relative;
+    left: 8rem;
+}
+
+.menu-restau__plats {
+    width: 50%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+} 
+@media screen  and (min-width: 990px) {
+
+/*MENU éléments statiques*/
+
+
+.menu-restau {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    top: -344px;
+    font-size: initial;
+    background-color: rgb(211, 211, 211);
+    padding-bottom: 4rem;
+}
+
+.menu-restau::after {
+    content: "";
+    width: 100%;
+    height: 71vh;
+    background-color: rgb(211, 211, 211);
+    position: absolute;
+    top: 81rem;
+    z-index: -2;
+}
+
+.menu-restau__tiers { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44%;
+    
+}
+
+.menu-restau__titre { 
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    
+}
+
+.menu-restau__soulignement { 
+    height: 3px;
+    position: relative;
+    top: -25px;
+}
+
+
+.menu-restau__ligne-verte { 
+    width: 100%;
+    position: absolute;
+    border: 2px #99E2D0 solid;
+}
+
+
+
+}
+
+.menu-restau__cartes_slide {
+    display: flex;
+    flex-direction: row;
+    background-color: #99E2D0;
+    font-weight: 700;
+    width: 3rem;
+    height: 3rem;
+    padding: 2rem;
+    position: relative;
+    left: 8rem;
+}
+
+
+
+
+.menu-restau__plats {
+    width: 50%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+} 
+
+
+
+
+}
