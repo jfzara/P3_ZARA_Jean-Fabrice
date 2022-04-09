@@ -332,6 +332,8 @@ footer a  {
 
 }
 
+
+
 /*--FORMULAIRE--*/
 
 /*@mixin formulaire*/ 
@@ -363,7 +365,6 @@ footer a  {
 $formulaire-border-hauteur:26px;
 
 
-
 @media screen and (max-width: 768px) {
 
     .formulaire {
@@ -384,20 +385,18 @@ $formulaire-border-hauteur:26px;
     } 
     
     .formulaire__icone {
-    @include formulaire-icone
-    margin-right: 13px;
-}
+        @include formulaire-icone;
+        margin-right: 13px;
+    }
 
-.formulaire__border_gradient {
+    .formulaire__border_gradient {
     height: 2px;
     @include formulaire-border-gradient;
 }
 
-
 } 
 
 @media screen  and (min-width: 768px) and (max-width: 990px) {
-    /*FORMULAIRE*/
 
     .formulaire {
         @include formulaire;
@@ -409,7 +408,7 @@ $formulaire-border-hauteur:26px;
     } 
     
     .formulaire__icone {
-        @include formulaire-icone
+        @include formulaire-icone;
         margin-right: 10px;
     }
     
@@ -433,15 +432,677 @@ $formulaire-border-hauteur:26px;
     } 
   
     .formulaire__icone {
-        @include formulaire-icone
+        @include formulaire-icone;
         margin-right: 6px;
     }
-    
-
   
-.formulaire__border_gradient {
+    .formulaire__border_gradient {
     height:$formulaire-border-hauteur;
     @include formulaire-border-gradient;
+    }
+
+} 
+
+
+/*--SECTION FONCTIONNEMENT (fctn)--*/
+
+
+@mixin etape-3-fctn {
+    background-color: #ecddff;
 }
+@mixin section-fctn__numero{
+    background-color: $color-primary;
+    color: white;
+    border-radius: 50px; 
+    position: relative;
+    left: -1rem;
+    text-align: center;
+}
+@mixin section-fctn__icones{
+    border-radius: 50px;
+    margin: 10px;  
+}
+@mixin fctn-texte-tablette-desktop {
+    font-size: 1rem;
+    font-weight: bold;
+    width: 50%;
+    color: $color-tertiary-darker;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+.section-fctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    
+        &__etape {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            height: 3.5rem;
+            background-color: $color-tertiary-lighter; 
+            border: 0px $color-tertiary-lighter solid;
+            border-radius: 17px;
+            box-shadow: 5px 5px 7px $color-tertiary-light;
+            color: $color-tertiary-darker;
+        }
+
+        &__numero {
+            @include section-fctn__numero;
+            padding-top: 1px;
+            padding-bottom: 7px;
+            width: 28px;
+            height: 19px;
+        }
+
+        & i {
+            font-size: $font-normale;
+            width:8%;
+            color: $color-tertiary-dark;/*variable*/ 
+            margin: 10px;
+        }
+        
+        &__texte {
+            font-size: 1rem;
+            font-weight: bold;
+            width: 50%; 
+        }
+
+} 
+
+.section-fctn div:nth-of-type(3) { 
+    @include etape-3-fctn;
+    }
+
+.section-fctn div:nth-of-type(3) i {
+    color: $color-primary;
+    }
+    
+}
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+.section-fctn {
+
+    {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+
+    &__titre {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__etape {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 30%;
+        height: 4rem;
+        border: 0px $color-tertiary-darker solid;
+        border-radius: 50px;
+        box-shadow: 7px 15px 17px  $color-tertiary-light;
+        position: relative;
+        cursor: pointer;
+    }
+
+
+    &__numero {
+        @include section-fctn__numero;
+        background-image: linear-gradient(to top right, $color-primary, $color-secondary);
+        font-size: 1rem;
+        font-weight: 500;
+        padding-top: 5px;
+        width: 29px;
+        height: 23px;
+    }
+
+    & i {
+        font-size: $font-normale;
+        font-weight: $font-tres-gras;
+        color: $color-tertiary-dark;
+    }
+
+    &__icones {
+        @include section-fctn__icones;  
+    }
+
+    &__texte {
+        @include fctn-texte-tablette-desktop ;
+    }
+}
+
+.section-fctn div:nth-of-type(3) { 
+        {
+            @include etape-3-fctn;
+        }/*etape 3 : "dégustez au restaurant"  @mixin etape-3-fctn*/
+
+        & i {
+            color: $color-primary;
+        }/*etape 3 : " icône restaurant (dégustez au restaurant)"*/
+
+    }
+    
+} 
+
+@media screen  and (min-width: 990px) { 
+
+.section-fctn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-top: 2rem;
+
+        &__titre{
+        width: 100%;
+        text-align: center;     
+    }
+    
+        &__etape {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 24%;
+        border: 0px rgb(227, 227, 227) solid;
+        border-radius: 50px;
+        box-shadow: 7px 15px 17px rgb(218, 218, 218);
+        position: relative;
+        font-size: 0.9rem;
+    }
+    
+    &__numero{
+        @include section-fctn__numero;
+        padding-top: 5px;
+        background-image: linear-gradient(to top right, $color-primary, $color-secondary);
+        width: 28px;
+        height: 23px;
+    }
+    
+    & i {
+        font-size: $font-normale;
+        font-weight: $font-tres-gras;
+        color: $color-tertiary-dark;
+    }
+    
+    &__icones {
+        @include section-fctn__icones;
+    }
+    
+    &__texte {
+        @include fctn-texte-tablette-desktop ;
+    }
+}
+  
+.section-fctn div:nth-of-type(3) { 
+    
+    @include etape-3-fctn;
+          /*etape 3 : "dégustez au restaurant"  @mixin etape-3-fctn*/
+
+        & i {
+            color: $color-primary;
+        }      /*etape 3 : " icône restaurant (dégustez au restaurant)"*/
+
+}
+    
+
+} 
+
+
+
+/*SECTION RESTOS*/
+
+
+@mixin menu-restau-tablette-desktop {
+    display: flex;
+    background-color: $color-tertiary-lighter;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+}
+@mixin ombre-cartes {
+    box-shadow: 9px 10px 16px $color-tertiary-light;
+}
+
+@mixin cartes-home-tablette-desktop {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6rem;
+    @include ombre-cartes;
+    border-radius: 0 0 15px 15px;
+}
+@mixin resto-photos { 
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+@mixin resto-nouveau{
+    border: 3px $color-emphasis-light solid;
+    background-color: $color-emphasis-light;
+    color: $color-emphasis-dark;
+    font-weight: bold;
+    width: 20%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-align: center;
+} 
+@mixin resto-legende {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 0 0 15px 15px ;
+    filter: brightness(96%); 
+}
+@mixin legende-mobile {
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    height: 8rem; 
+}
+@mixin legende-tablette-desktop {
+    box-sizing: border-box; 
+    padding-left: 0.4rem;
+    padding-right: 2rem;
+    border-top: 0;
+    height: 7rem;
+    
+}
+@mixin restos-infos{
+    display: flex;
+    flex-direction: column;
+} 
+
+                                            /*animation cartes éclaircissement*/
+@mixin ombre-cartes-assombrissement {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);
+}
+@mixin cartes-animation-eclaircissement {
+    -webkit-filter: brightness(100%);  
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .restos {
+    
+        display: flex;
+        margin-bottom: 3rem;
+        background-color: $color-tertiary-lighter;
+        padding-top: 1rem;
+        margin-top: 3rem;
+        flex-direction: column; 
+        padding-bottom: 4rem;  
+    
+
+    &__titre {
+        font-size: $font-grande; /*variable $font-titre-sections + titre fctn*/
+        font-weight: $font-gras;
+        padding-left: 2.5rem;
+     }
+
+    &__fig {
+        position: relative;
+        @include ombre-cartes;
+        width: 92%;
+        border-radius: 15px;
+
+    }
+
+    &__photos  { 
+        @include resto-photos;
+        height: 15rem;
+    }
+
+    &__nouveau {
+        @include resto-nouveau;
+    } 
+
+    &__legende {
+        @include resto-legende;
+        @include legende-mobile;
+        
+    }
+
+    &__cartes{
+        cursor: pointer;  
+    } 
+
+    &__infos {
+        @include restos-infos;
+    } 
+    
+    /*animation figcaption-lighten*/
+
+    &__cartes:hover  &__legende {
+        @include cartes-animation-eclaircissement;    
+    }
+
+    &__cartes:hover  &__fig {
+        @include ombre-cartes-assombrissement;     
+    }
+
+
+ }
+    
+} 
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+    
+    .restos {
+        @include menu-restau-tablette-desktop;
+        padding-top: 1rem;
+        padding-bottom: 3rem;  
+    
+
+    &__titre {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__fig  {
+        @include cartes-home-tablette-desktop;
+    }
+
+    & img {
+        @include resto-photos;
+        height: 300px;
+        border-bottom: 0;  
+    }
+
+    &__nouveau {
+        @include resto-nouveau;
+    } 
+
+    &__legende {
+        @include resto-legende;
+        @include legende-tablette-desktop;
+        
+    }
+
+    & article {
+        width: 55rem;
+        margin-bottom: 1.7rem;
+    }  
+    
+    &__infos {
+        @include restos-infos;
+    } 
+
+    /*animation figcaption-lighten*/
+
+    &__cartes:hover  &__legende {
+        @include cartes-animation-eclaircissement;    
+    }
+    
+    &__cartes:hover  &__fig {
+        @include ombre-cartes-assombrissement;     
+    }
+} 
+
+} 
+
+@media screen  and (min-width: 990px) {
+    
+.restos {
+    @include menu-restau-tablette-desktop; 
+    align-items: center; 
+    padding-top: 3rem;
+    padding-right: 5rem;   
+
+
+    &__titre {
+    
+        text-align: center;
+        margin-bottom: 3rem;
+        margin-left: 6rem;
+        width: 100%;
+    }
+
+    &__fig {
+        @include cartes-home-tablette-desktop; 
+    }
+    
+    & img {
+        @include resto-photos;
+        height: 300px;
+        border-bottom: 0;  
+    }
+
+    &__nouveau {
+        @include resto-nouveau;
+    } 
+
+    &__legende {
+        @include resto-legende;
+        @include legende-tablette-desktop;
+        
+    }
+
+    & article {
+        width: 50%;
+        margin-bottom: 1.7rem;
+    }  
+
+    &__infos {
+        @include restos-infos;
+    } 
+
+    /*animation figcaption-lighten*/
+
+    &__cartes:hover  &__legende {
+        @include cartes-animation-eclaircissement;    
+    }
+    
+    &__cartes:hover  &__fig {
+        @include ombre-cartes-assombrissement;     
+    }
+
+}
+
+} 
+
+/*ANIMATION COEUR OPACITY*/
+                                            
+                                            
+.restos__coeur {
+    font-size: 2rem;
+    position: relative;
+    height: 2rem;
+    font-size: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 255, 255); 
+}        
+
+
+.restos__coeur_plein {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    opacity: 0;
+}
+
+.restos__coeur_vide {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+}
+
+
+@keyframes accueil-coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
+.restos__coeur:hover  .restos__coeur_plein {
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+.restos__coeur:hover .restos__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;
+    
+}  
+
+@media screen and (max-width: 768px) {} 
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+/*ANIMATION COEUR OPACITY*/
+                                            
+                                            
+.restos__coeur {
+    font-size: 2rem;
+    position: relative;
+    height: 2rem;
+    font-size: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 255, 255); 
+}        
+
+
+.restos__coeur_plein {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    opacity: 0;
+}
+
+.restos__coeur_vide {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+}
+
+
+@keyframes accueil-coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
+.restos__coeur:hover  .restos__coeur_plein {
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+.restos__coeur:hover .restos__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;
+    
+}  
+
+} 
+@media screen  and (min-width: 990px) {
+
+/*ANIMATION COEUR OPACITY*/
+                                            
+                                            
+.restos__coeur {
+    font-size: 2rem;
+    position: relative;
+    height: 2rem;
+    font-size: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 255, 255); 
+}        
+
+
+.restos__coeur_plein {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    opacity: 0;
+}
+
+.restos__coeur_vide {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+}
+
+
+@keyframes accueil-coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
+.restos__coeur:hover  .restos__coeur_plein {
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+.restos__coeur:hover .restos__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;
+    
+}   
 
 } 
