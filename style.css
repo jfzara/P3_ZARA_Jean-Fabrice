@@ -420,6 +420,8 @@ footer a  {
     
 }  
 
+
+
 /*--FOOTER MOBILE--*/
 
 
@@ -432,11 +434,7 @@ footer a  {
     padding-top: 1.5rem;
     padding-left: 3rem;
     padding-right: 3rem;
-
 }
-
-
-
 
 
 .footer__logo_white {
@@ -477,13 +475,6 @@ li {
     line-height: 1rem;
 }
 
-.footer__icones {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 1.5rem;
-    margin-right: 0.5rem;
-}
 
 }
 
@@ -906,7 +897,7 @@ header {
 /*FOOTER TABLETTE*/
 
 
-footer {
+.footer {
     background-color: rgb(65, 65, 65);
     display: flex;
     flex-direction: column;
@@ -1351,11 +1342,11 @@ header {
 /*FOOTER DESKTOP*/ 
 
 
-footer {
+.footer {
     background-color: rgb(65, 65, 65);
     display: flex;
     flex-direction: column;
-    
+   
 }
   
 .footer__logo_white {
