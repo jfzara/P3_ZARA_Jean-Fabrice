@@ -1,15 +1,4 @@
 
-/*--FONTS--*/
-
-
-@font-face {
-    font-family: Shrikhand;
-    src: url('./shrikhand/Shrikhand-Regular.otf');
-}
-@font-face {
-    font-family: Roboto;
-    src: url('./robotofonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
-}
 
 
 /*--PAGE D'ACCUEIL MOBILE--*/
@@ -21,187 +10,6 @@
 
 
 
-/*animation accueil + spinner*/
-
-
-
-
-.fade-out {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(212, 212, 212);
-    z-index: 1;
-    animation: accueil-fondu_animation 2900ms forwards;
-    animation-timing-function: ease-in-out;
-
-}
-
-
-
-.fa-spinner {
-    position: absolute;
-    top: 20rem;
-    width: 6rem;
-    height: 6rem;
-    font-size: 6rem;
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: accueil-spinner 1.5s linear forwards;
-    animation-iteration-count: 5;
-} 
-
-@keyframes accueil-spinner {
-   
-    to {
-        transform: rotate(360deg);
-        
-        }
-}
-
-@keyframes accueil-fondu_animation {
-    
-    from {
-    opacity:1;
-    }
-    to {
-    opacity:0;
-    }
-
-}
-
-/*GENERAL*/
-
-body {
-    font-family: 'Roboto', sans-serif;  
-    margin: 0;
-}  
-
-.tout-home {
-    height:152rem;
-}
-
-h1, h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.titre_gras {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-p {
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-article, figure {
-    cursor: pointer;
-}
-
-footer a  {
-    font-size: 1.2rem;
-}
-
-/*HEADER-LOGO*/
-
-
-.header__container {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-
-.header__logo {
-    width:43%;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-
-
-/*TITRES H1 H2 */
-
-
-.entete-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:rgb(245, 245, 245);
-    padding-bottom: 4rem;
-}
-
-.entete-home__titre,.entete-home__soustitre {
-    padding-left: 0.5rem;
-    text-align: center;
-}
-
-
-/*BOUTON EXPLORER*/
-
-
-.btn__ancre_explorer {
-    background-color: #9356DC;
-    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
-    border-radius: 20px;
-    text-decoration: none;
-    line-height: 3rem;
-    width: 55%;
-    text-align: center;
-    color: white;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    cursor: pointer;
-}
-
-
-/*--FORMULAIRE--*/
-
-
-
- 
-.formulaire {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 2rem;
-    background-color: rgb(222, 222, 222); /*variable*/ 
-    border-top: 4px #c9c9c9 solid;
-    border-bottom: 1px solid rgb(222, 222, 222);   
-}
-
-.formulaire__texte {
-    color: rgb(54, 54, 54); /*variable*/ 
-    font-weight: 700;
-    background-color: rgb(222, 222, 222);
-    border: rgb(222, 222, 222);
-    width: 33%;
-    padding-left: 5px;
-} 
-
-.formulaire__icone {
-    color: rgb(54, 54, 54);
-    width: 20px;
-    margin-right: 13px;
-}
-
-.formulaire__border_gradient {
-    height: 2px;
-    background-image: linear-gradient(to bottom,rgb(112, 112, 112), #c9c9c9);
-}
 
 
 /*--SECTION FONCTIONNEMENT (fctn)--*/
@@ -488,130 +296,22 @@ li {
 }
 
 
+
+
+
+
 /*--PAGE D'ACCUEIL TABLETTE--*/
-
-
-/*animation accueil + spinner*/
-
-
-
-
-.fade-out {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(212, 212, 212);
-    z-index: 1;
-    animation: accueil-fondu_animation 2900ms forwards;
-    animation-timing-function: ease-in-out;
-
-}
-
-
-
-.fa-spinner {
-    position: absolute;
-    top: 20rem;
-    width: 6rem;
-    height: 6rem;
-    font-size: 6rem;
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: accueil-spinner 1.5s linear forwards;
-    animation-iteration-count: 5;
-} 
-
-@keyframes accueil-spinner {
-   
-    to {
-        transform: rotate(360deg);
-        
-        }
-}
-
-@keyframes accueil-fondu_animation {
-    
-    from {
-    opacity:1;
-    }
-    to {
-    opacity:0;
-    }
-
-}
-
 
 
 @media screen  and (min-width: 768px) and (max-width: 990px) {
     
 
-   /*FONTS*/ 
-
-
-@font-face {
-    font-family: Roboto;
-    src: url('./robotofonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
-}
 
 
 
 
-/*GENERAL*/
 
 
-body {
-    font-family: Roboto;
-    margin: 0;
-}
-
-.tout-home {
-    height: 164rem;
-}
-
-article {
-    cursor: pointer;
-}
-
-/*HEADER-LOGO*/
-
-
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-} 
-
-.header__container {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    
-}
-
-.header__restau_logo {
-    font-family: Shrikhand;
-    font-size: 3rem;
-    font-weight: 700;
-    padding-left: 1.5rem;
-    
-}
-
-.header__container_restau i {
-    position: absolute;
-    left: 20px;
-    top: 41px;
-    font-size: 2rem;
-    font-weight: 700;
-    color: rgb(58, 58, 58);
-}
 /*FORMULAIRE*/
 
 
@@ -639,7 +339,6 @@ header {
 .formulaire__icone {
     color: rgb(54, 54, 54);
     margin-right: 10px;
-    width: 20px;
 }
 
 .formulaire__border_gradient {
@@ -648,31 +347,7 @@ header {
 }
 
 
-/*TITRES H1 H2 + bouton Explorer*/ 
 
-
-.entete-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2rem;
-    background-color:rgb(245, 245, 245);
-    border-radius: 0 0 25px 25px;
-}
-
-.btn__ancre_explorer {
-    background-color: #9356DC;
-    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
-    border-radius: 20px;
-    text-decoration: none;
-    line-height: 3rem;
-    width: 50%;
-    text-align: center;
-    color: white;
-    margin-top: 1rem;
-    box-shadow: 6px 8px 6px rgb(205 205 205);
-    cursor: pointer;
-}
 
 
 /*SECTION FONCTIONNEMENT (fctn)*/
@@ -961,131 +636,23 @@ li {
 /*PAGE D'ACCUEIL DESKTOP*/
 
 
-/*animation accueil + spinner*/
 
-
-
-
-.fade-out {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(212, 212, 212);
-    z-index: 1;
-    animation: accueil-fondu_animation 2900ms forwards;
-    animation-timing-function: ease-in-out;
-
-}
-
-
-
-.fa-spinner {
-    position: absolute;
-    top: 20rem;
-    width: 6rem;
-    height: 6rem;
-    font-size: 6rem;
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: accueil-spinner 1.5s linear forwards;
-    animation-iteration-count: 5;
-} 
-
-@keyframes accueil-spinner {
-   
-    to {
-        transform: rotate(360deg);
-        
-        }
-}
-
-@keyframes accueil-fondu_animation {
-    
-    from {
-    opacity:1;
-    }
-    to {
-    opacity:0;
-    }
-
-}
 
 @media screen  and (min-width: 990px) {
 
-/*FONTS*/
 
 
-@font-face {
-    font-family: Roboto;
-    src: url('./robotofonts/roboto_regular_macroman/Roboto-Regular-webfont.woff');
-}
 
 
-/*GENERAL*/
 
 
-body {
-    font-family: Roboto;
-    margin: 0;
-}
-
-.tout-home {
-    height: 108rem;
-}
-
-article {
-    cursor: pointer;
-}
 
 
-/*HEADER-LOGO*/
 
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.header__container {
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}  
     
 
-/*TITRES H1 H2 + bouton Explorer*/ 
-  
 
-.entete-home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2rem;
-    background-color: rgb(245, 245, 245);
-    border-radius: 0 0 25px 25px;
-}
-  
-.btn__ancre_explorer {
-    background-color: #9356DC;
-    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
-    border-radius: 20px;
-    text-decoration: none;
-    line-height: 3rem;
-    width: 50%;
-    text-align: center;
-    color: white;
-    box-shadow: 6px 8px 6px rgb(205 205 205);
-    cursor: pointer;
-}
   
 
 /*FORMULAIRE*/ 
@@ -1115,7 +682,6 @@ header {
 .formulaire__icone {
     color: rgb(54, 54, 54);
     margin-right: 6px;
-    width: 20px;
 }
   
 .formulaire__border_gradient {
