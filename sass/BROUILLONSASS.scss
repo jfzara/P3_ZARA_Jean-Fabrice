@@ -1884,3 +1884,218 @@ li {
 
 
 } 
+
+
+
+/*Animation sélection plats*/
+
+@mixin sélection-plats-restau {
+    
+    .menu-restau__cartes:hover .menu-restau__cartes_tourne {
+        transform: rotate(360deg);
+        transition: all 0.3s linear;
+    }
+    
+    .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
+        transform: translateX(-8rem);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .menu-restau__cartes:hover .menu-restau__plats {
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        transition: width 0.3s ;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .menu-restau__cartes:hover{ 
+       @include sélection-plats-restau; 
+    }
+    
+} 
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+    .menu-restau__cartes:hover{ 
+        @include sélection-plats-restau; 
+     }
+
+} 
+@media screen  and (min-width: 990px) {
+
+    .menu-restau__cartes:hover{ 
+        @include sélection-plats-restau; 
+     }
+
+} 
+
+
+/*ANIMATION COEUR OPACITY*/
+  
+@mixin restau-coeur {
+    font-size: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    width: 2rem;
+    border: none;
+    background-color: rgb(222, 222, 222); 
+    position: relative;
+    cursor: pointer;
+}        
+@keyframes coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
+@media screen and (max-width: 768px) {
+
+    .restau__coeur {
+    
+        @include restau-coeur;
+          
+        &_plein {
+            @include restau-coeur;
+            background: -webkit-linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: 0;
+            opacity: 0;
+        }
+    
+        &_vide {
+            @include restau-coeur;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: 0;
+        }
+    
+        &:hover  &_plein {
+            animation: coeur-fill 0.6s forwards;
+            animation-timing-function: ease-in;
+            
+        }    
+        &:hover &_vide {
+            transform: scale(1.2) ;
+            transition: transform  0.5s ease-in-out;
+    
+        }  
+    
+    }   
+
+} 
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+    .restau__coeur {
+    
+        @include restau-coeur;
+          
+        &_plein {
+            @include restau-coeur;
+            background: -webkit-linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: 0;
+            opacity: 0;
+        }
+    
+        &_vide {
+            @include restau-coeur;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: 0;
+        }
+    
+        &:hover  &_plein {
+            animation: coeur-fill 0.6s forwards;
+            animation-timing-function: ease-in;
+            
+        }    
+        &:hover &_vide {
+            transform: scale(1.2) ;
+            transition: transform  0.5s ease-in-out;
+    
+        }  
+    
+    }   
+
+} 
+@media screen  and (min-width: 990px) {
+
+    .restau__coeur {
+    
+        @include restau-coeur;
+          
+        &_plein {
+            @include restau-coeur;
+            background: -webkit-linear-gradient($color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: 0;
+            opacity: 0;
+        }
+    
+        &_vide {
+            @include restau-coeur;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: 0;
+        }
+    
+        &:hover  &_plein {
+            animation: coeur-fill 0.6s forwards;
+            animation-timing-function: ease-in;
+            
+        }    
+        &:hover &_vide {
+            transform: scale(1.2) ;
+            transition: transform  0.5s ease-in-out;
+    
+        }  
+    
+    }   
+
+} 
+
+
+
+/*ANIMATION MENU FADE IN apparition progressive*/
+
+.menu-restau__tiers { 
+    animation: fade-in-tiers 1.5s forwards;   
+}
+
+@keyframes fade-in-tiers {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {} 
+@media screen  and (min-width: 768px) and (max-width: 990px) {} 
+@media screen  and (min-width: 990px) {} 

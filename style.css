@@ -1746,10 +1746,6 @@ a {
 }
 
 
-.footer__liste {
-    
-}
-
 li {
     list-style: none;
     color: white;
@@ -2596,15 +2592,6 @@ li {
         opacity: 1;
     }
     }
-
-@keyframes slide-up {
-    0%, 50% {
-        transform: translateY( 0.75rem ) ;
-    }
-    50% {
-        transform: translateY( 0.75rem ) ;
-    }
-}
 
     
 
