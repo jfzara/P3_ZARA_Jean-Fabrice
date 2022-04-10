@@ -1556,7 +1556,7 @@ a {
 
 /* BOUTON Commander*/
 
-.menu__btn {
+.menu-restau__btn {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -1564,14 +1564,14 @@ a {
 }
 
 
-.menu__btn_commander {
+.menu-restau__btn_commander {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-decoration: none;
 }
 
-.menu__btn_commander p {
+.menu-restau__btn_commander p {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1859,7 +1859,12 @@ li {
     left: 12%;
     top: 9%;
 }
-
+.header-restau__logo {
+    font-family: Shrikhand;
+    font-size: 3rem;
+    font-weight: 700;
+    padding-left: 1.5rem;
+}
 /*EN-TETE*/ 
 
 
@@ -1959,7 +1964,7 @@ li {
 
 /* BOUTON Commander*/
 
-.menu__btn {
+.menu-restau__btn {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -1967,14 +1972,14 @@ li {
 }
 
 
-.menu__btn_commander {
+.menu-restau__btn_commander {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-decoration: none;
 }
 
-.menu__btn_commander p {
+.menu-restau__btn_commander p {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -2433,6 +2438,7 @@ li {
 
 
 }
+
 
 .menu-restau__cartes_slide {
     display: flex;

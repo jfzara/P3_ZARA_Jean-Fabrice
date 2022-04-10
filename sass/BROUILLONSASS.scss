@@ -1432,7 +1432,7 @@ li {
     }
 
 } 
-
+} 
 @media screen  and (min-width: 768px) and (max-width: 990px) {
     .entete__restau {
         @include entete-restau;
@@ -1454,7 +1454,7 @@ li {
     }
 
 } 
-
+} 
 @media screen  and (min-width: 990px) {
     .entete__restau {
         @include entete-restau;
@@ -1476,42 +1476,34 @@ li {
         }
         
     }
+} 
+
 
 
 
 /*MENU éléments statiques*/
 
 
-.menu-restau { 
-    position: relative;
-    top: -113px;
-    background-color: rgb(212, 211, 211);
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 3rem;
-    
-}
-
-.menu-restau__titre { 
+@mixin restau-titre { 
     text-transform: uppercase;
     font-size: 2rem;
     line-height: 2rem;
     padding-top: 2rem;
     position: relative;
 }
-
-.menu-restau__soulignement { 
-    border-bottom: 4px #99E2D0 solid;
+@mixin ligne-verte { 
     height: 3px;
-    width: 5rem;
     position: relative;
-    top: -25px;
+    top: -25px;  
 }
-
-.menu-restau__cartes_slide {
+@mixin ligne-verte-mobile-tablette {
+    border-bottom: 4px $color-emphasis-light solid;
+    width: 5rem;
+}
+@mixin cartes-slide {
     display: flex;
     flex-direction: row;
-    background-color: #99E2D0;
+    background-color: $color-emphasis-light;
     font-weight: 700;
     width: 3rem;
     height: 3rem;
@@ -1519,103 +1511,131 @@ li {
     position: relative;
     left: 8rem;
 }
-
-.menu-restau__plats {
+@mixin cartes-ellipse-texte{
     width: 50%;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+@mixin back-background-gris{
+    content: "";
+    width: 100%;
+    z-index: -2; 
+    background-color: $color-tertiary-light ;
+    position: absolute;
+}
 
-@media screen and (max-width: 768px) {} 
+@media screen and (max-width: 768px) {
+
+    .menu-restau { 
+        position: relative;    
+        background-color: rgb(212, 211, 211);
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+        top: -113px;
+    }/*menu-restau= pas intéressant a traduire en Sass*/
+
+    .menu-restau__titre { 
+        @include restau-titre;
+    }
+
+    .menu-restau__soulignement { 
+        @include ligne-verte;
+        @include ligne-verte-mobile-tablette;
+    }
+
+    .menu-restau__cartes_slide {
+        @include cartes-slide;
+    }
+
+    .menu-restau__plats {
+        @include cartes-ellipse-texte;
+    }
+
+
+} 
+
 @media screen  and (min-width: 768px) and (max-width: 990px) {
 
 /*MENU éléments statiques*/
 
-
 .menu-restau { 
     position: relative;
-    top: -344px;   
-    font-size: initial; 
     background-color: rgb(212, 212, 212); 
+    font-size: initial; 
     padding-left: 2rem ;
     padding-right: 2rem ;
     padding-bottom: 2rem;
-    
-}
-
-.menu-restau::after {
-    content: "";
-    width: 100%;
-    height: 314vh;
-    background-color: rgb(211, 211, 211);
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-    z-index: -2;
-}
+    top: -344px; 
+}/*menu-restau= pas intéressant a traduire en Sass*/
 
 .menu-restau__titre { 
-    text-transform: uppercase;
-    font-size: 2rem;
-    line-height: 2rem;
-    padding-top: 2rem;
-    position: relative;
+    @include restau-titre;
 }
 
 .menu-restau__soulignement { 
-    border-bottom: 4px #99E2D0 solid;
-    height: 3px;
-    width: 5rem;
-    position: relative;
-    top: -25px;
+    @include ligne-verte;
+    @include ligne-verte-mobile-tablette;
 }
 
 .menu-restau__cartes_slide {
-    display: flex;
-    flex-direction: row;
-    background-color: #99E2D0;
-    font-weight: 700;
-    width: 3rem;
-    height: 3rem;
-    padding: 2rem;
-    position: relative;
-    left: 8rem;
+    @include cartes-slide;
 }
 
 .menu-restau__plats {
-    width: 50%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @include cartes-ellipse-texte;
 }
+
+.menu-restau::after {
+    @include back-background-gris; 
+    left: 0rem;
+    top: 0rem;
+    height: 314vh;
+}/*back-background gris*/
 
 
 } 
+
 @media screen  and (min-width: 990px) {
 
 /*MENU éléments statiques*/
 
-
 .menu-restau {
+    background-color: rgb(211, 211, 211);
+    position: relative;
+    font-size: initial;
+    padding-bottom: 4rem; 
+    top: -344px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    position: relative;
-    top: -344px;
-    font-size: initial;
-    background-color: rgb(211, 211, 211);
-    padding-bottom: 4rem;
+}/*menu-restau= pas intéressant a traduire en Sass*/
+
+.menu-restau__titre { 
+    @include restau-titre;
+    overflow: hidden;
+    width: fit-content;   
+}
+
+.menu-restau__soulignement { 
+    @include ligne-verte;
+}
+
+.menu-restau__cartes_slide {
+    @include cartes-slide;
+}
+
+.menu-restau__plats {
+    @include cartes-ellipse-texte;
 }
 
 .menu-restau::after {
-    content: "";
-    width: 100%;
-    height: 71vh;
-    background-color: rgb(211, 211, 211);
-    position: absolute;
+    @include back-background-gris;
     top: 81rem;
-    z-index: -2;
-}
+    height: 71vh;
+}/*back-background gris*/
+
 
 .menu-restau__tiers { 
     display: flex;
@@ -1625,24 +1645,6 @@ li {
     width: 44%;
     
 }
-
-.menu-restau__titre { 
-    text-transform: uppercase;
-    font-size: 2rem;
-    line-height: 2rem;
-    padding-top: 2rem;
-    position: relative;
-    overflow: hidden;
-    width: fit-content;
-    
-}
-
-.menu-restau__soulignement { 
-    height: 3px;
-    position: relative;
-    top: -25px;
-}
-
 
 .menu-restau__ligne-verte { 
     width: 100%;
@@ -1654,32 +1656,231 @@ li {
 
 }
 
-.menu-restau__cartes_slide {
+
+
+
+
+
+/* BOUTON Commander*/
+
+
+@mixin ancre-commander{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: #99E2D0;
-    font-weight: 700;
-    width: 3rem;
-    height: 3rem;
-    padding: 2rem;
-    position: relative;
-    left: 8rem;
+    justify-content: center; 
+}
+@mixin bouton-commander{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+}
+@mixin texte-bouton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 193px;
+    background-color: $color-primary;
+    background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    box-shadow: 6px 8px 6px $color-tertiary-medium;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+
+    .menu-restau__btn {
+        @include ancre-commander; 
+    }
+
+    .menu-restau__btn_commander {
+        @include bouton-commander;
+    }
+
+    .menu-restau__btn_commander p {
+        @include texte-bouton;
+    }
+
+} 
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
 
 
+.menu-restau__btn {
+    @include ancre-commander; 
+}
 
-.menu-restau__plats {
-    width: 50%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.menu-restau__btn_commander {
+    @include bouton-commander;
+}
+
+.menu-restau__btn_commander p {
+    @include texte-bouton;
 }
 
 
 
 } 
 
+@media screen  and (min-width: 990px) {
+  
+    .menu-restau__btn {
+        @include ancre-commander; 
+    }
+
+    .menu-restau__btn_commander {
+        @include bouton-commander;
+    }
+
+    .menu-restau__btn_commander p {
+        @include texte-bouton;
+    }
+
+} 
 
 
+/* MENU éléments animés*/
+
+/* carte */
+
+@mixin cartes-restaurant{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 25px;
+    padding-left: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 6px 8px 6px $color-tertiary-medium;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    filter: brightness(96%);
+}
+@mixin animation-legende-eclaircissement {
+    .menu-restau__cartes:hover {
+        -webkit-filter: brightness(100%);
+        
+    }
+    
+    .menu-restau__cartes:hover {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);    
+        
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .menu-restau__cartes { 
+        @include cartes-restaurant;
+    
+
+        &:hover { 
+            @include animation-legende-eclaircissement;
+        }
+    }
+
+} 
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+    .menu-restau__cartes { 
+        @include cartes-restaurant;
+
+
+        &:hover { 
+            @include animation-legende-eclaircissement;
+        }
+    }
+
+} 
+
+@media screen  and (min-width: 990px) {
+
+
+.menu-restau__cartes {
+        @include cartes-restaurant;
+        width: 95%;
+    
+        &:hover { 
+            @include animation-legende-eclaircissement;
+        }
+    }
 
 }
+
+
+/*Fa spin*/
+
+@mixin icone-check-spin {
+    color: $color-emphasis-light;
+    font-weight: $font-gras;
+    font-size: $font-grande;
+}
+@mixin contenant-icone-check-spin { 
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50px;
+    border: 1px $color-emphasis-light solid;
+    padding: 8px 14px 14px 10px;
+    background-color: white;
+    bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .fa-check {
+        @include icone-check-spin;
+    }
+
+    .menu-restau__cartes_tourne /* div*/  { 
+        @include contenant-icone-check-spin;
+    }
+
+
+} 
+
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+/*Fa spin*/
+
+.fa-check {
+    @include icone-check-spin;
+}
+
+.menu-restau__cartes_tourne /* div*/  { 
+    @include contenant-icone-check-spin;
+}
+
+
+} 
+
+
+@media screen  and (min-width: 990px) {
+
+/*Fa spin*/
+
+.fa-check {
+    @include icone-check-spin;
+}
+
+.menu-restau__cartes_tourne /* div*/  { 
+    @include contenant-icone-check-spin;
+}
+
+
+} 
