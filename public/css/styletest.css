@@ -1355,6 +1355,7 @@ footer a {
     border-radius: 60px 60px 0 0;
     position: relative;
     bottom: 220px;
+    border-bottom: 30px solid rgb(222, 222, 222);
   }
 }
 /*MENU éléments statiques*/
@@ -1531,7 +1532,7 @@ footer a {
     background-color: rgb(222, 222, 222);
     position: absolute;
     top: 81rem;
-    height: 71vh;
+    height: 318px;
   }
 
   /*back-background gris*/
@@ -2114,16 +2115,96 @@ restau__coeur_vide {
   }
 }
 /*ANIMATION MENU FADE IN apparition progressive*/
-.menu-restau__tiers {
-  animation: fade-in-tiers 1.5s forwards;
-}
-
+/*ANIMATION MENU FADE IN apparition progressive*/
 @keyframes fade-in-tiers {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+.menu-restau__tiers {
+  animation: fade-in-tiers forwards;
+}
+
+.menu-restau__tiers:nth-of-type(1) {
+  animation-delay: 0.9;
+}
+
+.menu-restau__tiers:nth-of-type(2) {
+  animation-delay: 1.8;
+}
+
+.menu-restau__tiers:nth-of-type(3) {
+  animation-delay: 2.7;
+}
+
+.menu-restau__tiers:nth-of-type(4) {
+  animation-delay: 3.6;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-restau__tiers {
+    animation: fade-in-tiers 3s forwards;
+  }
+
+  .menu-restau__tiers:nth-of-type(1) {
+    animation-delay: 0.9;
+  }
+
+  .menu-restau__tiers:nth-of-type(2) {
+    animation-delay: 1.8;
+  }
+
+  .menu-restau__tiers:nth-of-type(3) {
+    animation-delay: 2.7;
+  }
+
+  .menu-restau__tiers:nth-of-type(4) {
+    animation-delay: 3.6;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  .menu-restau__tiers {
+    animation: fade-in-tiers 3s forwards;
+  }
+
+  .menu-restau__tiers:nth-of-type(1) {
+    animation-delay: 0.9;
+  }
+
+  .menu-restau__tiers:nth-of-type(2) {
+    animation-delay: 1.8;
+  }
+
+  .menu-restau__tiers:nth-of-type(3) {
+    animation-delay: 2.7;
+  }
+
+  .menu-restau__tiers:nth-of-type(4) {
+    animation-delay: 3.6;
+  }
+}
+@media screen and (min-width: 990px) {
+  .menu-restau__tiers {
+    animation: fade-in-tiers 3s forwards;
+  }
+
+  .menu-restau__tiers:nth-of-type(1) {
+    animation-delay: 0.9;
+  }
+
+  .menu-restau__tiers:nth-of-type(2) {
+    animation-delay: 1.8;
+  }
+
+  .menu-restau__tiers:nth-of-type(3) {
+    animation-delay: 2.7;
+  }
+
+  .menu-restau__tiers:nth-of-type(4) {
+    animation-delay: 3.6;
   }
 }
 

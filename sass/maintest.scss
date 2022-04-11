@@ -1508,6 +1508,7 @@ li {
         & figcaption {
             @include pancarte;
             bottom: 220px;
+            border-bottom: 30px solid rgb(222, 222, 222);
         }
         
     }
@@ -1675,7 +1676,7 @@ li {
 .menu-restau::after {
     @include back-background-gris;
     top: 81rem;
-    height: 71vh;
+    height: 318px;
 }/*back-background gris*/
 
 
@@ -2293,20 +2294,60 @@ restau__coeur_vide {
 
 /*ANIMATION MENU FADE IN apparition progressive*/
 
-.menu-restau__tiers { 
-    animation: fade-in-tiers 1.5s forwards;   
-}
+/*ANIMATION MENU FADE IN apparition progressive*/
 
-@keyframes fade-in-tiers {
+ @keyframes fade-in-tiers {
     from {
-        opacity: 0;
+      opacity: 0;
     }
-    
     to {
-        opacity: 1;
+      opacity: 1;
     }
-}
+  }
+.menu-restau__tiers {
+    animation: fade-in-tiers forwards;
+  }
+  
+  @for $i from 1 through 4 {
+    .menu-restau__tiers:nth-of-type(#{$i}){
+        animation-delay: $i * 0.9;
+    }
+  }
+ 
 
-@media screen and (max-width: 768px) {} 
-@media screen  and (min-width: 768px) and (max-width: 990px) {} 
-@media screen  and (min-width: 990px) {} 
+@media screen and (max-width: 768px) {
+    .menu-restau__tiers {
+        animation: fade-in-tiers 3s forwards;
+      }
+      
+      @for $i from 1 through 4 {
+        .menu-restau__tiers:nth-of-type(#{$i}){
+            animation-delay: $i * 0.9;
+        }
+      }
+} 
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+    .menu-restau__tiers {
+        animation: fade-in-tiers 3s forwards;
+      }
+      
+      @for $i from 1 through 4 {
+        .menu-restau__tiers:nth-of-type(#{$i}){
+            animation-delay: $i * 0.9;
+        }
+      }
+} 
+@media screen  and (min-width: 990px) {
+
+    .menu-restau__tiers {
+        animation: fade-in-tiers 3s forwards;
+      }
+      
+      @for $i from 1 through 4 {
+        .menu-restau__tiers:nth-of-type(#{$i}){
+            animation-delay: $i * 0.9;
+        }
+      }
+
+} 
