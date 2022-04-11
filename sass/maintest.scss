@@ -45,7 +45,7 @@ body {
     @media screen  and (min-width: 768px) and (max-width: 990px) {
         height: 164rem;} 
     @media screen  and (min-width: 990px) {
-        height: 108rem;
+        height: 105rem;
     } 
 }
 
@@ -68,27 +68,22 @@ h1, h2 {
 p {
     font-size: $font-normale;
     font-weight: normal;
-    @media screen and (max-width: 768px) {} 
-    @media screen  and (min-width: 768px) and (max-width: 990px) {} 
-    @media screen  and (min-width: 990px) {} 
+    
 }
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
-article, figure, a {
+article, figure {
     cursor: pointer;
-    @media screen and (max-width: 768px) {} 
-    @media screen  and (min-width: 768px) and (max-width: 990px) {} 
-    @media screen  and (min-width: 990px) {} 
+    
 }
 
 footer a  {
     font-size: $font-moyenne;
-    @media screen and (max-width: 768px) {} 
-    @media screen  and (min-width: 768px) and (max-width: 990px) {} 
-    @media screen  and (min-width: 990px) {} 
+    
 }
 
 
@@ -115,7 +110,16 @@ footer a  {
 
 }
 
+
 /* COMPOSANTS animation fondu accueil + spinner*/
+
+@mixin transform-z-ndx {
+    @keyframes transform-z-ndx {
+        from { z-index: 1; transform: scale(1) 0.1s ease-in-out 2900ms ; }
+        to { z-index: -2; transform: scale(0); }
+      }
+
+}
 
 @mixin fade-out{
     display: flex;
@@ -150,12 +154,16 @@ footer a  {
 
     .fade-out {
         @include fade-out;
+        @include transform-z-ndx;
     } 
 
     .fa-spinner {
         @include accueil-spinner;
     } 
 
+    body {  
+        margin-right: 1rem;
+    }  
     
 } 
 
@@ -163,10 +171,12 @@ footer a  {
     
     .fade-out {
         @include fade-out;
+        @include transform-z-ndx;
     } 
 
     .fa-spinner {
         @include accueil-spinner;
+        @include transform-z-ndx;
     } 
 
     
@@ -1084,35 +1094,52 @@ $formulaire-border-hauteur:26px;
     font-family: Shrikhand;
     font-weight: 500;
     color: white;
+    font-size: $font-grande;
 }
 @mixin footer-liste {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 @mixin footer-li {
     list-style: none;
     color: white;
+    line-height: 20px;
 }
 @mixin footer-ancres {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 14px;
+    width: 100%;
+    font-size: 1.2rem;
 }
-
+@mixin footer-ancres-illustrees{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    font-size: 1.2rem;
+    gap: 15px;
+    font-weight: 600;
+    
+}
 
 @media screen and (max-width: 768px) {
 
 .footer {
         @include footer;
-        padding-left: 3rem;
+        padding-left: 0rem;
         padding-top: 1.5rem;
         padding-right: 3rem;
     }
 
 .footer__logo_white {
     @include footer-logo-white;
-    margin-left: 0rem;
-    margin-bottom: 0rem;
+    margin-left: 40px;
+    margin-bottom: 0px;    
+    margin-top: 0px;
 }
 
 .footer__liste {
@@ -1129,12 +1156,13 @@ li {
     @include footer-ancres;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    line-height: 1rem;
+    line-height: 1.3rem;
+    font-size: $font-moyenne;
 }
 
 .footer__ancres_illustrees {
-    @include footer-ancres; 
-    width: 100%;
+    @include footer-ancres-illustrees;
+    min-width: 74%;
 }
 
 
@@ -1146,14 +1174,15 @@ li {
      /*FOOTER TABLETTE*/
 
 .footer {
-        @include footer;;
+        @include footer;
         padding-right: 2rem;
     }
 
 .footer__logo_white {
     @include footer-logo-white;
-    font-size: 1.5rem;
-    margin-left: 4rem;
+    margin-left: 40px;
+    margin-bottom: 0px;    
+    margin-top: 1rem;
 }
   
 .footer__liste  {
@@ -1165,10 +1194,8 @@ li {
 }
 
 .footer__ancres_illustrees {
-    @include footer-ancres;
-    gap: 15px; 
-    font-weight: 600;
-    width: 25%;
+    @include footer-ancres-illustrees;
+    width: 55%;
 }
    
 .footer__ancres {
@@ -1192,11 +1219,7 @@ li {
     
 }
   
-.footer__logo_white {
-    @include footer-logo-white;
-    font-size: 1.5rem;
-    margin-left: 4rem;
-}
+
 
 .footer__liste  {
     @include footer-liste;
@@ -1207,10 +1230,8 @@ li {
 }
 
 .footer__ancres_illustrees {
-    @include footer-ancres;
-    gap: 15px; 
-    font-weight: 600;
-    width: 25%;
+    @include footer-ancres-illustrees;
+    width: 55%;
 }
 
 .footer__ancres {
@@ -1221,6 +1242,17 @@ li {
     margin-bottom: 0.5rem;
     line-height: 3rem;
 }
+.footer p {
+    font-weight: normal;  
+}
+
+.footer__logo_white {
+    @include footer-logo-white;
+    font-size: 1.5rem;
+    margin-left: 40px;
+    margin-bottom: auto;
+}
+
 
 }
 
@@ -1300,7 +1332,7 @@ li {
     .header-restau__container {
         @include header-restau;
         justify-content: flex-start;
-        gap: 23%;  
+        gap: 9%;  
     }
 
     .header-restau__container i {
@@ -1324,6 +1356,10 @@ li {
         padding-bottom: 1rem;
     }
 
+    .header-restau p {
+        @include header-restau-logo;   
+   }
+
     .header-restau__container {
         @include header-restau;
         justify-content: center;
@@ -1335,7 +1371,7 @@ li {
         @include fleche-retour;
     }
 
-
+       
 
 
 } 
@@ -1404,7 +1440,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding-right: 3rem;
-    background-color: rgb(222, 222, 222);
+    background-color: $color-tertiary-light;
     border-radius: 60px 60px 0 0;
     position: relative;
 }
@@ -1449,6 +1485,7 @@ li {
     & figcaption {
         @include pancarte;
         bottom: 220px;
+        background-color: $color-tertiary-light;
     }
 
 } 
@@ -1526,7 +1563,7 @@ li {
 
     .menu-restau { 
         position: relative;    
-        background-color: rgb(212, 211, 211);
+        background-color: $color-tertiary-light;
         padding-left: 2rem;
         padding-right: 2rem;
         padding-bottom: 3rem;
@@ -1549,7 +1586,13 @@ li {
     .menu-restau__plats {
         @include cartes-ellipse-texte;
     }
-
+    .menu-restau::after {
+        @include back-background-gris; 
+        left: 0rem;
+        top: 0rem;
+        height: 314vh;
+        background-color: $color-tertiary-light;
+    }
 
 } 
 
@@ -1559,7 +1602,7 @@ li {
 
 .menu-restau { 
     position: relative;
-    background-color: rgb(212, 212, 212); 
+    background-color: $color-tertiary-light; 
     font-size: initial; 
     padding-left: 2rem ;
     padding-right: 2rem ;
@@ -1589,6 +1632,7 @@ li {
     left: 0rem;
     top: 0rem;
     height: 314vh;
+    
 }/*back-background gris*/
 
 
@@ -1599,7 +1643,7 @@ li {
 /*MENU éléments statiques*/
 
 .menu-restau {
-    background-color: rgb(211, 211, 211);
+    background-color: $color-tertiary-light;
     position: relative;
     font-size: initial;
     padding-bottom: 4rem; 
@@ -1766,17 +1810,13 @@ li {
     overflow: hidden;
     filter: brightness(96%);
 }
-@mixin animation-legende-eclaircissement {
-    .menu-restau__cartes:hover {
-        -webkit-filter: brightness(100%);
-        
-    }
+
     
     .menu-restau__cartes:hover {
     box-shadow: 9px 10px 10px rgb(189, 189, 189);    
         
     }
-}
+
 
 
 @media screen and (max-width: 768px) {
@@ -1786,7 +1826,7 @@ li {
     
 
         &:hover { 
-            @include animation-legende-eclaircissement;
+            -webkit-filter: brightness(100%);
         }
     }
 
@@ -1799,7 +1839,7 @@ li {
 
 
         &:hover { 
-            @include animation-legende-eclaircissement;
+            -webkit-filter: brightness(100%);
         }
     }
 
@@ -1813,7 +1853,7 @@ li {
         width: 95%;
     
         &:hover { 
-            @include animation-legende-eclaircissement;
+            -webkit-filter: brightness(100%);
         }
     }
 
@@ -1887,7 +1927,9 @@ li {
 
 /*Animation sélection plats*/
 
-@mixin sélection-plats-restau {
+ 
+
+@media screen and (max-width: 768px) {
     
     .menu-restau__cartes:hover .menu-restau__cartes_tourne {
         transform: rotate(360deg);
@@ -1907,42 +1949,100 @@ li {
         white-space: nowrap;
     }
 
-}
-
-@media screen and (max-width: 768px) {
-    .menu-restau__cartes:hover{ 
-       @include sélection-plats-restau; 
-    }
     
 } 
 @media screen  and (min-width: 768px) and (max-width: 990px) {
 
-    .menu-restau__cartes:hover{ 
-        @include sélection-plats-restau; 
-     }
+    
+    .menu-restau__cartes:hover .menu-restau__cartes_tourne {
+        transform: rotate(360deg);
+        transition: all 0.3s linear;
+    }
+    
+    .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
+        transform: translateX(-8rem);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .menu-restau__cartes:hover .menu-restau__plats {
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        transition: width 0.3s ;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
 
 } 
 @media screen  and (min-width: 990px) {
 
-    .menu-restau__cartes:hover{ 
-        @include sélection-plats-restau; 
-     }
+    
+    .menu-restau__cartes:hover .menu-restau__cartes_tourne {
+        transform: rotate(360deg);
+        transition: all 0.3s linear;
+    }
+    
+    .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
+        transform: translateX(-8rem);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .menu-restau__cartes:hover .menu-restau__plats {
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        transition: width 0.3s ;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
 
 } 
 
 
 /*ANIMATION COEUR OPACITY*/
   
+
+
 @mixin restau-coeur {
     font-size: 2rem;
+    position: relative;
     height: 2rem;
     font-size: 2rem;
     width: 2rem;
-    border: none;
-    background-color: rgb(222, 222, 222); 
-    position: relative;
     cursor: pointer;
+    border: none;
+    background-color: $color-tertiary-light; 
 }        
+@mixin restau-coeur-plein {
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    opacity: 0;
+}
+@mixin restau-coeur-vide {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+}
+
+restau__coeur {
+    @include restau-coeur; 
+}        
+
+restau__coeur_plein {
+    @include restau-coeur-plein;
+}
+
+restau__coeur_vide {
+    @include restau-coeur-vide;
+}
+
+
 @keyframes coeur-fill {
     from {
       opacity: 0;
@@ -1958,123 +2058,236 @@ li {
 @media screen and (max-width: 768px) {
 
     .restau__coeur {
-    
-        @include restau-coeur;
-          
-        &_plein {
-            @include restau-coeur;
-            background: -webkit-linear-gradient($color-primary, $color-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            z-index: 0;
-            opacity: 0;
-        }
-    
-        &_vide {
-            @include restau-coeur;
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            z-index: 0;
-        }
-    
-        &:hover  &_plein {
-            animation: coeur-fill 0.6s forwards;
-            animation-timing-function: ease-in;
-            
-        }    
-        &:hover &_vide {
-            transform: scale(1.2) ;
-            transition: transform  0.5s ease-in-out;
-    
-        }  
-    
-    }   
+        @include restau-coeur; 
+    }        
 
+    .restau__coeur_plein {
+        @include restau-coeur-plein;
+    }
+
+    .restau__coeur_vide {
+        @include restau-coeur-vide;
+    }
+
+/*ANIMATION COEUR OPACITY */
+
+@keyframes coeur-fill {
+    from {
+    opacity: 0;
+    
+    }
+
+    to {
+        opacity: 1;
+        
+    }
+}
+
+.restau__coeur:hover  .restau__coeur_plein {
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+.restau__coeur:hover .restau__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;  
 } 
+
+}
+
+
+
+
+
+
 @media screen  and (min-width: 768px) and (max-width: 990px) {
 
-    .restau__coeur {
-    
-        @include restau-coeur;
-          
-        &_plein {
-            @include restau-coeur;
-            background: -webkit-linear-gradient($color-primary, $color-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            z-index: 0;
-            opacity: 0;
-        }
-    
-        &_vide {
-            @include restau-coeur;
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            z-index: 0;
-        }
-    
-        &:hover  &_plein {
-            animation: coeur-fill 0.6s forwards;
-            animation-timing-function: ease-in;
-            
-        }    
-        &:hover &_vide {
-            transform: scale(1.2) ;
-            transition: transform  0.5s ease-in-out;
-    
-        }  
-    
-    }   
+    restau__coeur {
+    @include restau-coeur; 
+}        
 
+restau__coeur_plein {
+    @include restau-coeur-plein;
+}
+
+restau__coeur_vide {
+    @include restau-coeur-vide;
+}
+
+
+@keyframes coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
+@media screen and (max-width: 768px) {
+
+    .restau__coeur {
+        @include restau-coeur; 
+    }        
+
+    .restau__coeur_plein {
+        @include restau-coeur-plein;
+    }
+
+    .restau__coeur_vide {
+        @include restau-coeur-vide;
+    }
+
+/*ANIMATION COEUR OPACITY */
+
+@keyframes coeur-fill {
+    from {
+    opacity: 0;
+    
+    }
+
+    to {
+        opacity: 1;
+        
+    }
+}
+
+.restau__coeur:hover  .restau__coeur_plein {
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+.restau__coeur:hover .restau__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;  
 } 
+ 
+}
+} 
+
+
+@media screen  and (min-width: 768px) and  (max-width:990px) {
+
+    
+    .restau__coeur {
+        @include restau-coeur; 
+    }        
+
+    .restau__coeur_plein {
+        @include restau-coeur-plein;
+    }
+
+    .restau__coeur_vide {
+        @include restau-coeur-vide;
+    }
+
+/*ANIMATION COEUR OPACITY */
+
+@keyframes coeur-fill {
+    from {
+    opacity: 0;
+    
+    }
+
+    to {
+        opacity: 1;
+        
+    }
+}
+
+.restau__coeur:hover  .restau__coeur_plein {
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+.restau__coeur:hover .restau__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;  
+} 
+ 
+}
+
 @media screen  and (min-width: 990px) {
 
+    
     .restau__coeur {
-    
-        @include restau-coeur;
-          
-        &_plein {
-            @include restau-coeur;
-            background: -webkit-linear-gradient($color-primary, $color-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            z-index: 0;
-            opacity: 0;
-        }
-    
-        &_vide {
-            @include restau-coeur;
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            z-index: 0;
-        }
-    
-        &:hover  &_plein {
-            animation: coeur-fill 0.6s forwards;
-            animation-timing-function: ease-in;
-            
-        }    
-        &:hover &_vide {
-            transform: scale(1.2) ;
-            transition: transform  0.5s ease-in-out;
-    
-        }  
-    
-    }   
+        @include restau-coeur; 
+    }        
 
+    .restau__coeur_plein {
+        @include restau-coeur-plein;
+    }
+
+    .restau__coeur_vide {
+        @include restau-coeur-vide;
+    }
+
+/*ANIMATION COEUR OPACITY */
+
+@keyframes coeur-fill {
+    from {
+    opacity: 0;
+    
+    }
+
+    to {
+        opacity: 1;
+        
+    }
+}
+
+.restau__coeur:hover  .restau__coeur_plein {
+    animation: accueil-coeur-fill 0.4s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+.restau__coeur:hover .restau__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;  
 } 
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
