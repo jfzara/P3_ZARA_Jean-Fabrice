@@ -41,12 +41,6 @@ body {
     
 }  
 
-.content {
-    position: absolute;
-    background-color: #fff;
-    width: 100%;    
-}  
-
 
  .tout-home {
     height:152rem;
@@ -105,12 +99,46 @@ footer a  {
 /*ANIMATION fondu accueil + spinner*/
 
 
+/*ANIMATION fondu accueil + spinner*/
+
+
 @keyframes accueil-spinner {
-    
-    to {
+    0% {
+        transform: rotate(0deg);
+         opacity: 1;
+    }
+    8% {
+        transform: rotate(120deg);
+    }
+    15% {
+        transform: rotate(240deg);
+       
+    }
+    25% {
         transform: rotate(360deg);
-        }
+    }
+    35% {
+        transform: rotate(480deg);
+    }
+
+    50% {
+        transform: rotate(600deg);
+    }
+    65% {
+        transform: rotate(720deg);
+    }
+    80% {
+        transform: rotate(940deg)
+    }
+    90% {
+        transform: rotate(1060deg);
+    }
+    100% {
+        transform: rotate(1120deg);
+        opacity: 0;
+    }
 }
+
 
 @keyframes accueil-fondu_animation-in {
     
@@ -135,8 +163,6 @@ footer a  {
 
 /* COMPOSANTS animation fondu accueil + spinner*/
 
-
-
 @mixin fade-in {
     animation: accueil-fondu_animation-in 5000ms ease-in-out forwards;
 }
@@ -145,17 +171,18 @@ footer a  {
 }
 
 @mixin accueil-spinner{
-    position: absolute;
-    top: 48vh;
-    left: 37vw;
+    position: fixed;
+    top: 45vh;
+    left: 42vw;
     width: 6rem;
     height: 6rem;
     font-size: 6rem;
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: accueil-spinner 1.5s linear forwards;
-    animation-iteration-count: 3;
+    animation: accueil-spinner 2.5s linear forwards;
+    animation-iteration-count: 1;
+   
 }
 
 /* RESPONSIVE animation fondu accueil + spinner*/
@@ -166,7 +193,7 @@ footer a  {
         position: absolute;
         top: 0px;
         left: 0px;
-        width: 100vw;
+        width: 94vw;
         height: 10.7vh;
         background-color: white;
         border: 0px red solid;
@@ -180,11 +207,10 @@ footer a  {
 
     .fa-spinner {
         @include accueil-spinner;
-    } 
+        
+    }
 
-    body {  
-        margin-right: 1rem;
-    }  
+    
     
 } 
 
