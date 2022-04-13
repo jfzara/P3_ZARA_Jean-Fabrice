@@ -15,6 +15,12 @@ body {
   margin: 0;
 }
 
+.content {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+}
+
 .tout-home {
   height: 152rem;
 }
@@ -32,6 +38,9 @@ body {
 h1, h2 {
   font-size: 1.2rem;
   font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .titre_gras {
   font-size: 1.5rem;
@@ -40,6 +49,9 @@ h1, h2 {
 p {
   font-size: 1rem;
   font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 a {
@@ -61,7 +73,15 @@ footer a {
     transform: rotate(360deg);
   }
 }
-@keyframes accueil-fondu_animation {
+@keyframes accueil-fondu_animation-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes accueil-fondu_animation-out {
   from {
     opacity: 1;
   }
@@ -72,33 +92,26 @@ footer a {
 /* COMPOSANTS animation fondu accueil + spinner*/
 /* RESPONSIVE animation fondu accueil + spinner*/
 @media screen and (max-width: 768px) {
-  .fade-out {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .masque-logo {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(222, 222, 222);
-    z-index: 1;
-    animation: accueil-fondu_animation 2900ms forwards;
-    animation-timing-function: ease-in-out;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 10.7vh;
+    background-color: white;
+    border: 0px red solid;
+    z-index: 2;
+    animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
   }
-  @keyframes transform-z-ndx {
-    from {
-      z-index: 1;
-      transform: scale(1) 0.1s ease-in-out 2900ms;
-    }
-    to {
-      z-index: -2;
-      transform: scale(0);
-    }
+
+  .tout-home, .header-container {
+    animation: accueil-fondu_animation-in 5000ms ease-in-out forwards;
   }
 
   .fa-spinner {
     position: absolute;
-    top: 20rem;
+    top: 48vh;
+    left: 37vw;
     width: 6rem;
     height: 6rem;
     font-size: 6rem;
@@ -106,7 +119,7 @@ footer a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: accueil-spinner 1.5s linear forwards;
-    animation-iteration-count: 5;
+    animation-iteration-count: 3;
   }
 
   body {
@@ -114,33 +127,10 @@ footer a {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
-  .fade-out {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(222, 222, 222);
-    z-index: 1;
-    animation: accueil-fondu_animation 2900ms forwards;
-    animation-timing-function: ease-in-out;
-  }
-  @keyframes transform-z-ndx {
-    from {
-      z-index: 1;
-      transform: scale(1) 0.1s ease-in-out 2900ms;
-    }
-    to {
-      z-index: -2;
-      transform: scale(0);
-    }
-  }
-
   .fa-spinner {
     position: absolute;
-    top: 20rem;
+    top: 48vh;
+    left: 37vw;
     width: 6rem;
     height: 6rem;
     font-size: 6rem;
@@ -148,37 +138,14 @@ footer a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: accueil-spinner 1.5s linear forwards;
-    animation-iteration-count: 5;
-  }
-  @keyframes transform-z-ndx {
-    from {
-      z-index: 1;
-      transform: scale(1) 0.1s ease-in-out 2900ms;
-    }
-    to {
-      z-index: -2;
-      transform: scale(0);
-    }
+    animation-iteration-count: 3;
   }
 }
 @media screen and (min-width: 990px) {
-  .fade-out {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(222, 222, 222);
-    z-index: 1;
-    animation: accueil-fondu_animation 2900ms forwards;
-    animation-timing-function: ease-in-out;
-  }
-
   .fa-spinner {
     position: absolute;
-    top: 20rem;
+    top: 48vh;
+    left: 37vw;
     width: 6rem;
     height: 6rem;
     font-size: 6rem;
@@ -186,11 +153,11 @@ footer a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: accueil-spinner 1.5s linear forwards;
-    animation-iteration-count: 5;
+    animation-iteration-count: 3;
   }
 }
 /*HEADER-LOGO*/
-/*pas intéressant a traduire en Sass car Flexbox et autres sont trop different*/
+/*pas intéressant a traduire en Sass car Flexbox et autres sont trop differents*/
 @media screen and (max-width: 768px) {
   .header__container {
     display: flex;
@@ -710,12 +677,14 @@ footer a {
     }
   }
   .restos__coeur:hover .restos__coeur_plein {
-    animation: accueil-coeur-fill 0.4s forwards;
+    animation: accueil-coeur-fill 0.7s forwards;
     animation-timing-function: ease-in;
   }
   .restos__coeur:hover .restos__coeur_vide {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+    display: none;
+    z-index: -2;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
@@ -827,12 +796,14 @@ footer a {
     }
   }
   .restos__coeur:hover .restos__coeur_plein {
-    animation: accueil-coeur-fill 0.4s forwards;
+    animation: accueil-coeur-fill 0.7s forwards;
     animation-timing-function: ease-in;
   }
   .restos__coeur:hover .restos__coeur_vide {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+    display: none;
+    z-index: -2;
   }
 }
 @media screen and (min-width: 990px) {
@@ -946,12 +917,14 @@ footer a {
     }
   }
   .restos__coeur:hover .restos__coeur_plein {
-    animation: accueil-coeur-fill 0.4s forwards;
+    animation: accueil-coeur-fill 0.7s forwards;
     animation-timing-function: ease-in;
   }
   .restos__coeur:hover .restos__coeur_vide {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+    display: none;
+    z-index: -2;
   }
 }
 /*--FOOTER --*/
@@ -1149,7 +1122,7 @@ footer a {
 }
 @media screen and (min-width: 990px) {
   .tout {
-    height: 321vh;
+    height: 347vh;
   }
 }
 /*HEADER */
@@ -1537,11 +1510,7 @@ footer a {
 
   /*back-background gris*/
   .menu-restau__tiers {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 44%;
+    width: 73%;
   }
 
   .menu-restau__ligne-verte {
@@ -1919,13 +1888,15 @@ restau__coeur_vide {
     }
   }
   .restau__coeur:hover .restau__coeur_plein {
-    animation: accueil-coeur-fill 0.4s forwards;
+    animation: accueil-coeur-fill 0.7s forwards;
     animation-timing-function: ease-in;
   }
 
   .restau__coeur:hover .restau__coeur_vide {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+    display: none;
+    z-index: -2;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
@@ -2014,6 +1985,8 @@ restau__coeur_vide {
   .restau__coeur:hover .restau__coeur_vide {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+    display: none;
+    z-index: -2;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
@@ -2063,6 +2036,8 @@ restau__coeur_vide {
   .restau__coeur:hover .restau__coeur_vide {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+    display: none;
+    z-index: -2;
   }
 }
 @media screen and (min-width: 990px) {
@@ -2112,6 +2087,8 @@ restau__coeur_vide {
   .restau__coeur:hover .restau__coeur_vide {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+    display: none;
+    z-index: -2;
   }
 }
 /*ANIMATION MENU FADE IN apparition progressive*/
