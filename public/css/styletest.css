@@ -16,16 +16,19 @@ body {
 }
 
 .tout-home {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   height: 152rem;
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
   .tout-home {
-    height: 164rem;
+    height: 176rem;
   }
 }
 @media screen and (min-width: 990px) {
   .tout-home {
-    height: 105rem;
+    height: 104rem;
   }
 }
 
@@ -43,7 +46,6 @@ h1, h2 {
 p {
   font-size: 1rem;
   font-weight: normal;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -61,7 +63,10 @@ footer a {
   font-size: 1.2rem;
 }
 
-/*ANIMATION fondu accueil + spinner*/
+li:hover {
+  color: #9356DC;
+}
+
 /*ANIMATION fondu accueil + spinner*/
 @keyframes accueil-spinner {
   0% {
@@ -116,14 +121,13 @@ footer a {
 /* COMPOSANTS animation fondu accueil + spinner*/
 /* RESPONSIVE animation fondu accueil + spinner*/
 @media screen and (max-width: 768px) {
-  .masque-logo {
+  .header__masque_logo {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 94vw;
     height: 10.7vh;
     background-color: white;
-    border: 0px red solid;
     z-index: 2;
     animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
   }
@@ -135,7 +139,7 @@ footer a {
   .fa-spinner {
     position: fixed;
     top: 45vh;
-    left: 42vw;
+    left: 45vw;
     width: 6rem;
     height: 6rem;
     font-size: 6rem;
@@ -147,10 +151,21 @@ footer a {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
+  .header__masque_logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 15.2vh;
+    background-color: white;
+    z-index: 2;
+    animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
+  }
+
   .fa-spinner {
     position: fixed;
     top: 45vh;
-    left: 42vw;
+    left: 45vw;
     width: 6rem;
     height: 6rem;
     font-size: 6rem;
@@ -160,12 +175,27 @@ footer a {
     animation: accueil-spinner 2.5s linear forwards;
     animation-iteration-count: 1;
   }
+
+  .tout-home, .header-container {
+    animation: accueil-fondu_animation-in 5000ms ease-in-out forwards;
+  }
 }
 @media screen and (min-width: 990px) {
+  .header__masque_logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 20.1vh;
+    background-color: white;
+    z-index: 2;
+    animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
+  }
+
   .fa-spinner {
     position: fixed;
     top: 45vh;
-    left: 42vw;
+    left: 45vw;
     width: 6rem;
     height: 6rem;
     font-size: 6rem;
@@ -174,6 +204,10 @@ footer a {
     -webkit-text-fill-color: transparent;
     animation: accueil-spinner 2.5s linear forwards;
     animation-iteration-count: 1;
+  }
+
+  .tout-home, .header-container {
+    animation: accueil-fondu_animation-in 5000ms ease-in-out forwards;
   }
 }
 /*HEADER-LOGO*/
@@ -319,6 +353,8 @@ footer a {
     width: 100%;
     border-top: 4px #c9c9c9 solid;
     border-bottom: 1px solid rgb(222, 222, 222);
+    border: none;
+    outline: none;
   }
 
   .formulaire__texte {
@@ -328,6 +364,8 @@ footer a {
     border: rgb(222, 222, 222);
     width: 33%;
     padding-left: 5px;
+    border: none;
+    outline: none;
   }
 
   .formulaire__icone {
@@ -360,6 +398,8 @@ footer a {
     padding: 15px;
     border-radius: 17px;
     box-shadow: 9px 6px 4px rgb(205, 205, 205);
+    border: none;
+    outline: none;
   }
 
   .formulaire__icone {
@@ -392,6 +432,8 @@ footer a {
     padding: 15px;
     border-radius: 17px;
     box-shadow: 9px 6px 4px rgb(205, 205, 205);
+    border: none;
+    outline: none;
   }
 
   .formulaire__icone {
@@ -419,6 +461,8 @@ footer a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    position: relative;
     gap: 1rem;
     width: 100%;
     height: 3.5rem;
@@ -432,7 +476,7 @@ footer a {
     background-color: #9356DC;
     color: white;
     border-radius: 50px;
-    position: relative;
+    position: absolute;
     left: -1rem;
     text-align: center;
     padding-top: 1px;
@@ -464,9 +508,10 @@ footer a {
 @media screen and (min-width: 768px) and (max-width: 990px) {
   .section-fctn {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     gap: 2rem;
     padding-left: 3rem;
@@ -480,7 +525,8 @@ footer a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 30%;
+    justify-content: center;
+    width: 40%;
     height: 4rem;
     border: 0px rgb(54, 54, 54) solid;
     border-radius: 50px;
@@ -492,7 +538,7 @@ footer a {
     background-color: #9356DC;
     color: white;
     border-radius: 50px;
-    position: relative;
+    position: absolute;
     left: -1rem;
     text-align: center;
     background-image: linear-gradient(to top right, #9356DC, #FF79DA);
@@ -514,7 +560,7 @@ footer a {
   .section-fctn__texte {
     font-size: 1rem;
     font-weight: bold;
-    width: 50%;
+    min-width: 60%;
     color: rgb(54, 54, 54);
   }
 
@@ -548,7 +594,8 @@ footer a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 24%;
+    justify-content: center;
+    width: 27%;
     border: 0px rgb(227, 227, 227) solid;
     border-radius: 50px;
     box-shadow: 7px 15px 17px rgb(218, 218, 218);
@@ -559,7 +606,7 @@ footer a {
     background-color: #9356DC;
     color: white;
     border-radius: 50px;
-    position: relative;
+    position: absolute;
     left: -1rem;
     text-align: center;
     padding-top: 5px;
@@ -579,7 +626,7 @@ footer a {
   .section-fctn__texte {
     font-size: 1rem;
     font-weight: bold;
-    width: 50%;
+    min-width: 60%;
     color: rgb(54, 54, 54);
   }
 
@@ -956,6 +1003,7 @@ footer a {
     /*variable*/
     color: white;
     justify-content: start;
+    position: relative;
     padding-left: 0rem;
     padding-top: 1.5rem;
     padding-right: 3rem;
@@ -969,6 +1017,17 @@ footer a {
     margin-left: 40px;
     margin-bottom: 0px;
     margin-top: 0px;
+  }
+
+  .footer__masque {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+    animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
   }
 
   .footer__liste {
@@ -1020,6 +1079,18 @@ footer a {
     color: white;
     justify-content: start;
     padding-right: 2rem;
+    position: relative;
+  }
+
+  .footer__masque {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+    animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
   }
 
   .footer__logo_white {
@@ -1078,6 +1149,18 @@ footer a {
     /*variable*/
     color: white;
     justify-content: start;
+    position: relative;
+  }
+
+  .footer__masque {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 2;
+    animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
   }
 
   .footer__liste {
@@ -1090,6 +1173,10 @@ footer a {
     list-style: none;
     color: white;
     line-height: 20px;
+  }
+
+  li:hover {
+    color: #9356DC;
   }
 
   .footer__ancres_illustrees {
