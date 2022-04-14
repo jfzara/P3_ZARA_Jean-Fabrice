@@ -20,16 +20,16 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  height: 152rem;
+  /*  height:152rem;*/
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
   .tout-home {
-    height: 176rem;
+    /* height: 176rem;*/
   }
 }
 @media screen and (min-width: 990px) {
   .tout-home {
-    height: 104rem;
+    /* height: 104rem;*/
   }
 }
 
@@ -1073,6 +1073,7 @@ footer a {
     justify-content: start;
     padding-right: 2rem;
     position: relative;
+    top: 100px;
   }
 
   .footer__masque {
@@ -1196,7 +1197,6 @@ footer a {
 /*MAIN page restaurant (class="tout") */
 @media screen and (max-width: 768px) {
   .tout {
-    height: 372vh;
     min-width: 356px;
   }
 }
@@ -1351,7 +1351,7 @@ footer a {
     border-radius: 60px 60px 0 0;
     position: relative;
     padding-right: 1rem;
-    bottom: 94px;
+    bottom: 29px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
@@ -1384,7 +1384,7 @@ footer a {
     border-radius: 60px 60px 0 0;
     position: relative;
     padding-right: 1rem;
-    bottom: 220px;
+    bottom: 104px;
     background-color: rgb(222, 222, 222);
   }
 }
@@ -1430,7 +1430,7 @@ footer a {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 3rem;
-    top: -113px;
+    top: -55px;
   }
 
   /*menu-restau= pas intéressant a traduire en Sass*/
@@ -1493,7 +1493,7 @@ footer a {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 2rem;
-    top: -344px;
+    top: -223px;
   }
 
   /*menu-restau= pas intéressant a traduire en Sass*/
@@ -1546,7 +1546,7 @@ footer a {
     background-color: rgb(222, 222, 222);
     position: absolute;
     left: 0rem;
-    top: 0rem;
+    top: 20rem;
     height: 321vh;
   }
 
@@ -1612,8 +1612,8 @@ footer a {
     z-index: -2;
     background-color: rgb(222, 222, 222);
     position: absolute;
-    top: 112rem;
-    height: 318px;
+    top: 110rem;
+    height: 411px;
   }
 
   /*back-background gris*/
@@ -1645,6 +1645,7 @@ footer a {
     flex-direction: row;
     justify-content: center;
     text-decoration: none;
+    margin-top: 50px;
   }
 
   .menu-restau__btn_commander p {
@@ -1681,6 +1682,7 @@ footer a {
     flex-direction: row;
     justify-content: center;
     text-decoration: none;
+    margin-top: 93px;
   }
 
   .menu-restau__btn_commander p {
@@ -1717,6 +1719,7 @@ footer a {
     flex-direction: row;
     justify-content: center;
     text-decoration: none;
+    margin-top: 93px;
   }
 
   .menu-restau__btn_commander p {
@@ -1755,8 +1758,8 @@ footer a {
     background-color: white;
     border-radius: 25px;
     padding-left: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
     box-shadow: 6px 8px 6px rgb(205, 205, 205);
     position: relative;
     cursor: pointer;
@@ -1776,8 +1779,8 @@ footer a {
     background-color: white;
     border-radius: 25px;
     padding-left: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
     box-shadow: 6px 8px 6px rgb(205, 205, 205);
     position: relative;
     cursor: pointer;
@@ -1797,8 +1800,8 @@ footer a {
     background-color: white;
     border-radius: 25px;
     padding-left: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
     box-shadow: 6px 8px 6px rgb(205, 205, 205);
     position: relative;
     cursor: pointer;

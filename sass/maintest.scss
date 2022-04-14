@@ -46,12 +46,12 @@ body {
      display: flex;
      flex-direction: column;
      align-content: center;
-    height:152rem;
+  /*  height:152rem;*/
     @media screen  and (min-width: 768px) and (max-width: 990px) {
-        height: 176rem;
+       /* height: 176rem;*/
     } 
     @media screen  and (min-width: 990px) {
-        height: 104rem;
+       /* height: 104rem;*/
     } 
 }
 
@@ -1273,6 +1273,7 @@ li {
         @include footer;
         padding-right: 2rem;
         position: relative;
+        top: 100px;
     }
 
     .footer__masque{
@@ -1384,7 +1385,7 @@ line-height: 3rem;
 
 @media screen and (max-width: 768px) {
     .tout {
-        height: 372vh;
+        
         min-width: 356px;
     }
 }
@@ -1575,7 +1576,7 @@ line-height: 3rem;
 
     & figcaption {
         @include pancarte;
-        bottom: 94px;
+        bottom: 29px;
     }
 
 } 
@@ -1597,7 +1598,7 @@ line-height: 3rem;
 
     & figcaption {
         @include pancarte;
-        bottom: 220px;
+        bottom: 104px;
         background-color: $color-tertiary-light;
     }
 
@@ -1683,7 +1684,7 @@ line-height: 3rem;
         padding-left: 2rem;
         padding-right: 2rem;
         padding-bottom: 3rem;
-        top: -113px;
+        top: -55px;
     }/*menu-restau= pas intéressant a traduire en Sass*/
 
     .menu-restau__titre { 
@@ -1726,7 +1727,7 @@ line-height: 3rem;
     padding-left: 2rem ;
     padding-right: 2rem ;
     padding-bottom: 2rem;
-    top: -344px; 
+    top: -223px;
 }/*menu-restau= pas intéressant a traduire en Sass*/
 
 .menu-restau__tiers {
@@ -1756,7 +1757,7 @@ line-height: 3rem;
 .menu-restau::after {
     @include back-background-gris; 
     left: 0rem;
-    top: 0rem;
+    top: 20rem;
     height: 321vh;
     
 }/*back-background gris*/
@@ -1804,8 +1805,8 @@ line-height: 3rem;
 
 .menu-restau::after {
     @include back-background-gris;
-    top: 112rem;
-    height: 318px;
+    top: 110rem;
+    height: 411px;
 }/*back-background gris*/
 
 
@@ -1877,6 +1878,7 @@ line-height: 3rem;
 
     .menu-restau__btn_commander {
         @include bouton-commander;
+        margin-top: 50px;
     }
 
     .menu-restau__btn_commander p {
@@ -1894,6 +1896,7 @@ line-height: 3rem;
 
 .menu-restau__btn_commander {
     @include bouton-commander;
+    margin-top: 93px;
 }
 
 .menu-restau__btn_commander p {
@@ -1912,6 +1915,7 @@ line-height: 3rem;
 
     .menu-restau__btn_commander {
         @include bouton-commander;
+        margin-top: 93px;
     }
 
     .menu-restau__btn_commander p {
@@ -1934,8 +1938,8 @@ line-height: 3rem;
     
     border-radius: 25px;
     padding-left: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
     box-shadow: 6px 8px 6px $color-tertiary-medium;
     position: relative;
     cursor: pointer;
