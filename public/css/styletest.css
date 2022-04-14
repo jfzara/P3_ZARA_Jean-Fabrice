@@ -13,6 +13,7 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
+  color: black;
 }
 
 .tout-home {
@@ -39,13 +40,19 @@ h1, h2 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .titre_gras {
   font-size: 1.5rem;
   font-weight: 700;
 }
 p {
-  font-size: 1rem;
-  font-weight: normal;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -61,10 +68,6 @@ article, figure {
 
 footer a {
   font-size: 1.2rem;
-}
-
-li:hover {
-  color: #9356DC;
 }
 
 /*ANIMATION fondu accueil + spinner*/
@@ -1003,20 +1006,8 @@ li:hover {
     /*variable*/
     color: white;
     justify-content: start;
+    padding-right: 2rem;
     position: relative;
-    padding-left: 0rem;
-    padding-top: 1.5rem;
-    padding-right: 3rem;
-  }
-
-  .footer__logo_white {
-    font-family: Shrikhand;
-    font-weight: 500;
-    color: white;
-    font-size: 1.5rem;
-    margin-left: 40px;
-    margin-bottom: 0px;
-    margin-top: 0px;
   }
 
   .footer__masque {
@@ -1030,31 +1021,25 @@ li:hover {
     animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
   }
 
+  .footer__logo_white {
+    font-family: Shrikhand;
+    font-weight: 500;
+    color: white;
+    font-size: 1.5rem;
+  }
+
   .footer__liste {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-direction: column;
   }
 
   li {
     list-style: none;
     color: white;
     line-height: 20px;
-    line-height: 0rem;
-  }
-
-  .footer__ancres {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.3rem;
-    font-size: 1.2rem;
+    width: 210px;
+    cursor: pointer;
   }
 
   .footer__ancres_illustrees {
@@ -1062,11 +1047,19 @@ li:hover {
     flex-direction: row;
     align-items: center;
     gap: 14px;
-    width: 100%;
     font-size: 1.2rem;
-    gap: 15px;
     font-weight: 600;
-    min-width: 74%;
+  }
+
+  .footer__ancres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 3rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
@@ -1098,9 +1091,6 @@ li:hover {
     font-weight: 500;
     color: white;
     font-size: 1.5rem;
-    margin-left: 40px;
-    margin-bottom: 0px;
-    margin-top: 1rem;
   }
 
   .footer__liste {
@@ -1113,6 +1103,8 @@ li:hover {
     list-style: none;
     color: white;
     line-height: 20px;
+    width: 210px;
+    cursor: pointer;
   }
 
   .footer__ancres_illustrees {
@@ -1120,11 +1112,8 @@ li:hover {
     flex-direction: row;
     align-items: center;
     gap: 14px;
-    width: 100%;
     font-size: 1.2rem;
-    gap: 15px;
     font-weight: 600;
-    width: 55%;
   }
 
   .footer__ancres {
@@ -1132,12 +1121,10 @@ li:hover {
     flex-direction: row;
     align-items: center;
     gap: 14px;
-    width: 100%;
     font-size: 1.2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     line-height: 3rem;
-    width: 25%;
   }
 }
 @media screen and (min-width: 990px) {
@@ -1149,6 +1136,7 @@ li:hover {
     /*variable*/
     color: white;
     justify-content: start;
+    padding-right: 2rem;
     position: relative;
   }
 
@@ -1163,6 +1151,13 @@ li:hover {
     animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
   }
 
+  .footer__logo_white {
+    font-family: Shrikhand;
+    font-weight: 500;
+    color: white;
+    font-size: 1.5rem;
+  }
+
   .footer__liste {
     display: flex;
     flex-direction: column;
@@ -1173,10 +1168,8 @@ li:hover {
     list-style: none;
     color: white;
     line-height: 20px;
-  }
-
-  li:hover {
-    color: #9356DC;
+    width: 210px;
+    cursor: pointer;
   }
 
   .footer__ancres_illustrees {
@@ -1184,52 +1177,37 @@ li:hover {
     flex-direction: row;
     align-items: center;
     gap: 14px;
-    width: 100%;
     font-size: 1.2rem;
-    gap: 15px;
     font-weight: 600;
-    width: 55%;
   }
 
   .footer__ancres {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 14px;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     line-height: 3rem;
-  }
-
-  .footer p {
-    font-weight: normal;
-  }
-
-  .footer__logo_white {
-    font-family: Shrikhand;
-    font-weight: 500;
-    color: white;
-    font-size: 1.5rem;
-    font-size: 1.5rem;
-    margin-left: 40px;
-    margin-bottom: auto;
   }
 }
 /*PAGE RESTAURANT */
 /*MAIN page restaurant (class="tout") */
 @media screen and (max-width: 768px) {
   .tout {
-    height: 362vh;
+    height: 372vh;
     min-width: 356px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
   .tout {
-    height: 390vh;
+    height: 395vh;
   }
 }
 @media screen and (min-width: 990px) {
   .tout {
-    height: 347vh;
+    height: 395vh;
   }
 }
 /*HEADER */
@@ -1361,6 +1339,7 @@ li:hover {
     font-size: 2.5rem;
     font-weight: 700;
     padding-left: 1.5rem;
+    margin-right: 1rem;
   }
   .entete__restau figcaption {
     display: flex;
@@ -1371,6 +1350,7 @@ li:hover {
     background-color: rgb(222, 222, 222);
     border-radius: 60px 60px 0 0;
     position: relative;
+    padding-right: 1rem;
     bottom: 94px;
   }
 }
@@ -1392,6 +1372,7 @@ li:hover {
     font-size: 2.5rem;
     font-weight: 700;
     padding-left: 1.5rem;
+    margin-right: 1rem;
   }
   .entete__restau figcaption {
     display: flex;
@@ -1402,6 +1383,7 @@ li:hover {
     background-color: rgb(222, 222, 222);
     border-radius: 60px 60px 0 0;
     position: relative;
+    padding-right: 1rem;
     bottom: 220px;
     background-color: rgb(222, 222, 222);
   }
@@ -1424,6 +1406,7 @@ li:hover {
     font-size: 2.5rem;
     font-weight: 700;
     padding-left: 1.5rem;
+    margin-right: 1rem;
   }
   .entete__restau figcaption {
     display: flex;
@@ -1434,6 +1417,7 @@ li:hover {
     background-color: rgb(222, 222, 222);
     border-radius: 60px 60px 0 0;
     position: relative;
+    padding-right: 1rem;
     bottom: 220px;
     border-bottom: 30px solid rgb(222, 222, 222);
   }
@@ -1451,19 +1435,22 @@ li:hover {
 
   /*menu-restau= pas intéressant a traduire en Sass*/
   .menu-restau__titre {
+    display: flex;
+    flex-direction: column;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
     line-height: 2rem;
     padding-top: 2rem;
     position: relative;
   }
 
   .menu-restau__soulignement {
-    height: 3px;
     position: relative;
-    top: -25px;
+    width: 4rem;
+    bottom: 1rem;
     border-bottom: 4px #99E2D0 solid;
-    width: 5rem;
+    border-bottom: 4px #99E2D0 solid;
   }
 
   .menu-restau__cartes_slide {
@@ -1479,7 +1466,8 @@ li:hover {
   }
 
   .menu-restau__plats {
-    width: 50%;
+    width: 32rem;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -1509,20 +1497,27 @@ li:hover {
   }
 
   /*menu-restau= pas intéressant a traduire en Sass*/
+  .menu-restau__tiers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .menu-restau__titre {
+    display: flex;
+    flex-direction: column;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
     line-height: 2rem;
     padding-top: 2rem;
     position: relative;
   }
 
   .menu-restau__soulignement {
-    height: 3px;
     position: relative;
-    top: -25px;
+    top: -20px;
     border-bottom: 4px #99E2D0 solid;
-    width: 5rem;
   }
 
   .menu-restau__cartes_slide {
@@ -1538,7 +1533,8 @@ li:hover {
   }
 
   .menu-restau__plats {
-    width: 50%;
+    width: 32rem;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -1551,7 +1547,7 @@ li:hover {
     position: absolute;
     left: 0rem;
     top: 0rem;
-    height: 314vh;
+    height: 321vh;
   }
 
   /*back-background gris*/
@@ -1565,15 +1561,19 @@ li:hover {
     padding-bottom: 4rem;
     top: -344px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
   }
 
   /*menu-restau= pas intéressant a traduire en Sass*/
   .menu-restau__titre {
+    display: flex;
+    flex-direction: column;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
     line-height: 2rem;
     padding-top: 2rem;
     position: relative;
@@ -1582,9 +1582,9 @@ li:hover {
   }
 
   .menu-restau__soulignement {
-    height: 3px;
     position: relative;
-    top: -25px;
+    top: 0px;
+    border-bottom: none;
   }
 
   .menu-restau__cartes_slide {
@@ -1600,7 +1600,8 @@ li:hover {
   }
 
   .menu-restau__plats {
-    width: 50%;
+    width: 32rem;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -1611,18 +1612,22 @@ li:hover {
     z-index: -2;
     background-color: rgb(222, 222, 222);
     position: absolute;
-    top: 81rem;
+    top: 112rem;
     height: 318px;
   }
 
   /*back-background gris*/
   .menu-restau__tiers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 73%;
   }
 
   .menu-restau__ligne-verte {
     width: 100%;
     position: absolute;
+    bottom: 1rem;
     border: 2px #99E2D0 solid;
   }
 }
@@ -1746,6 +1751,7 @@ li:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
     border-radius: 25px;
     padding-left: 1rem;
@@ -1766,6 +1772,7 @@ li:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
     border-radius: 25px;
     padding-left: 1rem;
@@ -1786,6 +1793,7 @@ li:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
     border-radius: 25px;
     padding-left: 1rem;
@@ -1796,7 +1804,7 @@ li:hover {
     cursor: pointer;
     overflow: hidden;
     filter: brightness(96%);
-    width: 95%;
+    width: 72%;
   }
   .menu-restau__cartes:hover {
     -webkit-filter: brightness(100%);
@@ -1863,18 +1871,19 @@ li:hover {
 @media screen and (max-width: 768px) {
   .menu-restau__cartes:hover .menu-restau__cartes_tourne {
     transform: rotate(360deg);
-    transition: all 0.3s linear;
+    transition: all 0.5s ease-in-out;
   }
 
-  .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
+  .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__prix {
     transform: translateX(-8rem);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   .menu-restau__cartes:hover .menu-restau__plats {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     transition: width 0.3s;
+    width: calc(70% - 8em);
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -1882,10 +1891,10 @@ li:hover {
 @media screen and (min-width: 768px) and (max-width: 990px) {
   .menu-restau__cartes:hover .menu-restau__cartes_tourne {
     transform: rotate(360deg);
-    transition: all 0.3s linear;
+    transition: all 0.5s ease-in-out;
   }
 
-  .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
+  .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__prix {
     transform: translateX(-8rem);
     transition: all 0.3s ease-in-out;
   }
@@ -1901,10 +1910,10 @@ li:hover {
 @media screen and (min-width: 990px) {
   .menu-restau__cartes:hover .menu-restau__cartes_tourne {
     transform: rotate(360deg);
-    transition: all 0.3s linear;
+    transition: all 0.5s ease-in-out;
   }
 
-  .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
+  .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__prix {
     transform: translateX(-8rem);
     transition: all 0.3s ease-in-out;
   }
@@ -1913,6 +1922,7 @@ li:hover {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     transition: width 0.3s;
+    width: calc(70% - 8em);
     text-overflow: ellipsis;
     white-space: nowrap;
   }

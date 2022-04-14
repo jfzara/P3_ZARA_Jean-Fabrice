@@ -38,7 +38,7 @@ $font-tres-grande: 2.5rem;
 body {
     font-family: 'Roboto', sans-serif;  
     margin: 0;
-    
+    color: black;
 }  
 
 
@@ -66,6 +66,14 @@ h1, h2 {
     @media screen  and (min-width: 990px) {} 
 }
 
+h3 {
+    font-size: $font-moyenne;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .titre_gras {
     font-size: $font-grande;
     font-weight: $font-gras;
@@ -75,8 +83,6 @@ h1, h2 {
 }
 
 p {
-    font-size: $font-normale;
-    font-weight: normal;
     text-overflow: ellipsis;
     white-space: nowrap;
     
@@ -97,9 +103,6 @@ footer a  {
     
 }
 
- li:hover {
-    color: #9356DC;
-}
 
 /*ANIMATION fondu accueil + spinner*/
 
@@ -1189,13 +1192,14 @@ $formulaire-border-hauteur:26px;
     list-style: none;
     color: white;
     line-height: 20px;
+    width: 210px;
+    cursor: pointer;
 }
 @mixin footer-ancres {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 14px;
-    width: 100%;
     font-size: 1.2rem;
 }
 @mixin footer-ancres-illustrees{
@@ -1203,9 +1207,7 @@ $formulaire-border-hauteur:26px;
     flex-direction: row;
     align-items: center;
     gap: 14px;
-    width: 100%;
     font-size: 1.2rem;
-    gap: 15px;
     font-weight: 600;
     
 }
@@ -1215,55 +1217,49 @@ $formulaire-border-hauteur:26px;
 
 
 @media screen and (max-width: 768px) {
-
-.footer {
+    .footer {
         @include footer;
+        padding-right: 2rem;
         position: relative;
-        padding-left: 0rem;
-        padding-top: 1.5rem;
-        padding-right: 3rem;
     }
+
+    .footer__masque{
+        position:absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 2;
+        @include fade-out;
+}
 
 .footer__logo_white {
     @include footer-logo-white;
-    margin-left: 40px;
-    margin-bottom: 0px;    
-    margin-top: 0px;
-}
 
-.footer__masque{
-    position:absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 2;
-    @include fade-out;
 }
-
-.footer__liste {
+  
+.footer__liste  {
     @include footer-liste;
-    flex-direction: column;
 }
 
 li {
     @include footer-li;
-    line-height: 0rem;
-}
-
-.footer__ancres {
-    @include footer-ancres;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.3rem;
-    font-size: $font-moyenne;
 }
 
 .footer__ancres_illustrees {
     @include footer-ancres-illustrees;
-    min-width: 74%;
+
 }
+   
+.footer__ancres {
+    @include footer-ancres;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 3rem;
+  
+}     
+
 
 
 } 
@@ -1292,9 +1288,7 @@ li {
 
 .footer__logo_white {
     @include footer-logo-white;
-    margin-left: 40px;
-    margin-bottom: 0px;    
-    margin-top: 1rem;
+
 }
   
 .footer__liste  {
@@ -1307,7 +1301,7 @@ li {
 
 .footer__ancres_illustrees {
     @include footer-ancres-illustrees;
-    width: 55%;
+
 }
    
 .footer__ancres {
@@ -1315,7 +1309,7 @@ li {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     line-height: 3rem;
-    width: 25%;
+  
 }     
 
 
@@ -1328,10 +1322,10 @@ li {
 
 .footer {
     @include footer;
+    padding-right: 2rem;
     position: relative;
-    
 }
-  
+
 .footer__masque{
     position:absolute;
     bottom: 0px;
@@ -1343,43 +1337,32 @@ li {
     @include fade-out;
 }
 
+.footer__logo_white {
+@include footer-logo-white;
+
+}
 
 .footer__liste  {
-    @include footer-liste;
+@include footer-liste;
 }
 
 li {
-    @include footer-li;
-}
-
-
-li:hover {
-    color: #9356DC;
+@include footer-li;
 }
 
 .footer__ancres_illustrees {
-    @include footer-ancres-illustrees;
-    width: 55%;
+@include footer-ancres-illustrees;
+
 }
 
 .footer__ancres {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 3rem;
-}
-.footer p {
-    font-weight: normal;  
-}
+@include footer-ancres;
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+line-height: 3rem;
 
-.footer__logo_white {
-    @include footer-logo-white;
-    font-size: 1.5rem;
-    margin-left: 40px;
-    margin-bottom: auto;
-}
+}     
+
 
 
 }
@@ -1401,21 +1384,21 @@ li:hover {
 
 @media screen and (max-width: 768px) {
     .tout {
-        height: 362vh;
+        height: 372vh;
         min-width: 356px;
     }
 }
 
 @media screen  and (min-width: 768px) and (max-width: 990px) {
     .tout {
-        height: 390vh;
+        height: 395vh;
     }
 
 }
 
 @media screen  and (min-width: 990px) {
     .tout {
-        height: 347vh;
+        height: 395vh;
     }
 }
   
@@ -1560,7 +1543,8 @@ li:hover {
     font-family: Shrikhand;
     font-size: $font-tres-grande;
     font-weight: $font-gras;
-    padding-left: 1.5rem;  
+    padding-left: 1.5rem; 
+    margin-right: 1rem; 
 }
 @mixin pancarte{
     display: flex;
@@ -1571,6 +1555,7 @@ li:hover {
     background-color: $color-tertiary-light;
     border-radius: 60px 60px 0 0;
     position: relative;
+    padding-right: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -1649,20 +1634,21 @@ li:hover {
 
 
 @mixin restau-titre { 
+    display: flex;
+    flex-direction: column;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
     line-height: 2rem;
     padding-top: 2rem;
     position: relative;
 }
+
 @mixin ligne-verte { 
-    height: 3px;
     position: relative;
-    top: -25px;  
 }
 @mixin ligne-verte-mobile-tablette {
     border-bottom: 4px $color-emphasis-light solid;
-    width: 5rem;
 }
 @mixin cartes-slide {
     display: flex;
@@ -1676,7 +1662,8 @@ li:hover {
     left: 8rem;
 }
 @mixin cartes-ellipse-texte{
-    width: 50%;
+    width: 32rem;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -1705,6 +1692,9 @@ li:hover {
 
     .menu-restau__soulignement { 
         @include ligne-verte;
+        width: 4rem;
+        bottom: 1rem;
+        border-bottom: 4px #99E2D0 solid;
         @include ligne-verte-mobile-tablette;
     }
 
@@ -1739,12 +1729,19 @@ li:hover {
     top: -344px; 
 }/*menu-restau= pas intéressant a traduire en Sass*/
 
+.menu-restau__tiers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .menu-restau__titre { 
     @include restau-titre;
 }
 
 .menu-restau__soulignement { 
     @include ligne-verte;
+    top: -20px;
     @include ligne-verte-mobile-tablette;
 }
 
@@ -1760,7 +1757,7 @@ li:hover {
     @include back-background-gris; 
     left: 0rem;
     top: 0rem;
-    height: 314vh;
+    height: 321vh;
     
 }/*back-background gris*/
 
@@ -1772,16 +1769,18 @@ li:hover {
 /*MENU éléments statiques*/
 
 .menu-restau {
-    background-color: $color-tertiary-light;
+    background-color: rgb(222, 222, 222);
     position: relative;
     font-size: initial;
-    padding-bottom: 4rem; 
+    padding-bottom: 4rem;
     top: -344px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }/*menu-restau= pas intéressant a traduire en Sass*/
+
 
 .menu-restau__titre { 
     @include restau-titre;
@@ -1789,8 +1788,10 @@ li:hover {
     width: fit-content;   
 }
 
-.menu-restau__soulignement { 
+.menu-restau__soulignement {  
     @include ligne-verte;
+    top: 0px;
+    border-bottom: none;
 }
 
 .menu-restau__cartes_slide {
@@ -1803,13 +1804,15 @@ li:hover {
 
 .menu-restau::after {
     @include back-background-gris;
-    top: 81rem;
+    top: 112rem;
     height: 318px;
 }/*back-background gris*/
 
 
 .menu-restau__tiers { 
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 73%;
     
 }
@@ -1817,6 +1820,7 @@ li:hover {
 .menu-restau__ligne-verte { 
     width: 100%;
     position: absolute;
+    bottom: 1rem;
     border: 2px #99E2D0 solid;
 }
 
@@ -1925,7 +1929,9 @@ li:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
+    
     border-radius: 25px;
     padding-left: 1rem;
     margin-top: 1.5rem;
@@ -1976,7 +1982,7 @@ li:hover {
 
 .menu-restau__cartes {
         @include cartes-restaurant;
-        width: 95%;
+        width: 72%;
     
         &:hover { 
             -webkit-filter: brightness(100%);
@@ -2059,18 +2065,19 @@ li:hover {
     
     .menu-restau__cartes:hover .menu-restau__cartes_tourne {
         transform: rotate(360deg);
-        transition: all 0.3s linear;
+        transition: all 0.5s ease-in-out;
     }
     
-    .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
+    .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__prix {
         transform: translateX(-8rem);
-        transition: all 0.3s ease-in-out;
+        transition: all 0.5s ease-in-out;
     }
     
     .menu-restau__cartes:hover .menu-restau__plats {
         overflow: hidden;
         transition: all 0.3s ease-in-out;
         transition: width 0.3s ;
+        width: calc(70% - 8em);
         text-overflow: ellipsis;
         white-space: nowrap;
     }
@@ -2082,10 +2089,10 @@ li:hover {
     
     .menu-restau__cartes:hover .menu-restau__cartes_tourne {
         transform: rotate(360deg);
-        transition: all 0.3s linear;
+        transition: all 0.5s ease-in-out;
     }
     
-    .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
+    .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__prix {
         transform: translateX(-8rem);
         transition: all 0.3s ease-in-out;
     }
@@ -2094,9 +2101,12 @@ li:hover {
         overflow: hidden;
         transition: all 0.3s ease-in-out;
         transition: width 0.3s ;
+        
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
+    
 
 
 } 
@@ -2105,10 +2115,10 @@ li:hover {
     
     .menu-restau__cartes:hover .menu-restau__cartes_tourne {
         transform: rotate(360deg);
-        transition: all 0.3s linear;
+        transition: all 0.5s ease-in-out;
     }
     
-    .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__cartes_slide p {
+    .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__prix {
         transform: translateX(-8rem);
         transition: all 0.3s ease-in-out;
     }
@@ -2117,11 +2127,12 @@ li:hover {
         overflow: hidden;
         transition: all 0.3s ease-in-out;
         transition: width 0.3s ;
+        width: calc(70% - 8em);
         text-overflow: ellipsis;
         white-space: nowrap;
     }
 
-
+   
 } 
 
 
