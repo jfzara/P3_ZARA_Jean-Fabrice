@@ -2205,6 +2205,8 @@ line-height: 3rem;
     cursor: pointer;
     border: none;
     background-color: $color-tertiary-light; 
+    position: absolute;
+    right: 80px;
 }        
 @mixin restau-coeur-plein {
     background: -webkit-linear-gradient($color-primary, $color-secondary);
@@ -2506,14 +2508,25 @@ restau__coeur_vide {
       opacity: 1;
     }
   }
-
-.menu-restau__tiers article {
-    animation: cartes-delay 0.6s forwards ;
+  @keyframes fade-in-tiers {
+    0% {
+      opacity: 0;
+    }
+   100% {
+      opacity: 1;
+    }
   }
 
-@for $i from 2 through 4 {
+  .menu-restau__tiers  {
+    animation: fade-in-tiers 3s forwards  ;
+  }
+    .menu-restau__tiers article {
+    animation: cartes-delay 0.7s ease-out   forwards ;
+  }
+
+@for $i from 2 through 5 {
     .menu-restau__cartes:nth-child(#{$i}){
-        animation-delay: 0.1s*$i;
+        animation-delay: 0.2s*$i;
     }
 }
   
