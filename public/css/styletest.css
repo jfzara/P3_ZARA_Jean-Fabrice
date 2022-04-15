@@ -20,19 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   align-content: center;
-  /*  height:152rem;*/
+  color: black;
 }
-@media screen and (min-width: 768px) and (max-width: 990px) {
-  .tout-home {
-    /* height: 176rem;*/
-  }
-}
-@media screen and (min-width: 990px) {
-  .tout-home {
-    /* height: 104rem;*/
-  }
-}
-
 h1, h2 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -60,6 +49,7 @@ p {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: black;
 }
 
 article, figure {
@@ -68,6 +58,11 @@ article, figure {
 
 footer a {
   font-size: 1.2rem;
+  color: white;
+}
+
+.footer a:hover, .footer p:hover {
+  color: #9356DC;
 }
 
 /*ANIMATION fondu accueil + spinner*/
@@ -299,6 +294,12 @@ footer a {
 }
 /*BOUTON EXPLORER*/
 /*@mixin bouton-explorer */
+.btn__ancre_explorer:hover {
+  box-shadow: 9px 10px 10px rgb(205, 205, 205);
+  filter: brightness(100%);
+  filter: brightness(105%);
+}
+
 @media screen and (max-width: 768px) {
   .btn__ancre_explorer {
     background-color: #9356DC;
@@ -309,6 +310,8 @@ footer a {
     text-align: center;
     color: white;
     cursor: pointer;
+    max-width: 330px;
+    filter: brightness(96%);
     padding-left: 1rem;
     padding-right: 1rem;
     width: 55%;
@@ -324,7 +327,9 @@ footer a {
     text-align: center;
     color: white;
     cursor: pointer;
-    box-shadow: 6px 8px 6px rgb(205, 205, 205);
+    max-width: 330px;
+    filter: brightness(96%);
+    box-shadow: 6px 8px 8px rgb(222, 222, 222);
     width: 50%;
     margin-top: 1rem;
   }
@@ -339,7 +344,9 @@ footer a {
     text-align: center;
     color: white;
     cursor: pointer;
-    box-shadow: 6px 8px 6px rgb(205, 205, 205);
+    max-width: 330px;
+    filter: brightness(96%);
+    box-shadow: 6px 8px 8px rgb(222, 222, 222);
     width: 50%;
   }
 }
@@ -451,6 +458,15 @@ footer a {
   }
 }
 /*--SECTION FONCTIONNEMENT (fctn)--*/
+.section-fctn div:hover {
+  background-color: #ecddff;
+  box-shadow: 6px 8px 8px rgb(222, 222, 222);
+}
+
+.section-fctn div:hover > i {
+  color: #9356DC;
+}
+
 @media screen and (max-width: 768px) {
   .section-fctn {
     display: flex;
@@ -498,14 +514,6 @@ footer a {
     font-size: 1rem;
     font-weight: bold;
     width: 50%;
-  }
-
-  .section-fctn div:nth-of-type(3) {
-    background-color: #ecddff;
-  }
-
-  .section-fctn div:nth-of-type(3) i {
-    color: #9356DC;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
@@ -566,17 +574,6 @@ footer a {
     min-width: 60%;
     color: rgb(54, 54, 54);
   }
-
-  .section-fctn div:nth-of-type(3) {
-    background-color: #ecddff;
-  }
-
-  /*etape 3 : "dégustez au restaurant"  @mixin etape-3-fctn*/
-  .section-fctn div:nth-of-type(3) i {
-    color: #9356DC;
-  }
-
-  /*etape 3 : " icône restaurant (dégustez au restaurant)"*/
 }
 @media screen and (min-width: 990px) {
   .section-fctn {
@@ -632,15 +629,6 @@ footer a {
     min-width: 60%;
     color: rgb(54, 54, 54);
   }
-
-  .section-fctn div:nth-of-type(3) {
-    background-color: #ecddff;
-    /*etape 3 : "dégustez au restaurant"  @mixin etape-3-fctn*/
-    /*etape 3 : " icône restaurant (dégustez au restaurant)"*/
-  }
-  .section-fctn div:nth-of-type(3) i {
-    color: #9356DC;
-  }
 }
 /*SECTION RESTOS*/
 /*animation cartes éclaircissement*/
@@ -681,7 +669,7 @@ footer a {
     background-color: #99E2D0;
     color: rgb(0, 116, 58);
     font-weight: bold;
-    width: 20%;
+    width: 22%;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -772,8 +760,14 @@ footer a {
   }
   .restos__titre {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     text-align: center;
     margin-bottom: 2rem;
+  }
+  .restos__titre_gras {
+    width: 200px;
   }
   .restos__fig {
     width: 80%;
@@ -797,7 +791,7 @@ footer a {
     background-color: #99E2D0;
     color: rgb(0, 116, 58);
     font-weight: bold;
-    width: 20%;
+    width: 22%;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -885,6 +879,7 @@ footer a {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     padding-top: 3rem;
     padding-right: 5rem;
     /*animation figcaption-lighten*/
@@ -918,7 +913,7 @@ footer a {
     background-color: #99E2D0;
     color: rgb(0, 116, 58);
     font-weight: bold;
-    width: 20%;
+    width: 22%;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -939,7 +934,7 @@ footer a {
     height: 7rem;
   }
   .restos article {
-    width: 50%;
+    width: 28rem;
     margin-bottom: 1.7rem;
   }
   .restos__infos {
@@ -1032,6 +1027,7 @@ footer a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: white;
   }
 
   li {
@@ -1098,6 +1094,7 @@ footer a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: white;
   }
 
   li {
@@ -1163,6 +1160,7 @@ footer a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: white;
   }
 
   li {
@@ -1640,6 +1638,16 @@ footer a {
     justify-content: center;
   }
 
+  .menu-restau__btn p {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);
+    filter: brightness(96%);
+  }
+
+  .menu-restau__btn p:hover {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);
+    filter: brightness(100%);
+  }
+
   .menu-restau__btn_commander {
     display: flex;
     flex-direction: row;
@@ -1677,6 +1685,16 @@ footer a {
     justify-content: center;
   }
 
+  .menu-restau__btn p {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);
+    filter: brightness(96%);
+  }
+
+  .menu-restau__btn p:hover {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);
+    filter: brightness(100%);
+  }
+
   .menu-restau__btn_commander {
     display: flex;
     flex-direction: row;
@@ -1712,6 +1730,16 @@ footer a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
+
+  .menu-restau__btn p {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);
+    filter: brightness(96%);
+  }
+
+  .menu-restau__btn p:hover {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);
+    filter: brightness(100%);
   }
 
   .menu-restau__btn_commander {
