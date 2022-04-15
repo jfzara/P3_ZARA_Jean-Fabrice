@@ -389,10 +389,23 @@ footer a  {
     box-shadow: 9px 10px 10px  $color-tertiary-medium;    
     filter: brightness(100%);  
     }
-    
+ 
+@keyframes btn-scale-hover {
+    0% {
+        transform: scale(1.0);
+        
+    }
+    100% {
+        transform: scale(1.05);
+        
+    }
+}   
+
+
 .btn__ancre_explorer:hover {
     @include ombre-bouton-explorer-eclaircissement;
     filter: brightness(105%);
+    animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards;
 }
 
 @media screen and (max-width: 768px) {
@@ -584,6 +597,7 @@ $formulaire-border-hauteur:26px;
 .section-fctn div:hover { 
     @include etape-fctn-hover;
     @include ombre-bouton-explorer; 
+    animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards; 
     }
 
 .section-fctn div:hover > i {
@@ -1884,6 +1898,12 @@ line-height: 3rem;
     font-weight: 500;
 }
 
+.menu-restau__btn p:hover {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);  
+    animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards;   
+    filter: brightness(100%);   
+    }
+
 @media screen and (max-width: 768px) {
 
     .menu-restau__btn {
@@ -1893,11 +1913,8 @@ line-height: 3rem;
         box-shadow: 9px 10px 10px rgb(189, 189, 189);    
         filter: brightness(96%);   
         }
-    .menu-restau__btn p:hover {
-        box-shadow: 9px 10px 10px rgb(189, 189, 189);    
-        filter: brightness(100%);   
-        }
-    
+   
+       
     .menu-restau__btn_commander {
         @include bouton-commander;
         margin-top: 50px;
@@ -1920,10 +1937,7 @@ line-height: 3rem;
     box-shadow: 9px 10px 10px rgb(189, 189, 189);    
     filter: brightness(96%);   
     }
-.menu-restau__btn p:hover {
-    box-shadow: 9px 10px 10px rgb(189, 189, 189);    
-    filter: brightness(100%);   
-    }
+
 
 .menu-restau__btn_commander {
     @include bouton-commander;
@@ -1948,10 +1962,7 @@ line-height: 3rem;
         box-shadow: 9px 10px 10px rgb(189, 189, 189);    
         filter: brightness(96%);   
         }
-    .menu-restau__btn p:hover {
-        box-shadow: 9px 10px 10px rgb(189, 189, 189);    
-        filter: brightness(100%);   
-        }
+    
     
 
     .menu-restau__btn_commander {
@@ -2485,27 +2496,54 @@ restau__coeur_vide {
 
 /*ANIMATION MENU FADE IN apparition progressive*/
 
- @keyframes fade-in-tiers {
-    from {
+@keyframes fade-in-tiers {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+.menu-restau__tiers {
+    animation: fade-in-tiers 4s forwards;
+  }
+
+@for $i from 1 through 4 {
+.menu-restau__tiers:nth-of-type(#{$i}){
+    animation-delay: $i * 0.9;
+}
+
+  @keyframes cartes-delay {
+    0% {
       opacity: 0;
     }
-    to {
+    25% {
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 0.75;
+      }
+
+   100% {
       opacity: 1;
     }
   }
-.menu-restau__tiers {
-    animation: fade-in-tiers forwards;
+
+.menu-restau__cartes {
+    animation: cartes-delay 2s ease-in-out forwards ;
   }
-  
-  @for $i from 1 through 4 {
-    .menu-restau__tiers:nth-of-type(#{$i}){
-        animation-delay: $i * 0.9;
+
+@for $i from 1 through 4 {
+    .menu-restau__cartes:nth-of-type(#{$i}){
+        animation-delay: $i * 1;
     }
-  }
+}
+  
  
 
 @media screen and (max-width: 768px) {
-    .menu-restau__tiers {
+   /* .menu-restau__tiers {
         animation: fade-in-tiers 3s forwards;
       }
       
@@ -2513,11 +2551,10 @@ restau__coeur_vide {
         .menu-restau__tiers:nth-of-type(#{$i}){
             animation-delay: $i * 0.9;
         }
-      }
+      }*/
 } 
 @media screen  and (min-width: 768px) and (max-width: 990px) {
-
-    .menu-restau__tiers {
+/* .menu-restau__tiers {
         animation: fade-in-tiers 3s forwards;
       }
       
@@ -2525,12 +2562,12 @@ restau__coeur_vide {
         .menu-restau__tiers:nth-of-type(#{$i}){
             animation-delay: $i * 0.9;
         }
-      }
+      }*/
 } 
 
 @media screen  and (min-width: 990px) {
 
-    .menu-restau__tiers {
+   /* .menu-restau__tiers {
         animation: fade-in-tiers 3s forwards;
       }
       
@@ -2538,6 +2575,6 @@ restau__coeur_vide {
         .menu-restau__tiers:nth-of-type(#{$i}){
             animation-delay: $i * 0.9;
         }
-      
+      }*/
 }
 }
