@@ -50,66 +50,8 @@ $formulaire-border-hauteur:26px;
     @include formulaire;  
 }
 
-@media screen and (max-width: 768px) {
 
-    .formulaire {
-        height: 2rem;
-        width: 100%;
-        border-top: 4px #c9c9c9 solid;
-        border-bottom: 1px solid $color-tertiary-light;   
-    }
 
-    .formulaire__texte {
-        width: 33%;
-        padding-left: 5px;
-    } 
-    
-    .formulaire__icone {
-        margin-right: 13px;   
-    }
 
-    .formulaire__border_gradient {
-        height: 2px;
-    }
-
-} 
-
-@media screen  and (min-width: 768px) and (max-width: 990px) {
-
-    .formulaire {
-        padding: 20px;  
-    }
-
-    .formulaire__texte  {
-        @include formulaire-texte--combo-tablette-desktop; 
-    } 
-    
-    .formulaire__icone {
-        margin-right: 10px;
-    }
-    
-    .formulaire__border_gradient {
-        height: $formulaire-border-hauteur;
-    }
-
-} 
-
-@media screen  and (min-width: 990px) {
  
-    .formulaire {
-        padding: 20px;  
-    }
-
-    .formulaire__texte  {
-       
-    } 
     
-    .formulaire__icone {
-        margin-right: 6px;
-    }
-  
-    .formulaire__border_gradient {
-        height:$formulaire-border-hauteur;
-    }
-
-} 
