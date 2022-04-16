@@ -1,0 +1,157 @@
+/*BOUTON EXPLORER*/ 
+
+/*@mixin bouton-explorer */
+
+@mixin bouton-explorer {
+    background-color: $color-primary;
+    background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+    border-radius: 20px;
+    text-decoration: none;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    max-width: 330px;   
+    filter: brightness(96%);
+}
+@mixin ombre-bouton-explorer {
+    box-shadow: 6px 8px 8px $color-tertiary-light;
+}
+@mixin ombre-bouton-explorer-eclaircissement{
+    box-shadow: 9px 10px 10px  $color-tertiary-medium;    
+    filter: brightness(100%);  
+}
+ 
+@keyframes btn-scale-hover {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.05); 
+    }
+}   
+
+
+.btn__ancre_explorer:hover {
+    @include ombre-bouton-explorer-eclaircissement;
+    filter: brightness(105%);
+    animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards;
+}
+
+@media screen and (max-width: 768px) {
+
+    .btn__ancre_explorer {
+        @include bouton-explorer;
+        padding-left: 1rem;
+        padding-right: 1rem; 
+        width: 55%;
+    }
+
+} 
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+    .btn__ancre_explorer {
+        @include bouton-explorer;
+        @include ombre-bouton-explorer;
+        width: 50%;
+        margin-top: 1rem;  
+    }
+} 
+@media screen  and (min-width: 990px) {
+
+    .btn__ancre_explorer {
+        @include bouton-explorer;
+        @include ombre-bouton-explorer;
+        width: 50%; 
+    }
+  
+}
+
+
+
+
+
+/* BOUTON COMMANDER*/
+
+
+@mixin ancre-commander{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}/* permet de contenir le btn*/
+@mixin bouton-commander{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+} /* permet de centrer le btn*/
+@mixin texte-bouton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 193px;
+    background-color: $color-primary;
+    background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    box-shadow: 6px 8px 6px $color-tertiary-medium;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+.menu-restau__btn {
+
+    @include ancre-commander;
+
+        & p {
+            box-shadow: 9px 10px 10px rgb(189, 189, 189);    
+            filter: brightness(96%);   
+            }
+    
+    
+        & p:hover {
+        box-shadow: 9px 10px 10px rgb(189, 189, 189);  
+        animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards;   
+        filter: brightness(100%);   
+        }
+    
+        &_commander {
+            @include bouton-commander;
+          
+        }
+
+        &_commander p {
+            @include texte-bouton;
+        }
+
+  }
+
+@media screen and (max-width: 768px) {    
+    .menu-restau__btn_commander {
+        margin-top: 50px;
+    }
+} 
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+.menu-restau__btn_commander {
+    margin-top: 93px;
+}
+} 
+
+@media screen  and (min-width: 990px) {
+    .menu-restau__btn_commander {
+        margin-top: 93px;
+    }
+
+    
+
+} 
+
+

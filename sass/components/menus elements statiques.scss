@@ -1,0 +1,184 @@
+/*MENU éléments statiques*/
+@mixin menu-restau-tiers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin restau-titre { 
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: $font-gras;
+    font-size: $font-grande;
+    line-height: 2rem;
+    padding-top: 2rem;
+    position: relative;
+}
+@mixin ligne-verte { 
+    position: relative;
+}
+@mixin ligne-verte-mobile-tablette {
+    border-bottom: 4px $color-emphasis-light solid;
+}
+@mixin cartes-slide {
+    display: flex;
+    flex-direction: row;
+    background-color: $color-emphasis-light;
+    font-weight: $font-gras;
+    width: 3rem;
+    height: 3rem;
+    padding: 2rem;
+    position: relative;
+    left: 8rem;
+}
+@mixin cartes-ellipse-texte{
+    width: 32rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin back-background-gris{
+    content: "";
+    width: 100%;
+    z-index: -2; 
+    background-color: $color-tertiary-light ;
+    position: absolute;
+}
+
+.menu-restau__soulignement {  
+    @include ligne-verte;  
+}
+
+.menu-restau__titre { 
+    @include restau-titre;
+}
+
+.menu-restau__cartes_slide {
+    @include cartes-slide;
+}
+
+.menu-restau__plats {
+    @include cartes-ellipse-texte;
+}
+
+.menu-restau__tiers  {
+    @include menu-restau-tiers;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .menu-restau { 
+        position: relative;    
+        background-color: $color-tertiary-light;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+        top: -55px;
+    }/*menu-restau= pas intéressant a traduire en Sass*/
+
+    
+
+    .menu-restau__soulignement { 
+        @include ligne-verte;
+        width: 4rem;
+        bottom: 1rem;
+        border-bottom: 4px #99E2D0 solid;
+        @include ligne-verte-mobile-tablette;
+    }
+    
+    .menu-restau::after {
+        @include back-background-gris; 
+        left: 0rem;
+        top: 0rem;
+        height: 314vh;
+    }
+
+} 
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+
+/*MENU éléments statiques*/
+
+.menu-restau { 
+    position: relative;
+    background-color: $color-tertiary-light; 
+    font-size: initial; 
+    padding-left: 2rem ;
+    padding-right: 2rem ;
+    padding-bottom: 2rem;
+    top: -223px;
+}
+
+.menu-restau__soulignement { 
+    @include ligne-verte;
+    top: -20px;
+    @include ligne-verte-mobile-tablette;
+}
+
+.menu-restau::after {
+    @include back-background-gris; 
+    left: 0rem;
+    top: 20rem;
+    height: 321vh;
+}
+
+} 
+
+@media screen  and (min-width: 990px) {
+
+/*MENU éléments statiques*/
+
+.menu-restau {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary-light;
+    position: relative;
+    font-size: initial;
+    padding-bottom: 4rem;
+    top: -344px;
+    
+}/*menu-restau= pas intéressant a traduire en Sass*/
+
+
+.menu-restau__titre { 
+    overflow: hidden;
+    width: fit-content;   
+}
+
+.menu-restau__soulignement {  
+    @include ligne-verte;
+    top: 0px;
+    border-bottom: none;
+}
+
+
+.menu-restau::after {
+    @include back-background-gris;
+    top: 110rem;
+    height: 411px;
+}/*back-background gris*/
+
+
+.menu-restau__tiers { 
+    @include menu-restau-tiers;
+    width: 73%;  
+}
+
+.menu-restau__ligne-verte { 
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    border: 2px #99E2D0 solid;
+}
+
+
+
+}
+
+
+
+

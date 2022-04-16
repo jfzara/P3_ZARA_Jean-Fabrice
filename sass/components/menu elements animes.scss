@@ -1,0 +1,176 @@
+
+/* MENU éléments animés*/
+
+/* carte */
+
+@mixin cartes-restaurant{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding-left: 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 6px 8px 6px $color-tertiary-medium;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    filter: brightness(96%);
+}
+   
+.menu-restau__cartes { 
+    @include cartes-restaurant;
+    
+    &:hover { 
+        -webkit-filter: brightness(100%);
+        box-shadow: 9px 10px 10px rgb(189, 189, 189);
+    }
+}
+
+ 
+@media screen and (max-width: 768px) {   
+
+} 
+
+@media screen  and (min-width: 768px) and (max-width: 990px) {
+} 
+
+@media screen  and (min-width: 990px) {
+
+.menu-restau__cartes {
+       
+    width: 72%;
+}
+
+}
+
+
+/*Fa spin*/
+
+@mixin icone-check-spin {
+    color: $color-emphasis-light;
+    font-weight: $font-gras;
+    font-size: $font-grande;
+}
+@mixin contenant-icone-check-spin { 
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50px;
+    border: 1px $color-emphasis-light solid;
+    padding: 8px 14px 14px 10px;
+    background-color: white;
+    bottom: 2rem;
+}
+@mixin animation-tourne {
+    .fa-check {
+        @include icone-check-spin;
+    }
+
+    .menu-restau__cartes_tourne /* div*/  { 
+        @include contenant-icone-check-spin;
+    }
+}/*combo de 2 mixins: icone-check-spin + contenant-cone-check-spin*/
+
+
+
+/*Animation sélection plats*/
+
+.menu-restau {
+    
+    &__cartes:hover &__cartes_tourne {
+        transform: rotate(360deg);
+        transition: all 0.5s ease-in-out;
+    }
+    
+    &__cartes:hover &__cartes_slide, &__prix {
+        transform: translateX(-8rem);
+        transition: all 0.5s ease-in-out;
+    }
+    
+    &__cartes:hover &__plats {
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        transition: width 0.3s ;
+        width: calc(70% - 8em);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+} /*a mettre dans composant menu-restau menu elements statiques*/
+
+
+
+/*ANIMATION COEUR OPACITY*/
+  
+
+@mixin restau-coeur {
+    font-size: 2rem;
+    position: relative;
+    height: 2rem;
+    font-size: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: $color-tertiary-light; 
+    position: absolute;
+    right: 80px;
+}        
+@mixin restau-coeur-plein {
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    opacity: 0;
+}
+@mixin restau-coeur-vide {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+}
+
+.restau__coeur {
+    @include restau-coeur; 
+}        
+
+.restau__coeur_plein {
+    @include restau-coeur-plein;
+}
+
+.restau__coeur_vide {
+    @include restau-coeur-vide;
+}
+
+
+@keyframes coeur-fill {
+    from {
+      opacity: 0;
+      
+    }
+  
+    to {
+        opacity: 1;
+        
+    }
+  }
+
+    .restau__coeur:hover  .restau__coeur_plein {
+    animation: accueil-coeur-fill 0.7s forwards;
+    animation-timing-function: ease-in;
+    
+}    
+    .restau__coeur:hover .restau__coeur_vide {
+    transform: scale(1.1) ;
+    transition: transform  0.2s ease-in-out;  
+    display: none;
+    z-index: -2;
+} 
+
+
+
