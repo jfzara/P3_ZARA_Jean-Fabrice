@@ -1,4 +1,93 @@
 
+/*--FORMULAIRE--*/
+
+/*@mixin formulaire*/ 
+
+@mixin formulaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary-light; 
+}
+@mixin formulaire-texte {
+    color: $color-tertiary-darker;  
+    font-weight: $font-gras;
+    background-color:  $color-tertiary-light;
+    border:  $color-tertiary-light;
+    border: none;
+    outline: none;
+} 
+
+@mixin formulaire-texte-tablette-desktop {
+    width: 38%;
+    padding: 15px;
+    border-radius: 17px;
+    box-shadow: 9px 6px 4px $color-tertiary-medium;
+}
+@mixin formulaire-texte-combo-tablette-desktop{
+    @include formulaire-texte;
+    @include formulaire-texte-tablette-desktop;  
+}
+@mixin formulaire-icone{
+    width: 20px;
+    color: $color-tertiary-darker;
+}
+@mixin formulaire-border-gradient {
+    background-image: linear-gradient(to bottom,$color-tertiary-dark, #c9c9c9);
+}
+
+
+
+.formulaire__texte {
+    @include formulaire-texte;
+} 
+.formulaire__border_gradient{
+    @include formulaire-border-gradient;
+}
+.formulaire__icone {
+    @include formulaire-icone;
+}
+.formulaire {
+    @include formulaire;  
+}
+
+
+/*--SECTION FONCTIONNEMENT (fctn)--*/
+
+
+@mixin etape-fctn-hover {
+    background-color: #ecddff;
+}
+@mixin section-fctn__numero{
+    background-color: $color-primary;
+    color: white;
+    border-radius: 50px; 
+    position: absolute;
+    left: -1rem;
+    text-align: center;
+}
+@mixin section-fctn__icones{
+    border-radius: 50px;
+    margin: 10px;  
+}
+@mixin fctn-texte-tablette-desktop {
+    font-size: 1rem;
+    font-weight: bold;
+    min-width: 60%;
+    color: $color-tertiary-darker;
+}
+
+.section-fctn div:hover { 
+    @include etape-fctn-hover;
+    @include ombre-bouton-explorer; 
+    animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards; 
+    }
+
+.section-fctn div:hover > i {
+    color: $color-primary;
+    }
+
 /*SECTION RESTOS*/
 
 
@@ -103,33 +192,6 @@
     z-index: 0;
 }
 
-/*Composant Restos Général */
-
-.restos {
-
-    &__coeur {
-        @include restos-coeur; 
-    }        
-
-    &__coeur_plein {
-        @include restos-coeur-plein;
-    }
-
-    &__coeur_vide {
-        @include restos-coeur-vide;
-    }
-    &__nouveau {
-        @include resto-nouveau;
-    } 
-    &__infos {
-        @include restos-infos;
-    } 
-    &__cartes{
-        cursor: pointer;  
-    }
-
-}
-
 /*ANIMATION COEUR OPACITY */
 
 @keyframes accueil-coeur-fill {
@@ -144,37 +206,67 @@
     }
 }
 
-.restos__coeur:hover  .restos__coeur_plein {
-    animation: accueil-coeur-fill 0.7s forwards;
-    animation-timing-function: ease-in;
+
+/*Composant Restos Général */
+
+.restos {
+
+    &__legende {
+        @include resto-legende;     
+    }
+    &__photos {
+        @include resto-photos;
+    }
+
+    &__coeur {
+        @include restos-coeur; 
+    }        
+
+    &__coeur_plein {
+        @include restos-coeur-plein;
+    }
+
+    &__coeur_vide {
+        @include restos-coeur-vide;
+    }
+
+    &__nouveau {
+        @include resto-nouveau;
+    } 
+
+    &__infos {
+        @include restos-infos;
+    } 
+
+    &__cartes{
+        cursor: pointer;  
+    }
+  
+    &__coeur:hover  &__coeur_plein {
+        animation: accueil-coeur-fill 0.7s forwards;
+        animation-timing-function: ease-in;
+        
+    }
+
+    &__coeur:hover &__coeur_vide {
+        transform: scale(1.1) ;
+        transition: transform  0.2s ease-in-out;
+        display:none;
+        z-index: -2; 
+    } 
+
+    &__cartes:hover  &__legende {
+        @include cartes-animation-eclaircissement;    
+    }
     
-}    
-.restos__coeur:hover .restos__coeur_vide {
-    transform: scale(1.1) ;
-    transition: transform  0.2s ease-in-out;
-    display:none;
-    z-index: -2;
+    &__cartes:hover  &__fig {
+        @include ombre-cartes-assombrissement;     
+    }
+
+}
+
+
     
-}  
-
-/*animation figcaption-lighten*/
-
-.restos__cartes:hover  .restos__legende {
-    @include cartes-animation-eclaircissement;    
-}
-
-.restos__cartes:hover  .restos__fig {
-    @include ombre-cartes-assombrissement;     
-}
-
-.restos__legende {
-    @include resto-legende;     
-}
-.restos__photos {
-    @include resto-photos;
-}
-
-
-
+ 
 
 

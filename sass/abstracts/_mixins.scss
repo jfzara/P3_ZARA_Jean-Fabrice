@@ -1,0 +1,135 @@
+/*BOUTON EXPLORER*/ 
+
+/*@mixin bouton-explorer */
+
+@mixin bouton-explorer {
+    background-color: $color-primary;
+    background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+    border-radius: 20px;
+    text-decoration: none;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    max-width: 330px;   
+    filter: brightness(96%);
+}
+@mixin ombre-bouton-explorer {
+    box-shadow: 6px 8px 8px $color-tertiary-light;
+}
+@mixin ombre-bouton-explorer-eclaircissement{
+    box-shadow: 9px 10px 10px  $color-tertiary-medium;    
+    filter: brightness(100%);  
+}
+
+/* BOUTON COMMANDER*/
+
+
+@mixin ancre-commander{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}/* permet de contenir le btn*/
+@mixin bouton-commander{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+} /* permet de centrer le btn*/
+@mixin texte-bouton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 193px;
+    background-color: $color-primary;
+    background-image: linear-gradient(to top left, $color-primary, $color-secondary);
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    box-shadow: 6px 8px 6px $color-tertiary-medium;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+/*EN-TETE-RESTAU*/ 
+
+
+@mixin entete-restau {
+    width: 100%;
+    margin-inline-start: 0;
+    margin-inline-end: 0; 
+}
+@mixin entete-restau-images{
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+}
+@mixin nom-restau {
+    font-family: Shrikhand;
+    font-size: $font-tres-grande;
+    font-weight: $font-gras;
+    padding-left: 1.5rem; 
+    margin-right: 1rem; 
+}
+@mixin pancarte{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3rem;
+    background-color: $color-tertiary-light;
+    border-radius: 60px 60px 0 0;
+    position: relative;
+    padding-right: 1rem;
+}
+
+/*--FOOTER --*/
+
+@mixin footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-tertiary-darker; 
+    color: white;
+    justify-content: start;
+}
+@mixin footer-logo-white{
+    font-family: Shrikhand;
+    font-weight: 500;
+    color: white;
+    font-size: $font-grande;
+}
+@mixin footer-liste {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+@mixin footer-li {
+    list-style: none;
+    color: white;
+    line-height: 20px;
+    width: 210px;
+    cursor: pointer;
+}
+@mixin footer-ancres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.2rem;
+}
+@mixin footer-ancres-illustrees{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.2rem;
+    font-weight: 600;  
+}

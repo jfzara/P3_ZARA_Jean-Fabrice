@@ -21,49 +21,6 @@
     box-shadow: 9px 10px 10px  $color-tertiary-medium;    
     filter: brightness(100%);  
 }
- 
-@keyframes btn-scale-hover {
-    0% {
-        transform: scale(1.0);
-    }
-    100% {
-        transform: scale(1.05); 
-    }
-}   
-
-
-.btn__ancre_explorer:hover {
-    @include ombre-bouton-explorer-eclaircissement;
-    filter: brightness(105%);
-    animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards;
-}
-
-@media screen and (max-width: 768px) {
-
-    
-} 
-@media screen  and (min-width: 768px) and (max-width: 990px) {
-
-    .btn__ancre_explorer {
-        @include bouton-explorer;
-        @include ombre-bouton-explorer;
-        width: 50%;
-        margin-top: 1rem;  
-    }
-} 
-@media screen  and (min-width: 990px) {
-
-    .btn__ancre_explorer {
-        @include bouton-explorer;
-        @include ombre-bouton-explorer;
-        width: 50%; 
-    }
-  
-}
-
-
-
-
 
 /* BOUTON COMMANDER*/
 
@@ -100,6 +57,25 @@
     color: white;
     font-weight: 500;
 }
+
+ 
+@keyframes btn-scale-hover {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.05); 
+    }
+}   
+
+
+.btn__ancre_explorer:hover {
+    @include ombre-bouton-explorer-eclaircissement;
+    filter: brightness(105%);
+    animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards;
+}
+
+
 .menu-restau__btn {
 
     @include ancre-commander;
@@ -126,6 +102,9 @@
         }
 
   }
+
+
+
 
 
 

@@ -183,8 +183,7 @@ article, figure {
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: white;
-    
+    background-color: white; 
  } 
 
  .fa-spinner {
@@ -201,6 +200,38 @@ article, figure {
  /* masque header animation fondu accueil*/
 
 
+
+/*ANIMATION MENU FADE IN apparition progressive*/
+
+@keyframes cartes-delay {
+    0% {
+      opacity: 0;
+    }
+   100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-tiers {
+    0% {
+      opacity: 0;
+    }
+   100% {
+      opacity: 1;
+    }
+  }
+
+  .menu-restau__tiers  {
+    animation: fade-in-tiers 3s forwards  ;
+  }
+    .menu-restau__tiers article {
+    animation: cartes-delay 0.7s ease-out   forwards ;
+  }
+
+@for $i from 2 through 5 {
+    .menu-restau__cartes:nth-child(#{$i}){
+        animation-delay: 0.2s*$i;
+    }
+}
 /* HEADER*/
 
 @mixin header {
@@ -225,38 +256,6 @@ header {
 } 
 
 
-@media screen and (max-width: 768px) {
-
-    .header__masque_logo {
-        width: 94vw;
-        height: 10.7vh;
-     } 
-
-     .header__logo {
-        width:43%;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-    }
-
-} 
-
-@media screen  and (min-width: 768px) and (max-width: 990px) {
-    
-    .header__masque_logo  {
-        width: 100%;
-        height: 15.2vh;    
-     } 
-} 
-
-
-@media screen  and (min-width: 990px) {
-
-    .header__masque_logo  {
-        width: 100%;
-        height: 20.1vh;   
-     } 
-} 
-
 /*TITRES H1 H2 */
 
 /*@mixin entete-home */
@@ -276,38 +275,18 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
+
+    .header__masque_logo {
+        width: 94vw;
+        height: 10.7vh;
+     } 
+
+     .header__logo {
+        width:43%;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
 
 .entete-home {
     padding-bottom: 4rem;
@@ -485,12 +464,24 @@ header {
 
 @media screen  and (min-width: 768px) and (max-width: 990px) {
 
+    .header__masque_logo  {
+        width: 100%;
+        height: 15.2vh;    
+     } 
+
     .entete-home {
         @include entete-home-tablette-desktop;
     }
     .menu-restau__btn_commander {
         margin-top: 93px;
     }
+    .btn__ancre_explorer {
+        @include bouton-explorer;
+        @include ombre-bouton-explorer;
+        width: 50%;
+        margin-top: 1rem;  
+    }
+} 
     .entete__restau {
         height: 52rem;
     
@@ -654,8 +645,12 @@ header {
 
 } 
 
-
 @media screen  and (min-width: 990px) {
+
+    .header__masque_logo  {
+        width: 100%;
+        height: 20.1vh;   
+     } 
 
     .entete-home {
         @include entete-home-tablette-desktop;
@@ -664,7 +659,13 @@ header {
     .menu-restau__btn_commander {
         margin-top: 93px;
     }
-
+    
+    .btn__ancre_explorer {
+        @include bouton-explorer;
+        @include ombre-bouton-explorer;
+        width: 50%; 
+    }
+  
     .entete__restau {
       
         height: 52rem;
