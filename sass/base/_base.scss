@@ -1,0 +1,58 @@
+/*GENERAL*/
+
+body {
+    font-family: 'Roboto', sans-serif;  
+    margin: 0;
+}  
+
+
+ .tout-home {
+     display: flex;
+     flex-direction: column;
+     align-content: center;   
+}
+
+h1, h2 {
+    font-size: $font-moyenne;
+    font-weight: $font-gras;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+h3 {
+    font-size: $font-moyenne;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.titre_gras {
+    font-size: $font-grande;
+    font-weight: $font-gras;
+}
+
+p {
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+footer a  {
+    font-size: $font-moyenne;
+    color: white;
+}
+
+.footer a:hover, .footer p:hover {
+    color: #9356DC;
+}
+
+article, figure {
+    cursor: pointer;  
+}

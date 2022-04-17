@@ -58,6 +58,100 @@
     font-weight: 500;
 }
 
+/* HEADER*/
+
+@mixin header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+} 
+@mixin header-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;  
+}
+
+/*HEADER-(pages restaurants) */ 
+
+@mixin header-restau {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@mixin header-restau-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    height: 5rem;
+}
+@mixin fleche-retour {
+    position: absolute;
+    font-size: 2rem;
+    font-weight: 700;
+    color: $color-tertiary-darker;
+    left: 12%;
+    top: 9%;
+}
+@mixin header-restau-logo {
+    font-family: Shrikhand;
+    font-size: 3rem;
+    font-weight: 700;
+    padding-left: 1.5rem;  
+}
+
+/* COMPOSANTS animation fondu accueil + spinner*/
+
+@mixin fade-in {
+    animation: accueil-fondu_animation-in 5000ms ease-in-out forwards;
+}
+@mixin fade-out {
+    animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
+}
+@mixin accueil-spinner{
+    position: fixed;
+    top: 45vh;
+    left: 45vw;
+    width: 6rem;
+    height: 6rem;
+    font-size: 6rem;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: accueil-spinner 2.5s linear forwards;
+    animation-iteration-count: 1;
+}
+@mixin header-masque-logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: white; 
+ } 
+
+/*@mixin entete-home */
+
+@mixin entete-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(245, 245, 245);
+}
+@mixin entete-home-tablette-desktop {
+        padding-bottom: 2rem;
+        border-radius: 0 0 25px 25px;
+}
+.entete-home {
+    @include entete-home;
+}
+
+
 /*EN-TETE-RESTAU*/ 
 
 
@@ -89,6 +183,302 @@
     position: relative;
     padding-right: 1rem;
 }
+
+
+/*--FORMULAIRE--*/
+
+/*@mixin formulaire*/ 
+
+@mixin formulaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-tertiary-light; 
+}
+@mixin formulaire-texte {
+    color: $color-tertiary-darker;  
+    font-weight: $font-gras;
+    background-color:  $color-tertiary-light;
+    border:  $color-tertiary-light;
+    border: none;
+    outline: none;
+} 
+
+@mixin formulaire-texte-tablette-desktop {
+    width: 38%;
+    padding: 15px;
+    border-radius: 17px;
+    box-shadow: 9px 6px 4px $color-tertiary-medium;
+}
+@mixin formulaire-texte-combo-tablette-desktop{
+    @include formulaire-texte;
+    @include formulaire-texte-tablette-desktop;  
+}
+@mixin formulaire-icone{
+    width: 20px;
+    color: $color-tertiary-darker;
+}
+@mixin formulaire-border-gradient {
+    background-image: linear-gradient(to bottom,$color-tertiary-dark, #c9c9c9);
+}
+
+/*--SECTION FONCTIONNEMENT (fctn)--*/
+
+
+@mixin etape-fctn-hover {
+    background-color: #ecddff;
+}
+@mixin section-fctn__numero{
+    background-color: $color-primary;
+    color: white;
+    border-radius: 50px; 
+    position: absolute;
+    left: -1rem;
+    text-align: center;
+}
+@mixin section-fctn__icones{
+    border-radius: 50px;
+    margin: 10px;  
+}
+@mixin fctn-texte-tablette-desktop {
+    font-size: 1rem;
+    font-weight: bold;
+    min-width: 60%;
+    color: $color-tertiary-darker;
+}
+
+
+
+/*SECTION RESTOS*/
+
+
+@mixin menu-restau-tablette-desktop {
+    display: flex;
+    background-color: $color-tertiary-lighter;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    flex-direction: row;
+    flex-wrap: wrap;   
+}
+@mixin ombre-cartes {
+    box-shadow: 9px 10px 16px $color-tertiary-light;
+}
+@mixin cartes-home-tablette-desktop {
+    width: 80%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6rem;
+    @include ombre-cartes;
+    border-radius: 0 0 15px 15px;
+}
+@mixin resto-photos { 
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+@mixin resto-nouveau{
+    border: 3px $color-emphasis-light solid;
+    background-color: $color-emphasis-light;
+    color: $color-emphasis-dark;
+    font-weight: bold;
+    width: 22%;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-align: center;
+} 
+@mixin resto-legende {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 0 0 15px 15px ;
+    filter: brightness(96%); 
+}
+@mixin legende-mobile {
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    height: 8rem; 
+}
+@mixin legende-tablette-desktop {
+    box-sizing: border-box; 
+    padding-left: 0.4rem;
+    padding-right: 2rem;
+    border-top: 0;
+    height: 7rem;
+    
+}
+@mixin restos-infos{
+    display: flex;
+    flex-direction: column;
+} 
+
+                                            /*animation cartes éclaircissement*/
+@mixin ombre-cartes-assombrissement {
+    box-shadow: 9px 10px 10px rgb(189, 189, 189);
+}
+@mixin cartes-animation-eclaircissement {
+    -webkit-filter: brightness(100%);  
+}
+
+     /*mixins pour ANIMATION COEUR OPACITY = animation identique pour mobile,tablette et desktop*/
+                                            
+@mixin restos-coeur {
+    font-size: 2rem;
+    position: relative;
+    height: 2rem;
+    font-size: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 255, 255); 
+}            
+@mixin restos-coeur-plein {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    opacity: 0;
+}
+@mixin restos-coeur-vide {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+}
+/* Eléments statiques*/
+
+@mixin menu-restau-tiers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin restau-titre { 
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: $font-gras;
+    font-size: $font-grande;
+    line-height: 2rem;
+    padding-top: 2rem;
+    position: relative;
+}
+@mixin ligne-verte { 
+    position: relative;
+}
+@mixin ligne-verte-mobile-tablette {
+    border-bottom: 4px $color-emphasis-light solid;
+}
+@mixin cartes-slide {
+    display: flex;
+    flex-direction: row;
+    background-color: $color-emphasis-light;
+    font-weight: $font-gras;
+    width: 3rem;
+    height: 3rem;
+    padding: 2rem;
+    position: relative;
+    left: 8rem;
+}
+@mixin cartes-ellipse-texte{
+    width: 32rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin back-background-gris{
+    content: "";
+    width: 100%;
+    z-index: -2; 
+    background-color: $color-tertiary-light ;
+    position: absolute;
+}
+
+/* Eléments animés*/
+
+/* carte */
+
+@mixin cartes-restaurant{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding-left: 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 6px 8px 6px $color-tertiary-medium;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    filter: brightness(96%);
+}
+
+/*Fa spin*/
+
+@mixin icone-check-spin {
+    color: $color-emphasis-light;
+    font-weight: $font-gras;
+    font-size: $font-grande;
+}
+@mixin contenant-icone-check-spin { 
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50px;
+    border: 1px $color-emphasis-light solid;
+    padding: 8px 14px 14px 10px;
+    background-color: white;
+    bottom: 2rem;
+}
+@mixin animation-tourne {
+    .fa-check {
+        @include icone-check-spin;
+    }
+
+    .menu-restau__cartes_tourne /* div*/  { 
+        @include contenant-icone-check-spin;
+    }
+}/*combo de 2 mixins: icone-check-spin + contenant-cone-check-spin*/
+
+@mixin restau-coeur {
+    font-size: 2rem;
+    position: relative;
+    height: 2rem;
+    font-size: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    border: none;
+    background-color: $color-tertiary-light; 
+    position: absolute;
+    right: 80px;
+}        
+@mixin restau-coeur-plein {
+    background: -webkit-linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    opacity: 0;
+}
+@mixin restau-coeur-vide {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+}
+
+
 
 /*--FOOTER --*/
 
@@ -133,3 +523,4 @@
     font-size: 1.2rem;
     font-weight: 600;  
 }
+

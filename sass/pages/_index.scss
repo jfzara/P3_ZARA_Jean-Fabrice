@@ -1,0 +1,185 @@
+
+
+/*ANIMATION fondu accueil (masque header, masque footer) + spinner*/
+
+
+@keyframes accueil-spinner {
+    0% {
+        transform: rotate(0deg);
+         opacity: 1;
+    }
+    8% {
+        transform: rotate(120deg);
+    }
+    15% {
+        transform: rotate(240deg);
+       
+    }
+    25% {
+        transform: rotate(360deg);
+    }
+    35% {
+        transform: rotate(480deg);
+    }
+
+    50% {
+        transform: rotate(600deg);
+    }
+    65% {
+        transform: rotate(720deg);
+    }
+    80% {
+        transform: rotate(940deg)
+    }
+    90% {
+        transform: rotate(1060deg);
+    }
+    100% {
+        transform: rotate(1120deg);
+        opacity: 0;
+    }
+}/*ANIMATION spinner*/
+
+@keyframes accueil-fondu_animation-in {
+    
+    from {
+    opacity:0;
+    }
+    to {
+    opacity:1;
+    }
+}/*ANIMATION fondu accueil*/
+
+@keyframes accueil-fondu_animation-out {
+    
+    from {
+    opacity:1;
+    }
+    to {
+    opacity:0;
+    }
+}/*ANIMATION (masque header, masque footer)*/
+
+
+
+
+ .fa-spinner {
+    @include accueil-spinner;
+} 
+.tout-home {
+    @include fade-in ;
+ } 
+
+ .header__masque_logo  {
+    @include header-masque-logo;
+    @include fade-out;   
+ } 
+ /* masque header animation fondu accueil*/
+
+
+
+ .section-fctn div:hover { 
+    @include etape-fctn-hover;
+    @include ombre-bouton-explorer; 
+    animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards; 
+    }
+
+.section-fctn div:hover > i {
+    color: $color-primary;
+    }
+
+
+
+.formulaire__texte {
+    @include formulaire-texte;
+} 
+.formulaire__border_gradient{
+    @include formulaire-border-gradient;
+}
+.formulaire__icone {
+    @include formulaire-icone;
+}
+.formulaire {
+    @include formulaire;  
+}
+
+
+
+
+/*ANIMATION COEUR OPACITY */
+
+@keyframes accueil-coeur-fill {
+    from {
+    opacity: 0;
+    
+    }
+
+    to {
+        opacity: 1;
+        
+    }
+}
+
+/*Composant Restos Général */
+
+.restos {
+
+    &__legende {
+        @include resto-legende;     
+    }
+    &__photos {
+        @include resto-photos;
+    }
+
+    &__coeur {
+        @include restos-coeur; 
+    }        
+
+    &__coeur_plein {
+        @include restos-coeur-plein;
+    }
+
+    &__coeur_vide {
+        @include restos-coeur-vide;
+    }
+
+    &__nouveau {
+        @include resto-nouveau;
+    } 
+
+    &__infos {
+        @include restos-infos;
+    } 
+
+    &__cartes{
+        cursor: pointer;  
+    }
+  
+    &__coeur:hover  &__coeur_plein {
+        animation: accueil-coeur-fill 0.7s forwards;
+        animation-timing-function: ease-in;
+        
+    }
+
+    &__coeur:hover &__coeur_vide {
+        transform: scale(1.1) ;
+        transition: transform  0.2s ease-in-out;
+        display:none;
+        z-index: -2; 
+    } 
+
+    &__cartes:hover  &__legende {
+        @include cartes-animation-eclaircissement;    
+    }
+    
+    &__cartes:hover  &__fig {
+        @include ombre-cartes-assombrissement;     
+    }
+
+}
+
+
+    
+ 
+
+
