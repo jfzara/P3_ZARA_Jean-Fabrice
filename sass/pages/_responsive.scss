@@ -68,6 +68,11 @@
     top: -55px;
 }
 
+.menu-restau__cartes {  
+    min-width: 17rem;   
+    width: 95%;
+}
+
 .menu-restau__soulignement { 
     @include ligne-verte;
     width: 4rem;
@@ -193,6 +198,7 @@
 
 @media screen  and (min-width: 768px) and (max-width: 990px) {
 
+
     .header__masque_logo  {
         width: 100%;
         height: 15.2vh;    
@@ -261,6 +267,10 @@
             top: 20rem;
             height: 321vh;
         }
+    }
+
+    .menu-restau__cartes {     
+        width: 84%;
     }
 
     .section-fctn {
@@ -380,6 +390,11 @@
 
 @media screen  and (min-width: 990px) {
 
+
+    .tout  {
+        height: 164rem;    
+     } 
+
     .header__masque_logo  {
         width: 100%;
         height: 20.1vh;   
@@ -426,7 +441,7 @@
     }
     
     .menu-restau__cartes {     
-        width: 72%;
+        width: 87%;
     }
 
     .menu-restau {

@@ -441,7 +441,7 @@ header {
 }
 .menu-restau__cartes:hover .menu-restau__cartes_slide, .menu-restau__prix {
   transform: translateX(-8rem);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .menu-restau__cartes:hover .menu-restau__plats {
   overflow: hidden;
@@ -450,6 +450,23 @@ header {
   width: calc(70% - 8em);
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.fa-check {
+  color: #99E2D0;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.menu-restau__cartes_tourne {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50px;
+  border: 1px #99E2D0 solid;
+  padding: 8px 14px 14px 10px;
+  background-color: white;
+  bottom: 2rem;
 }
 
 /*ANIMATION fondu accueil (masque header, masque footer) + spinner*/
@@ -652,7 +669,7 @@ header {
   -webkit-filter: brightness(100%);
 }
 .restos__cartes:hover .restos__fig {
-  box-shadow: 9px 10px 10px rgb(189, 189, 189);
+  box-shadow: 9px 10px 10px rgb(205, 205, 205);
 }
 
 @media screen and (max-width: 768px) {
@@ -719,6 +736,11 @@ header {
     padding-right: 2rem;
     padding-bottom: 3rem;
     top: -55px;
+  }
+
+  .menu-restau__cartes {
+    min-width: 17rem;
+    width: 95%;
   }
 
   .menu-restau__soulignement {
@@ -913,6 +935,10 @@ header {
     height: 321vh;
   }
 
+  .menu-restau__cartes {
+    width: 84%;
+  }
+
   .section-fctn {
     display: flex;
     flex-direction: column;
@@ -1040,6 +1066,10 @@ header {
   }
 }
 @media screen and (min-width: 990px) {
+  .tout {
+    height: 164rem;
+  }
+
   .header__masque_logo {
     width: 100%;
     height: 20.1vh;
@@ -1092,7 +1122,7 @@ header {
   }
 
   .menu-restau__cartes {
-    width: 72%;
+    width: 87%;
   }
 
   .menu-restau {
@@ -1247,4 +1277,4 @@ header {
   }
 }
 
-/*# sourceMappingURL=styletest.css.map */
+/*# sourceMappingURL=style.css.map */

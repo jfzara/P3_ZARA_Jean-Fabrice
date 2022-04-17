@@ -319,7 +319,7 @@
 
                                             /*animation cartes éclaircissement*/
 @mixin ombre-cartes-assombrissement {
-    box-shadow: 9px 10px 10px rgb(189, 189, 189);
+    box-shadow: 9px 10px 10px rgb(205, 205, 205);
 }
 @mixin cartes-animation-eclaircissement {
     -webkit-filter: brightness(100%);  
