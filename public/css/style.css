@@ -672,10 +672,10 @@ header {
   box-shadow: 9px 10px 10px rgb(205, 205, 205);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 786px) {
   .header__masque_logo {
     width: 94vw;
-    height: 10.7vh;
+    height: 1vh;
   }
 
   .header__logo {
@@ -856,7 +856,7 @@ header {
     height: 2px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 990px) {
+@media screen and (min-width: 786px) and (max-width: 990px) {
   .header__masque_logo {
     width: 100%;
     height: 15.2vh;
@@ -1006,6 +1006,7 @@ header {
     flex-wrap: wrap;
     padding-top: 1rem;
     padding-bottom: 3rem;
+    justify-content: center;
   }
   .restos__titre {
     width: 100%;
@@ -1039,7 +1040,7 @@ header {
     height: 7rem;
   }
   .restos article {
-    width: 55rem;
+    width: 46rem;
     margin-bottom: 1.7rem;
   }
 

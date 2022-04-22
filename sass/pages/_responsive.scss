@@ -1,13 +1,9 @@
 
-
-
-
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 786px) {
 
     .header__masque_logo {
         width: 94vw;
-        height: 10.7vh;
+        height: 1vh;
      } 
 
      .header__logo {
@@ -196,7 +192,7 @@
 
 } 
 
-@media screen  and (min-width: 768px) and (max-width: 990px) {
+@media screen  and (min-width: 786px) and (max-width: 990px) {
 
 
     .header__masque_logo  {
@@ -333,6 +329,7 @@
         @include menu-restau-tablette-desktop;
         padding-top: 1rem;
         padding-bottom: 3rem;  
+        justify-content: center;
 
         &__titre {
             width: 100%;
@@ -361,7 +358,7 @@
         }
 
         & article {
-            width: 55rem;
+            width: 46rem;
             margin-bottom: 1.7rem;
         }  
     
