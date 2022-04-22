@@ -62,6 +62,10 @@ h3 {
   font-weight: 700;
 }
 
+.entete-home__titre, .entete-home__soustitre {
+  text-align: center;
+}
+
 p {
   text-overflow: ellipsis;
   white-space: nowrap;

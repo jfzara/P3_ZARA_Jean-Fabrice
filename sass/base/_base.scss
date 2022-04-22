@@ -31,6 +31,11 @@ h3 {
 .titre_gras {
     font-size: $font-grande;
     font-weight: $font-gras;
+   
+}
+
+.entete-home__titre, .entete-home__soustitre {
+    text-align: center;
 }
 
 p {
