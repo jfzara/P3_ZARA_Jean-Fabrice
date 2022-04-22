@@ -99,7 +99,7 @@ article, figure {
   }
 }
 .btn__ancre_explorer:hover {
-  box-shadow: 9px 10px 10px rgb(205, 205, 205);
+  box-shadow: 6px 8px 10px rgb(112, 112, 112);
   filter: brightness(100%);
   filter: brightness(105%);
   animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards;
@@ -112,11 +112,11 @@ article, figure {
   justify-content: center;
 }
 .menu-restau__btn p {
-  box-shadow: 9px 10px 10px rgb(189, 189, 189);
+  box-shadow: 6px 8px 8px rgb(222, 222, 222);
   filter: brightness(96%);
 }
 .menu-restau__btn p:hover {
-  box-shadow: 9px 10px 10px rgb(189, 189, 189);
+  box-shadow: 6px 8px 10px rgb(112, 112, 112);
   animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards;
   filter: brightness(100%);
 }
@@ -570,7 +570,7 @@ header {
 }
 
 .formulaire__border_gradient {
-  background-image: linear-gradient(to bottom, rgb(112, 112, 112), #c9c9c9);
+  background-image: linear-gradient(to bottom, rgb(112, 112, 112), rgb(222, 222, 222));
 }
 
 .formulaire__icone {
@@ -792,8 +792,8 @@ header {
     position: absolute;
     left: -1rem;
     text-align: center;
-    padding-top: 1px;
-    padding-bottom: 7px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     width: 28px;
     height: 19px;
   }
@@ -1057,7 +1057,20 @@ header {
     width: 38%;
     padding: 15px;
     border-radius: 17px;
-    box-shadow: 9px 6px 4px rgb(205, 205, 205);
+    box-shadow: 9px 6px 4px rgb(181, 181, 181);
+  }
+  .formulaire__texte:hover {
+    color: rgb(54, 54, 54);
+    font-weight: 700;
+    background-color: rgb(222, 222, 222);
+    border: rgb(222, 222, 222);
+    border: none;
+    outline: none;
+    width: 38%;
+    padding: 15px;
+    border-radius: 17px;
+    box-shadow: 9px 6px 4px rgb(170, 170, 170);
+    background-color: rgb(245, 245, 245);
   }
   .formulaire__icone {
     margin-right: 10px;
@@ -1269,6 +1282,31 @@ header {
 
   .formulaire {
     padding: 20px;
+  }
+  .formulaire__texte {
+    color: rgb(54, 54, 54);
+    font-weight: 700;
+    background-color: rgb(222, 222, 222);
+    border: rgb(222, 222, 222);
+    border: none;
+    outline: none;
+    width: 38%;
+    padding: 15px;
+    border-radius: 17px;
+    box-shadow: 9px 6px 4px rgb(181, 181, 181);
+  }
+  .formulaire__texte:hover {
+    color: rgb(54, 54, 54);
+    font-weight: 700;
+    background-color: rgb(222, 222, 222);
+    border: rgb(222, 222, 222);
+    border: none;
+    outline: none;
+    width: 38%;
+    padding: 15px;
+    border-radius: 17px;
+    box-shadow: 9px 6px 4px rgb(170, 170, 170);
+    background-color: rgb(245, 245, 245);
   }
   .formulaire__icone {
     margin-right: 6px;

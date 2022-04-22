@@ -110,8 +110,8 @@
 
         &__numero {
             @include section-fctn__numero;
-            padding-top: 1px;
-            padding-bottom: 7px;
+            padding-top: 4px;
+            padding-bottom: 4px;
             width: 28px;
             height: 19px;
         }
@@ -367,9 +367,11 @@
     .formulaire {
         padding: 20px;  
     
-
-        &__texte  {
+        &__texte   {
             @include formulaire-texte-combo-tablette-desktop; 
+        } 
+        &__texte:hover   {
+            @include formulaire-texte-combo-tablette-desktop-hover; 
         } 
         
         &__icone {
@@ -574,6 +576,13 @@
 
     .formulaire {
         padding: 20px;  
+
+    &__texte  {
+        @include formulaire-texte-combo-tablette-desktop; 
+    } 
+    &__texte:hover   {
+        @include formulaire-texte-combo-tablette-desktop-hover; 
+    } 
     
     &__icone {
         margin-right: 6px;

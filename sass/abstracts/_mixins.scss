@@ -18,7 +18,7 @@
     box-shadow: 6px 8px 8px $color-tertiary-light;
 }
 @mixin ombre-bouton-explorer-eclaircissement{
-    box-shadow: 9px 10px 10px  $color-tertiary-medium;    
+    box-shadow: 6px 8px 10px  $color-tertiary-dark;    
     filter: brightness(100%);  
 }
 
@@ -209,18 +209,30 @@
     width: 38%;
     padding: 15px;
     border-radius: 17px;
-    box-shadow: 9px 6px 4px $color-tertiary-medium;
+    box-shadow: 9px 6px 4px $color-tertiary-shadow-light;
+    
+}
+@mixin formulaire-texte-tablette-desktop-hover {
+    width: 38%;
+    padding: 15px;
+    border-radius: 17px;
+    box-shadow: 9px 6px 4px $color-tertiary-shadow-dark;
+    background-color: $color-tertiary-lighter;
 }
 @mixin formulaire-texte-combo-tablette-desktop{
     @include formulaire-texte;
     @include formulaire-texte-tablette-desktop;  
+}
+@mixin formulaire-texte-combo-tablette-desktop-hover{
+    @include formulaire-texte;
+    @include formulaire-texte-tablette-desktop-hover;  
 }
 @mixin formulaire-icone{
     width: 20px;
     color: $color-tertiary-darker;
 }
 @mixin formulaire-border-gradient {
-    background-image: linear-gradient(to bottom,$color-tertiary-dark, #c9c9c9);
+    background-image: linear-gradient(to bottom,$color-tertiary-dark,$color-tertiary-light)
 }
 
 /*--SECTION FONCTIONNEMENT (fctn)--*/

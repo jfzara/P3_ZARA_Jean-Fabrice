@@ -22,13 +22,13 @@
     @include ancre-commander;
 
         & p {
-            box-shadow: 9px 10px 10px rgb(189, 189, 189);    
+            box-shadow: 6px 8px 8px $color-tertiary-light;    
             filter: brightness(96%);   
             }
     
     
         & p:hover {
-        box-shadow: 9px 10px 10px rgb(189, 189, 189);  
+        box-shadow: 6px 8px 10px  $color-tertiary-dark;  
         animation: btn-scale-hover 0.2s cubic-bezier(0.75, 0.82, 0.165, 1) forwards;   
         filter: brightness(100%);   
         }
