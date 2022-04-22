@@ -827,8 +827,8 @@ header {
   .restos__fig {
     position: relative;
     box-shadow: 9px 10px 16px rgb(222, 222, 222);
-    width: 92%;
     border-radius: 15px;
+    width: auto;
   }
   .restos__photos {
     height: 15rem;

@@ -1,6 +1,7 @@
 
 @media screen and (max-width: 786px) {
 
+
     .header__masque_logo {
         width: 94vw;
         height: 1vh;
@@ -140,7 +141,6 @@
     margin-top: 3rem;
     padding-bottom: 4rem;  
 
-
         &__titre {
             font-size: $font-grande; 
             font-weight: $font-gras;
@@ -150,9 +150,8 @@
         &__fig {
             position: relative;
             @include ombre-cartes;
-            width: 92%;
             border-radius: 15px;
-
+            width: auto;
         }
 
         &__photos  { 
