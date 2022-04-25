@@ -8,13 +8,6 @@
 /*HEADER-(pages restaurants) */
 /* COMPOSANTS animation fondu accueil + spinner*/
 /*@mixin entete-home */
-.entete-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(245, 245, 245);
-}
-
 /*EN-TETE-RESTAU*/
 /*--FORMULAIRE--*/
 /*@mixin formulaire*/
@@ -371,7 +364,7 @@ header {
   padding-left: 1rem;
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-  box-shadow: 6px 8px 6px rgb(205, 205, 205);
+  box-shadow: 6px 8px 6px rgb(195, 195, 195);
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -379,7 +372,7 @@ header {
 }
 .menu-restau__cartes:hover {
   -webkit-filter: brightness(100%);
-  box-shadow: 9px 10px 10px rgb(189, 189, 189);
+  box-shadow: 9px 10px 8px rgb(170, 170, 170);
 }
 
 @keyframes coeur-fill {
@@ -598,6 +591,13 @@ header {
   }
 }
 /*Composant Restos Général */
+.entete-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+}
+
 .restos__legende {
   display: flex;
   flex-direction: row;
@@ -1077,7 +1077,7 @@ header {
     width: 38%;
     padding: 15px;
     border-radius: 17px;
-    box-shadow: 9px 6px 4px rgb(181, 181, 181);
+    box-shadow: 9px 6px 4px rgb(195, 195, 195);
   }
   .formulaire__texte:hover {
     color: rgb(54, 54, 54);
@@ -1322,7 +1322,7 @@ header {
     width: 38%;
     padding: 15px;
     border-radius: 17px;
-    box-shadow: 9px 6px 4px rgb(181, 181, 181);
+    box-shadow: 9px 6px 4px rgb(195, 195, 195);
   }
   .formulaire__texte:hover {
     color: rgb(54, 54, 54);

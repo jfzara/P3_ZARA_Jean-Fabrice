@@ -92,7 +92,7 @@ header {
     
     &:hover { 
         -webkit-filter: brightness(100%);
-        box-shadow: 9px 10px 10px rgb(189, 189, 189);
+        box-shadow: 9px 10px 8px $color-tertiary-shadow-dark;
     }
 }
 

@@ -122,6 +122,11 @@
 
 /*Composant Restos Général */
 
+.entete-home {
+    @include entete-home;
+}
+
+
 .restos {
 
     &__legende {
