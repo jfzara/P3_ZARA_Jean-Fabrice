@@ -26,7 +26,7 @@
 /* Eléments animés*/
 /* carte */
 /*Fa spin*/
-/*combo de 2 mixins: icone-check-spin + contenant-cone-check-spin*/
+/*combo de 2 mixins: icone-check-spin + contenant-icone-check-spin*/
 /*--FOOTER --*/
 /*COULEURS + FONTS*/
 /*GENERAL*/
@@ -449,7 +449,7 @@ header {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   transition: width 0.3s;
-  width: calc(70% - 8em);
+  width: calc(70% - 8rem);
   text-overflow: ellipsis;
   white-space: nowrap;
 }

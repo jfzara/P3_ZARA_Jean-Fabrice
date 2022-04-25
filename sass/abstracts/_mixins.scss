@@ -460,7 +460,7 @@
     .menu-restau__cartes_tourne /* div*/  { 
         @include contenant-icone-check-spin;
     }
-}/*combo de 2 mixins: icone-check-spin + contenant-cone-check-spin*/
+}/*combo de 2 mixins: icone-check-spin + contenant-icone-check-spin*/
 
 @mixin restau-coeur {
     font-size: 2rem;
