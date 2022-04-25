@@ -1,4 +1,5 @@
 
+
 @media screen and (max-width: 786px) {
 
 
@@ -32,9 +33,7 @@
     margin-top: 25px;
 }
 
-.menu-restau__btn_commander {
-    margin-top: 50px;
-}
+
 
 .entete__restau  {
 
@@ -74,27 +73,32 @@
     padding-right: 2rem;
     padding-bottom: 3rem;
     top: -84px;
+
+        &__btn_commander {
+            margin-top: 50px;
+        }
+        &__cartes {  
+            min-width: 17rem;   
+            width: 95%;
+        }
+
+        &__menu-restau__soulignement { 
+            @include ligne-verte;
+            width: 4rem;
+            bottom: 1rem;
+            border-bottom: 4px #99E2D0 solid;
+            @include ligne-verte-mobile-tablette;
+        }
+
+        &::after {
+            @include back-background-gris; 
+            left: 0rem;
+            top: 0rem;
+            height: 314vh;
+        }
+
 }
 
-.menu-restau__cartes {  
-    min-width: 17rem;   
-    width: 95%;
-}
-
-.menu-restau__soulignement { 
-    @include ligne-verte;
-    width: 4rem;
-    bottom: 1rem;
-    border-bottom: 4px #99E2D0 solid;
-    @include ligne-verte-mobile-tablette;
-}
-
-.menu-restau::after {
-    @include back-background-gris; 
-    left: 0rem;
-    top: 0rem;
-    height: 314vh;
-}
 
 .section-fctn {
     display: flex;
@@ -219,9 +223,7 @@
         @include entete-home-tablette-desktop;
     }
 
-    .menu-restau__btn_commander {
-        margin-top: 93px;
-    }
+    
 
     .btn__ancre_explorer {
         @include bouton-explorer;
@@ -276,7 +278,11 @@
         padding-right: 2rem ;
         padding-bottom: 2rem;
         top: -223px;
-    
+
+        &__btn_commander {
+            margin-top: 93px;
+        }
+
         &__soulignement { 
             @include ligne-verte;
             top: -20px;
@@ -289,11 +295,14 @@
             top: 20rem;
             height: 321vh;
         }
+
+        &__cartes {     
+            width: 84%;
+        }
+
     }
 
-    .menu-restau__cartes {     
-        width: 84%;
-    }
+    
 
     .section-fctn {
         display: flex;
@@ -429,9 +438,7 @@
         @include entete-home-tablette-desktop;
     }
 
-    .menu-restau__btn_commander {
-        margin-top: 93px;
-    }
+    
 
     .btn__ancre_explorer {
         @include bouton-explorer;
@@ -476,10 +483,6 @@
         gap: 19%;
         padding-right: 4rem;  
     }
-    
-    .menu-restau__cartes {     
-        width: 87%;
-    }
 
     .menu-restau {
         display: flex;
@@ -492,6 +495,14 @@
         font-size: initial;
         padding-bottom: 4rem;
         top: -340px;
+
+        &__btn_commander {
+            margin-top: 93px;
+        }
+
+        &__cartes {     
+            width: 87%;
+        }
         
         &__titre { 
             overflow: hidden;

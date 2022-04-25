@@ -657,6 +657,9 @@ header {
 .restos__cartes {
   cursor: pointer;
 }
+.restos__cartes:hover .restos__fig {
+  box-shadow: 9px 10px 10px rgb(189, 189, 189);
+}
 .restos__coeur:hover .restos__coeur_plein {
   animation: accueil-coeur-fill 0.8s forwards;
   animation-timing-function: ease-in;
@@ -669,7 +672,7 @@ header {
   -webkit-filter: brightness(100%);
 }
 .restos__fig:hover .restos__fig {
-  box-shadow: 9px 10px 10px rgb(205, 205, 205);
+  box-shadow: 9px 10px 10px rgb(189, 189, 189);
 }
 
 @media screen and (max-width: 786px) {
@@ -709,10 +712,6 @@ header {
     margin-top: 25px;
   }
 
-  .menu-restau__btn_commander {
-    margin-top: 50px;
-  }
-
   .entete__restau img {
     height: 28rem;
   }
@@ -747,20 +746,20 @@ header {
     padding-bottom: 3rem;
     top: -84px;
   }
-
+  .menu-restau__btn_commander {
+    margin-top: 50px;
+  }
   .menu-restau__cartes {
     min-width: 17rem;
     width: 95%;
   }
-
-  .menu-restau__soulignement {
+  .menu-restau__menu-restau__soulignement {
     position: relative;
     width: 4rem;
     bottom: 1rem;
     border-bottom: 4px #99E2D0 solid;
     border-bottom: 4px #99E2D0 solid;
   }
-
   .menu-restau::after {
     content: "";
     width: 100%;
@@ -880,10 +879,6 @@ header {
     border-radius: 0 0 25px 25px;
   }
 
-  .menu-restau__btn_commander {
-    margin-top: 93px;
-  }
-
   .btn__ancre_explorer {
     background-color: #9356DC;
     background-image: linear-gradient(to top left, #9356DC, #FF79DA);
@@ -941,6 +936,9 @@ header {
     padding-bottom: 2rem;
     top: -223px;
   }
+  .menu-restau__btn_commander {
+    margin-top: 93px;
+  }
   .menu-restau__soulignement {
     position: relative;
     top: -20px;
@@ -956,7 +954,6 @@ header {
     top: 20rem;
     height: 321vh;
   }
-
   .menu-restau__cartes {
     width: 84%;
   }
@@ -1117,10 +1114,6 @@ header {
     border-radius: 0 0 25px 25px;
   }
 
-  .menu-restau__btn_commander {
-    margin-top: 93px;
-  }
-
   .btn__ancre_explorer {
     background-color: #9356DC;
     background-image: linear-gradient(to top left, #9356DC, #FF79DA);
@@ -1168,10 +1161,6 @@ header {
     padding-right: 4rem;
   }
 
-  .menu-restau__cartes {
-    width: 87%;
-  }
-
   .menu-restau {
     display: flex;
     flex-direction: column;
@@ -1184,6 +1173,12 @@ header {
     padding-bottom: 4rem;
     top: -340px;
     /*back-background gris*/
+  }
+  .menu-restau__btn_commander {
+    margin-top: 93px;
+  }
+  .menu-restau__cartes {
+    width: 87%;
   }
   .menu-restau__titre {
     overflow: hidden;

@@ -154,6 +154,10 @@
     &__cartes{
         cursor: pointer;  
     }
+
+    &__cartes:hover &__fig {
+        @include ombre-cartes-assombrissement;  
+    }
   
     &__coeur:hover  &__coeur_plein {
         animation: accueil-coeur-fill 0.8s forwards;
@@ -167,10 +171,10 @@
     } 
 
     &__fig:hover  &__legende {
-        @include cartes-animation-eclaircissement;    
+        @include cartes-animation-eclaircissement;     
     }
     
-    &__fig:hover  &__fig {
+    &__fig:hover  &__fig { 
         @include ombre-cartes-assombrissement;     
     }
 
