@@ -665,10 +665,10 @@ header {
   transition: transform 0.2s ease-in-out;
   display: none;
 }
-.restos__cartes:hover .restos__legende {
+.restos__fig:hover .restos__legende {
   -webkit-filter: brightness(100%);
 }
-.restos__cartes:hover .restos__fig {
+.restos__fig:hover .restos__fig {
   box-shadow: 9px 10px 10px rgb(205, 205, 205);
 }
 

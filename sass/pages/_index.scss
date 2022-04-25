@@ -166,11 +166,11 @@
         display:none;
     } 
 
-    &__cartes:hover  &__legende {
+    &__fig:hover  &__legende {
         @include cartes-animation-eclaircissement;    
     }
     
-    &__cartes:hover  &__fig {
+    &__fig:hover  &__fig {
         @include ombre-cartes-assombrissement;     
     }
 
