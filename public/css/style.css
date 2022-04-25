@@ -258,7 +258,7 @@ article, figure {
 }
 
 .menu-restau__tiers article {
-  animation: cartes-delay 0.7s ease-out forwards;
+  animation: cartes-delay 0.8s ease-out forwards;
 }
 
 .menu-restau__cartes:nth-child(2) {
@@ -398,7 +398,7 @@ header {
     opacity: 1;
   }
 }
-/* COEUR OPACITY (animationa)*/
+/* COEUR OPACITY (animation)*/
 .restau__coeur {
   font-size: 2rem;
   position: relative;
@@ -717,7 +717,7 @@ header {
     height: 28rem;
   }
   .entete__restau figcaption {
-    bottom: 29px;
+    bottom: 67px;
   }
 
   .footer {
@@ -745,7 +745,7 @@ header {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 3rem;
-    top: -55px;
+    top: -84px;
   }
 
   .menu-restau__cartes {

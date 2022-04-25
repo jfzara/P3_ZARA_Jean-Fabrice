@@ -22,7 +22,7 @@
     animation: fade-in-tiers 3s forwards  ;
     }
 .menu-restau__tiers article {
-    animation: cartes-delay 0.7s ease-out   forwards ;
+    animation: cartes-delay 0.8s ease-out   forwards ;
     }
 
 @for $i from 2 through 5 {
@@ -118,7 +118,7 @@ header {
     }
   }
 
-/* COEUR OPACITY (animationa)*/
+/* COEUR OPACITY (animation)*/
 
 .restau__coeur {
     @include restau-coeur; 
