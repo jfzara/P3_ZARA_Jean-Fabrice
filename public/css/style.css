@@ -428,14 +428,12 @@ header {
   z-index: 0;
 }
 .restau__coeur:hover .restau__coeur_plein {
-  animation: accueil-coeur-fill 0.7s forwards;
+  animation: accueil-coeur-fill 0.8s forwards;
   animation-timing-function: ease-in;
 }
 .restau__coeur:hover .restau__coeur_vide {
-  transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
   display: none;
-  z-index: -2;
 }
 
 /*Animation sélection plats*/
@@ -537,7 +535,7 @@ header {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: accueil-spinner 2.5s linear forwards;
+  animation: accueil-spinner 3s linear forwards;
   animation-iteration-count: 1;
 }
 
@@ -660,11 +658,10 @@ header {
   cursor: pointer;
 }
 .restos__coeur:hover .restos__coeur_plein {
-  animation: accueil-coeur-fill 0.7s forwards;
+  animation: accueil-coeur-fill 0.8s forwards;
   animation-timing-function: ease-in;
 }
 .restos__coeur:hover .restos__coeur_vide {
-  transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
   display: none;
   z-index: -2;
@@ -709,7 +706,8 @@ header {
     filter: brightness(96%);
     padding-left: 1rem;
     padding-right: 1rem;
-    width: 55%;
+    width: 187px;
+    margin-top: 25px;
   }
 
   .menu-restau__btn_commander {
@@ -726,6 +724,15 @@ header {
   .footer {
     padding-right: 2rem;
     position: relative;
+  }
+  .footer::before {
+    content: "";
+    height: 15rem;
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    top: -4rem;
+    width: 100%;
+    z-index: -3;
   }
 
   .header-restau__container {
@@ -773,6 +780,9 @@ header {
     gap: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+  .section-fctn__titre {
+    width: 100%;
   }
   .section-fctn__etape {
     display: flex;
@@ -907,6 +917,15 @@ header {
     position: relative;
     top: 100px;
   }
+  .footer::before {
+    content: "";
+    height: 15rem;
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    top: -12rem;
+    width: 100%;
+    z-index: -3;
+  }
 
   .header-restau__container {
     justify-content: center;
@@ -1008,6 +1027,7 @@ header {
     margin-top: 5rem;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
     padding-top: 1rem;
     padding-bottom: 3rem;
     justify-content: center;
@@ -1115,6 +1135,7 @@ header {
     filter: brightness(96%);
     box-shadow: 6px 8px 8px rgb(222, 222, 222);
     width: 50%;
+    margin-top: 25px;
   }
 
   .entete__restau {
@@ -1131,6 +1152,15 @@ header {
   .footer {
     padding-right: 2rem;
     position: relative;
+  }
+  .footer::before {
+    content: "";
+    height: 15rem;
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    top: -4rem;
+    width: 100%;
+    z-index: -3;
   }
 
   .header-restau__container {
@@ -1248,6 +1278,7 @@ header {
     margin-top: 5rem;
     flex-direction: row;
     flex-wrap: wrap;
+    position: relative;
     align-items: center;
     justify-content: center;
     padding-top: 3rem;

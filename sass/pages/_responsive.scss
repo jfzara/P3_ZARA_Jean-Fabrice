@@ -28,7 +28,8 @@
     @include bouton-explorer;
     padding-left: 1rem;
     padding-right: 1rem; 
-    width: 55%;
+    width: 187px;
+    margin-top: 25px;
 }
 
 .menu-restau__btn_commander {
@@ -49,6 +50,16 @@
 .footer {
     padding-right: 2rem;
     position: relative;
+
+    &::before {
+        content: "";
+        height: 15rem;
+        background-color: rgb(245,245,245);
+        position: absolute;
+        top: -4rem;
+        width: 100%;
+        z-index: -3;
+    } 
 }
 
 .header-restau__container {
@@ -93,6 +104,11 @@
     padding-left: 3rem;
     padding-right: 3rem;
     
+
+        &__titre  {  
+             width: 100%;
+        }
+
         &__etape {
             display: flex;
             flex-direction: row;
@@ -233,6 +249,17 @@
         padding-right: 2rem;
         position: relative;
         top: 100px;
+
+        &::before {
+            content: "";
+            height: 15rem;
+            background-color: rgb(245,245,245);
+            position: absolute;
+            top: -12rem;
+            width: 100%;
+            z-index: -3;
+        } 
+
     }
 
     .header-restau__container {
@@ -410,6 +437,7 @@
         @include bouton-explorer;
         @include ombre-bouton-explorer;
         width: 50%; 
+        margin-top: 25px;
     }
   
     .entete__restau {
@@ -430,7 +458,18 @@
     .footer {
         padding-right: 2rem;
         position: relative;
-        }
+       
+        &::before {
+            content: "";
+            height: 15rem;
+            background-color: rgb(245,245,245);
+            position: absolute;
+            top: -4rem;
+            width: 100%;
+            z-index: -3;
+        } 
+
+    }
     
     .header-restau__container {
         justify-content: center;
@@ -571,8 +610,8 @@
             margin-bottom: 1.7rem;
         }       
 
-    } 
-
+} 
+   
     .formulaire {
         padding: 20px;  
 

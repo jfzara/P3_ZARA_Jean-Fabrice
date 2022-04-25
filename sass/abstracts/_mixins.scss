@@ -110,10 +110,10 @@
 /* COMPOSANTS animation fondu accueil + spinner*/
 
 @mixin fade-in {
-    animation: accueil-fondu_animation-in 5000ms ease-in-out forwards;
+    animation: accueil-fondu_animation-in 5000ms ease-in-out forwards ;
 }
 @mixin fade-out {
-    animation: accueil-fondu_animation-out 5000ms ease-in-out forwards;
+    animation: accueil-fondu_animation-out 5000ms ease-in-out forwards ;
 }
 @mixin accueil-spinner{
     position: fixed;
@@ -125,7 +125,7 @@
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: accueil-spinner 2.5s linear forwards;
+    animation: accueil-spinner 3s linear forwards;
     animation-iteration-count: 1;
 }
 @mixin header-masque-logo {
@@ -272,6 +272,7 @@
     margin-top: 5rem;
     flex-direction: row;
     flex-wrap: wrap;   
+    position: relative;
 }
 @mixin ombre-cartes {
     box-shadow: 9px 10px 16px $color-tertiary-light;
