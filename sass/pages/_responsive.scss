@@ -53,13 +53,14 @@
     &::before {
         content: "";
         height: 15rem;
-        background-color: rgb(245,245,245);
+        background-color: $color-tertiary-lighter;
         position: absolute;
-        top: -4rem;
+        top: -9rem;
         width: 100%;
         z-index: -3;
-    } 
-}
+    }
+} 
+
 
 .header-restau__container {
     justify-content: flex-start;
@@ -90,12 +91,6 @@
             @include ligne-verte-mobile-tablette;
         }
 
-        &::after {
-            @include back-background-gris; 
-            left: 0rem;
-            top: 0rem;
-            height: 314vh;
-        }
 
 }
 
@@ -206,9 +201,6 @@
 
     }
 
-
-
-
 } 
 
 @media screen  and (min-width: 786px) and (max-width: 990px) {
@@ -254,10 +246,10 @@
 
         &::before {
             content: "";
-            height: 15rem;
-            background-color: rgb(245,245,245);
+            height: 25rem;
+            background-color: $color-tertiary-lighter;
             position: absolute;
-            top: -12rem;
+            top: -22rem;
             width: 100%;
             z-index: -3;
         } 
@@ -287,13 +279,6 @@
             @include ligne-verte;
             top: -20px;
             @include ligne-verte-mobile-tablette;
-        }
-        
-        &::after {
-            @include back-background-gris; 
-            left: 0rem;
-            top: 20rem;
-            height: 321vh;
         }
 
         &__cartes {     
@@ -393,7 +378,7 @@
         }
 
         & article {
-            width: 46rem;
+            width: 95vw;
             margin-bottom: 1.7rem;
         }  
     
@@ -468,13 +453,12 @@
        
         &::before {
             content: "";
-            height: 15rem;
-            background-color: rgb(245,245,245);
+            height: 4rem;
+            background-color: $color-tertiary-lighter;
             position: absolute;
-            top: -4rem;
+            top: -3rem;
             width: 100%;
-            z-index: -3;
-        } 
+        }   /*back-background gris*/
 
     }
     
@@ -516,11 +500,7 @@
         }
         
         
-        &::after {
-            @include back-background-gris;
-            top: 110rem;
-            height: 411px;
-        }/*back-background gris*/
+      
         
         
         &__tiers { 

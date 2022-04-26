@@ -728,7 +728,7 @@ header {
     height: 15rem;
     background-color: rgb(245, 245, 245);
     position: absolute;
-    top: -4rem;
+    top: -9rem;
     width: 100%;
     z-index: -3;
   }
@@ -759,16 +759,6 @@ header {
     bottom: 1rem;
     border-bottom: 4px #99E2D0 solid;
     border-bottom: 4px #99E2D0 solid;
-  }
-  .menu-restau::after {
-    content: "";
-    width: 100%;
-    z-index: -2;
-    background-color: rgb(222, 222, 222);
-    position: absolute;
-    left: 0rem;
-    top: 0rem;
-    height: 314vh;
   }
 
   .section-fctn {
@@ -913,10 +903,10 @@ header {
   }
   .footer::before {
     content: "";
-    height: 15rem;
+    height: 25rem;
     background-color: rgb(245, 245, 245);
     position: absolute;
-    top: -12rem;
+    top: -22rem;
     width: 100%;
     z-index: -3;
   }
@@ -943,16 +933,6 @@ header {
     position: relative;
     top: -20px;
     border-bottom: 4px #99E2D0 solid;
-  }
-  .menu-restau::after {
-    content: "";
-    width: 100%;
-    z-index: -2;
-    background-color: rgb(222, 222, 222);
-    position: absolute;
-    left: 0rem;
-    top: 20rem;
-    height: 321vh;
   }
   .menu-restau__cartes {
     width: 84%;
@@ -1060,7 +1040,7 @@ header {
     height: 7rem;
   }
   .restos article {
-    width: 46rem;
+    width: 95vw;
     margin-bottom: 1.7rem;
   }
 
@@ -1144,15 +1124,15 @@ header {
   .footer {
     padding-right: 2rem;
     position: relative;
+    /*back-background gris*/
   }
   .footer::before {
     content: "";
-    height: 15rem;
+    height: 4rem;
     background-color: rgb(245, 245, 245);
     position: absolute;
-    top: -4rem;
+    top: -3rem;
     width: 100%;
-    z-index: -3;
   }
 
   .header-restau__container {
@@ -1172,7 +1152,6 @@ header {
     font-size: initial;
     padding-bottom: 4rem;
     top: -340px;
-    /*back-background gris*/
   }
   .menu-restau__btn_commander {
     margin-top: 93px;
@@ -1188,15 +1167,6 @@ header {
     position: relative;
     top: 0px;
     border-bottom: none;
-  }
-  .menu-restau::after {
-    content: "";
-    width: 100%;
-    z-index: -2;
-    background-color: rgb(222, 222, 222);
-    position: absolute;
-    top: 110rem;
-    height: 411px;
   }
   .menu-restau__tiers {
     display: flex;
