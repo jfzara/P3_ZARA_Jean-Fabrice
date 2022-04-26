@@ -1274,14 +1274,12 @@ header {
     flex-wrap: wrap;
     position: relative;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     padding-top: 3rem;
-    padding-right: 5rem;
   }
   .restos__titre {
     text-align: center;
     margin-bottom: 3rem;
-    margin-left: 6rem;
     width: 100%;
   }
   .restos__fig {
@@ -1305,7 +1303,7 @@ header {
     height: 7rem;
   }
   .restos article {
-    width: 28rem;
+    width: 48vw;
     margin-bottom: 1.7rem;
   }
 
