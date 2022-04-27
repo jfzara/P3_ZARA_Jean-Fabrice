@@ -2,6 +2,27 @@
 
 @media screen and (max-width: 786px) {
 
+.tout-home::after {
+    content: "";
+        height: 9rem;
+        background-color: rgb(245, 245, 245);
+        position: absolute;
+        bottom: -2rem;
+        width: 100%;
+        z-index: -1;
+ } 
+
+
+    .tout::after {  
+        content: "";
+        height: 9rem;
+        background-color: rgb(222, 222, 222);
+        position: absolute;
+        bottom: -2rem;
+        width: 100%;
+        z-index: -1;
+}
+
 
     .header__masque_logo {
         width: 94vw;
@@ -50,15 +71,6 @@
     padding-right: 2rem;
     position: relative;
 
-    &::before {
-        content: "";
-        height: 15rem;
-        background-color: $color-tertiary-lighter;
-        position: absolute;
-        top: -9rem;
-        width: 100%;
-        z-index: -3;
-    }
 } 
 
 
@@ -205,6 +217,27 @@
 
 @media screen  and (min-width: 786px) and (max-width: 990px) {
 
+    .tout-home::after {
+        content: "";
+        height: 12rem;
+        background-color: rgb(245, 245, 245);
+        position: absolute;
+        bottom: -7rem;
+        width: 100%;
+        z-index: -1;
+    }
+    
+
+    .tout::after {  
+        content: "";
+        height: 22rem;
+        background-color: rgb(222, 222, 222);
+        position: absolute;
+        bottom: -7rem;
+        width: 100%;
+        z-index: -1;
+}
+
 
     .header__masque_logo  {
         width: 100%;
@@ -243,16 +276,6 @@
         padding-right: 2rem;
         position: relative;
         top: 100px;
-
-        &::before {
-            content: "";
-            height: 25rem;
-            background-color: $color-tertiary-lighter;
-            position: absolute;
-            top: -22rem;
-            width: 100%;
-            z-index: -3;
-        } 
 
     }
 
@@ -408,11 +431,30 @@
 
 
 @media screen  and (min-width: 990px) {
-
+   
+    .tout-home::after {
+        content: "";
+        height: 12rem;
+        background-color: rgb(245, 245, 245);
+        position: absolute;
+        bottom: -7rem;
+        width: 100%;
+        z-index: -1;
+    }
 
     .tout  {
         height: 164rem;    
      } 
+
+     .tout::after {
+        content: "";
+        height: 20rem;
+        background-color: rgb(222, 222, 222);
+        position: absolute;
+        bottom: 0rem;
+        width: 100%;
+        z-index: -1;
+    }
 
     .header__masque_logo  {
         width: 100%;
@@ -451,14 +493,14 @@
         padding-right: 2rem;
         position: relative;
        
-        &::before {
+       /*b &::before {
             content: "";
             height: 4rem;
             background-color: $color-tertiary-lighter;
             position: absolute;
             top: -3rem;
             width: 100%;
-        }   /*back-background gris*/
+        }   ack-background gris*/
 
     }
     

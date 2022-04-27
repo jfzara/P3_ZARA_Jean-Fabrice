@@ -9,8 +9,14 @@ body {
  .tout-home {
      display: flex;
      flex-direction: column;
-     align-content: center;   
+     align-content: center;  
+     position: relative;   
 }
+
+.tout {
+    position: relative;   
+}
+
 
 h1, h2 {
     font-size: $font-moyenne;
