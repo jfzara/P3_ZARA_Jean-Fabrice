@@ -377,7 +377,7 @@ header {
 }
 .menu-restau__cartes:hover {
   -webkit-filter: brightness(100%);
-  box-shadow: 9px 10px 8px rgb(170, 170, 170);
+  box-shadow: 9px 10px 8px rgb(169, 169, 169);
 }
 
 @keyframes coeur-fill {
@@ -1096,7 +1096,7 @@ header {
     width: 38%;
     padding: 15px;
     border-radius: 17px;
-    box-shadow: 9px 6px 4px rgb(170, 170, 170);
+    box-shadow: 9px 6px 4px rgb(169, 169, 169);
     background-color: rgb(245, 245, 245);
   }
   .formulaire__icone {
@@ -1348,7 +1348,7 @@ header {
     width: 38%;
     padding: 15px;
     border-radius: 17px;
-    box-shadow: 9px 6px 4px rgb(170, 170, 170);
+    box-shadow: 9px 6px 4px rgb(169, 169, 169);
     background-color: rgb(245, 245, 245);
   }
   .formulaire__icone {
