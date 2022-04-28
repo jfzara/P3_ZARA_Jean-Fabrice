@@ -133,8 +133,8 @@ article, figure {
   flex-direction: row;
   justify-content: center;
   min-width: 193px;
-  background-color: rgb(86, 220, 104);
-  background-image: linear-gradient(to top left, rgb(86, 220, 104), #FF79DA);
+  background-color: #9356DC;
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   border-radius: 25px;
   text-decoration: none;
   text-align: center;
@@ -410,7 +410,7 @@ header {
   right: 80px;
 }
 .restau__coeur_plein {
-  background: -webkit-linear-gradient(rgb(86, 220, 104), #FF79DA);
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: absolute;
@@ -557,7 +557,7 @@ header {
 }
 
 .section-fctn div:hover > i {
-  color: rgb(86, 220, 104);
+  color: #9356DC;
 }
 
 .formulaire__texte {
@@ -721,8 +721,8 @@ header {
   }
 
   .btn__ancre_explorer {
-    background-color: rgb(86, 220, 104);
-    background-image: linear-gradient(to top left, rgb(86, 220, 104), #FF79DA);
+    background-color: #9356DC;
+    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
     border-radius: 20px;
     text-decoration: none;
     line-height: 3rem;
@@ -804,7 +804,7 @@ header {
     box-shadow: 5px 5px 7px rgb(222, 222, 222);
   }
   .section-fctn__numero {
-    background-color: rgb(86, 220, 104);
+    background-color: #9356DC;
     color: white;
     border-radius: 50px;
     position: absolute;
@@ -906,8 +906,8 @@ header {
   }
 
   .btn__ancre_explorer {
-    background-color: rgb(86, 220, 104);
-    background-image: linear-gradient(to top left, rgb(86, 220, 104), #FF79DA);
+    background-color: #9356DC;
+    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
     border-radius: 20px;
     text-decoration: none;
     line-height: 3rem;
@@ -994,13 +994,13 @@ header {
     cursor: pointer;
   }
   .section-fctn__numero {
-    background-color: rgb(86, 220, 104);
+    background-color: #9356DC;
     color: white;
     border-radius: 50px;
     position: absolute;
     left: -1rem;
     text-align: center;
-    background-image: linear-gradient(to top right, rgb(86, 220, 104), #FF79DA);
+    background-image: linear-gradient(to top right, #9356DC, #FF79DA);
     font-size: 1rem;
     font-weight: 500;
     padding-top: 5px;
@@ -1142,8 +1142,8 @@ header {
   }
 
   .btn__ancre_explorer {
-    background-color: rgb(86, 220, 104);
-    background-image: linear-gradient(to top left, rgb(86, 220, 104), #FF79DA);
+    background-color: #9356DC;
+    background-image: linear-gradient(to top left, #9356DC, #FF79DA);
     border-radius: 20px;
     text-decoration: none;
     line-height: 3rem;
@@ -1254,14 +1254,14 @@ header {
     font-size: 0.9rem;
   }
   .section-fctn__numero {
-    background-color: rgb(86, 220, 104);
+    background-color: #9356DC;
     color: white;
     border-radius: 50px;
     position: absolute;
     left: -1rem;
     text-align: center;
     padding-top: 5px;
-    background-image: linear-gradient(to top right, rgb(86, 220, 104), #FF79DA);
+    background-image: linear-gradient(to top right, #9356DC, #FF79DA);
     width: 28px;
     height: 23px;
   }
