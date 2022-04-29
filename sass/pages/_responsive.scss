@@ -178,7 +178,7 @@
             position: relative;
             @include ombre-cartes;
             border-radius: 15px;
-            width: auto;
+            width: 88%;
         }
 
         &__photos  { 
@@ -188,6 +188,8 @@
         &__legende {
             @include legende-mobile;
         }          
+
+        
 
     } 
 
@@ -304,8 +306,9 @@
             @include ligne-verte-mobile-tablette;
         }
 
-        &__cartes {     
-            width: 84%;
+        &__cartes {  
+            width: 99vw;
+            margin-bottom: 1.7rem;   
         }
 
     }
@@ -389,6 +392,8 @@
 
         &__fig  {
             @include cartes-home-tablette-desktop;
+            width: 90.5%;
+            left: -5.1%;
         }
 
         &__photos {
@@ -399,9 +404,12 @@
         &__legende {
             @include legende-tablette-desktop;       
         }
-
+        &__ancres{
+            
+            
+        }  
         & article {
-            width: 95vw;
+            width: 99vw;
             margin-bottom: 1.7rem;
         }  
     

@@ -10,6 +10,8 @@
     } 
     &__container i {
         @include fleche-retour;
+        top: 3.1%;
+        left: 9%;
     }
 
 }

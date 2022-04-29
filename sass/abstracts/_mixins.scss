@@ -97,8 +97,7 @@
     font-size: 2rem;
     font-weight: 700;
     color: $color-tertiary-darker;
-    left: 12%;
-    top: 9%;
+    
 }
 @mixin header-restau-logo {
     font-family: Shrikhand;
@@ -276,7 +275,6 @@
     box-shadow: 9px 10px 16px $color-tertiary-light;
 }
 @mixin cartes-home-tablette-desktop {
-    width: 80%;
     position: relative;
     display: flex;
     flex-direction: column;

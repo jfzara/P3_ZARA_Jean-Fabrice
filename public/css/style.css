@@ -175,8 +175,8 @@ article, figure {
   font-size: 2rem;
   font-weight: 700;
   color: rgb(54, 54, 54);
-  left: 12%;
-  top: 9%;
+  top: 3.1%;
+  left: 9%;
 }
 
 .footer {
@@ -846,7 +846,7 @@ header {
     position: relative;
     box-shadow: 9px 10px 16px rgb(222, 222, 222);
     border-radius: 15px;
-    width: auto;
+    width: 88%;
   }
   .restos__photos {
     height: 15rem;
@@ -962,7 +962,8 @@ header {
     border-bottom: 4px #99E2D0 solid;
   }
   .menu-restau__cartes {
-    width: 84%;
+    width: 99vw;
+    margin-bottom: 1.7rem;
   }
 
   .section-fctn {
@@ -1047,13 +1048,14 @@ header {
     width: 200px;
   }
   .restos__fig {
-    width: 80%;
     position: relative;
     display: flex;
     flex-direction: column;
     margin-left: 6rem;
     box-shadow: 9px 10px 16px rgb(222, 222, 222);
     border-radius: 0 0 15px 15px;
+    width: 90.5%;
+    left: -5.1%;
   }
   .restos__photos {
     height: 300px;
@@ -1067,7 +1069,7 @@ header {
     height: 7rem;
   }
   .restos article {
-    width: 95vw;
+    width: 99vw;
     margin-bottom: 1.7rem;
   }
 
@@ -1299,7 +1301,6 @@ header {
     width: 100%;
   }
   .restos__fig {
-    width: 80%;
     position: relative;
     display: flex;
     flex-direction: column;
